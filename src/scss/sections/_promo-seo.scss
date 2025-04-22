@@ -33,10 +33,12 @@
 				url(../img/seo-promo-mob@2x.webp) 2x
 			);
 			min-height: 560px;
+			.promo-button {width: 100%;max-width: 330px; display: flex; justify-content: center;}
+			.promo-button .btn-accent{padding-left: 22px;
+				padding-right: 22px; height: 50px; font-size: 20px; width: fit-content;}
 		}
-		.promo-button {width: 100%;max-width: 330px; display: flex; justify-content: center;}
-		.promo-button .btn-accent{padding-left: 22px;
-		padding-right: 22px; height: 50px; font-size: 20px; width: fit-content;}	
+		
+			
 			
 		
 	}
