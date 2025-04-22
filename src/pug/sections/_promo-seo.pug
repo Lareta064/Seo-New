@@ -18,7 +18,7 @@ section.promo.promo--seo
 				button.btn-accent Подать заявку
 	
 	//БЛОК С КАРТОЧКАМИ 
-	.promo-benefits.d-none
+	.promo-benefits
 		//=====seo benefits=====
 		.container
 			.promo-benefits-grid
@@ -31,7 +31,7 @@ section.promo.promo--seo
 				//====card #2 ===
 				.benefit-card.benefit-2
 					p РОССИЯ #[br] СНГ #[br] ОАЭ #[br]
-						span и многие другие
+						span и многие#[br]другие
 				
 				//====card #3 ===
 				.benefit-card.benefit-3
@@ -56,8 +56,10 @@ section.promo.promo--seo
 				.benefit-card.benefit-slider
 					//====column===
 					.benefit-card__col
-						p.txt-34 Запросы в ТОП 10 Яндекс
-						
+						p.txt-34 Запросы в ТОП 10<br>Яндекс
+						.result-status.hide-768
+							.result-status__old  #[span ] Было
+							.result-status__new  #[span ] Стало
 						.result-slider.swiper
 							.swiper-wrapper
 								
@@ -73,6 +75,9 @@ section.promo.promo--seo
 								.swiper-slide
 									.chart-card
 										img(src='./img/result-slider/slider4.webp', srcset='./img/result-slider/slider4@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
+							
+							//slider pagination
+							.result-slider-pagination.swiper-pagination
 					
 					//====column===
 					.result-company-slider.swiper
@@ -81,43 +86,47 @@ section.promo.promo--seo
 								.company-card
 									.company-logo
 										img(src="./img/clients/bassein.svg", loading="lazy"  width="152" height="34" alt="img")
-									p Ниша: салон красоты
-									p ГЕО: Санкт-Петербург
-									p Каналы: Яндекс Директ
-									.result-status
-										.result-status__old  #[span ] Было
-										.result-status__new  #[span ] Стало
+									.company-desk
+										p Ниша: салон красоты
+										p ГЕО: Санкт-Петербург
+										p Каналы: Яндекс Директ
+										.result-status
+											.result-status__old  #[span ] Было
+											.result-status__new  #[span ] Стало
 										
 							.swiper-slide
 								.company-card
 									.company-logo
 										img(src="./img/clients/kiki.svg", loading="lazy" width="87" height="49" alt="img")
-									p Ниша: салон красоты
-									p ГЕО: Санкт-Петербург
-									p Каналы: Яндекс Директ
-									.result-status
-										.result-status__old  #[span ] Было
-										.result-status__new  #[span ] Стало
+									.company-desk
+										p Ниша: салон красоты
+										p ГЕО: Санкт-Петербург
+										p Каналы: Яндекс Директ
+										.result-status
+											.result-status__old  #[span ] Было
+											.result-status__new  #[span ] Стало
 							.swiper-slide
 								.company-card
 									.company-logo
 										img(src="./img/clients/theia.svg", loading="lazy" width="126" height="30" alt="img")
-									p Ниша: салон красоты
-									p ГЕО: Санкт-Петербург
-									p Каналы: Яндекс Директ
-									.result-status
-										.result-status__old  #[span ] Было
-										.result-status__new  #[span ] Стало
+									.company-desk
+										p Ниша: салон красоты
+										p ГЕО: Санкт-Петербург
+										p Каналы: Яндекс Директ
+										.result-status
+											.result-status__old  #[span ] Было
+											.result-status__new  #[span ] Стало
 							.swiper-slide
 								.company-card
 									.company-logo
 										img(src="./img/clients/insight.svg", loading="lazy" width="125" height="71" alt="img")
-									p Ниша: салон красоты
-									p ГЕО: Санкт-Петербург
-									p Каналы: Яндекс Директ
-									.result-status
-										.result-status__old  #[span ] Было
-										.result-status__new  #[span ] Стало
+									.company-desk
+										p Ниша: салон красоты
+										p ГЕО: Санкт-Петербург
+										p Каналы: Яндекс Директ
+										.result-status
+											.result-status__old  #[span ] Было
+											.result-status__new  #[span ] Стало
 						
 						//===== slider nav===
 						.result-company-nav.flex

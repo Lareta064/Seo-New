@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultSlider = new Swiper('.result-slider', {
         speed: 400,
         effect: "fade",
+        pagination: {
+            el: ".result-slider-pagination",
+			clickable: true,
+        },
     });
     const resultCompany= new Swiper('.result-company-slider', {
         speed: 400,
