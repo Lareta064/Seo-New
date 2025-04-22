@@ -5,13 +5,12 @@
 		flex-shrink: 0;
 		width: remy(159);
 		aspect-ratio: 159/25;
+		display: flex;
 		
 	}
-	
 	@media (max-width: 767px) {
-		.logo{width: remy(100)}
+	 padding-top: 16px;
 	}
-	
 }
 .svg-logo{
 	width: 100%;
@@ -30,12 +29,18 @@
 		padding-left: remy(46);
 		padding-right: remy(46);
 		font-weight: 700;
+		&:hover{background: var(--white); color:#302F2F;}
+		&:active{background: #d4deef;border-color:#d4deef; color:#282828;}
 	}
 	
 	@media (max-width: 767px) {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		.btn-outline{display: none;}
+		padding: 18px 20px 17px;
+		
+		background: #282828;
+		border-radius: 17px;
+		border-bottom: 0;
+		justify-content: space-between;
+		.phone-contacts, .btn-outline{display: none;}
 	}
 }
 .header-container{

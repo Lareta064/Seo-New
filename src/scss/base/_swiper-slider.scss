@@ -32,7 +32,7 @@
 }
 .result-company-pagination.swiper-pagination .swiper-pagination-bullet{
 
-		width: 30px;
+		width: remy(30);
 
 	
 	@media (max-width: 767px){width: 20px;}
@@ -42,8 +42,8 @@
 	
 }
 .swiper-button-next, .swiper-button-prev{
-	width: 24px;
-	height: 70px;
+	width:  remy(24);
+	height:  remy(70);
 	display: flex;
 	justify-content: center;
 	position: absolute;
@@ -58,18 +58,18 @@
 	&:hover{svg{color: white;}}
 }
 .swiper-button-next{
-	right: -40px;
+	right:  remy(-40);
 }
 .swiper-button-prev{
-	left: -40px;
+	left:  remy(-40);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after{
 	display: none;
 }
 .arr-left, .arr-right{
-	width: 20px;
-	height: 70px;
+	width:  remy(20);
+	height:  remy(70);
 	fill: transparent;
 	color:#3C3D3D;
 }

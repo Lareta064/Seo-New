@@ -6,8 +6,8 @@
 	cursor: pointer;
 	justify-content: center;
 	align-items: center;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 28px;
 	&:hover{
 		span,span:after,
 		span:before {background-color: #A4A6A9;}
@@ -46,10 +46,10 @@
 }
 
 .menu-toggle span:after {
-	top: -7px;
+	top: -10px;
 }
 .menu-toggle span:before {
-	bottom: -7px;
+	bottom: -10px;
 }
 .active.menu-toggle span {
 	background-color: transparent !important;

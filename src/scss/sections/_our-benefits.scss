@@ -31,7 +31,7 @@
 		justify-content: flex-end;
 		align-items: flex-end;
 		padding-bottom: remy(40);
-		height: remy(294);
+		// height: remy(294);
 		p{margin-top: remy(24); text-transform: uppercase;font-family:var(--font-family);}
 		
 	    @media (max-width: 767px) {
@@ -129,7 +129,7 @@
 		background-color: #282828;
 		position: relative;
 		padding-right: remy(41);
-		height: remy(294);
+		// height: remy(294);
 		p:not(.txt-34){font-size: remy(17);	line-height: 1.2; font-family: var(--second-family);}
 		.benefit-card__link{
 			position: absolute;
@@ -221,6 +221,7 @@
 			background: url(../img/result-slider/chart-bg.webp);
 			background-position: left bottom;
 			background-repeat: no-repeat;
+			background-size:100%;
 			padding-left: remy(42);
 			padding-bottom: remy(16);
 			height: remy(190);
@@ -238,16 +239,12 @@
 		flex-grow:1;
 		margin-top: remy(12);
 		position: relative;
-		padding-left:remy(25);
+		
 		border-left: 1px solid #888;
 		position: relative;
-		
+		.swiper-slide{padding-left:remy(25);}
 		.company-card{
-			position: absolute;
-			inset:0;
-			bottom: remy(20);
-			left:remy(25);
-			left:0;
+			
 			font-size: remy(12);
 			color: #888;
 			font-family: var(--second-family);
@@ -263,7 +260,7 @@
 		}
 		.result-status{
 			display: flex;
-			font-size: 10px;
+			font-size: remy(10);
 			line-height: 100%;
 			letter-spacing: -0.02em;
 			color: #d6d6d6;
@@ -278,7 +275,8 @@
 		}
 		.company-logo{
             margin-bottom: remy(10);
-			min-height: remy(70);
+			height: remy(70);
+			width: 100%;
 			
 		}
 		

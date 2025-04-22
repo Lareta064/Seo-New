@@ -5,20 +5,12 @@
 	// margin-top: 0!important;
 
 }
-// .inner-main .promo +*{
-// 	// padding-top: 80px;
-// 	@media (max-width: 767px) {
-// 		// padding-top: 40px;
-// 	}
-// }
+
 .promo-banner{
-	padding: 72px 40px 37px 61px;
+	padding: remy(72) remy(40) remy(37) remy(61);
 	background-color: #282828;;
-	border-radius: 26px;
-	margin-top: 20px;
-	// flex-direction: column;
-	
-	// align-items: flex-start;
+	border-radius: remy(26);
+	margin-top: remy(20);
 	
 	position: relative;
 	overflow: hidden;
