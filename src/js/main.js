@@ -316,48 +316,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	/**********блок what-seo-wrapper************* */
 	document.addEventListener("DOMContentLoaded", () => {
-	gsap.registerPlugin(ScrollTrigger);
-	// const scrollWrapper = document.querySelector(".scroll-wrapper");
-	// const seoWrapper = document.querySelector(".what-seo-wrapper");
-
-	// if (seoWrapper) {
-	// 	// Убедимся, что блок шире, чем контейнер
-	// 	if (seoWrapper.scrollWidth > scrollWrapper.clientWidth) {
-	// 		// gsap.registerPlugin(ScrollTrigger);
-
-	// 		// Создаем ScrollTrigger
-	// 		ScrollTrigger.create({
-	// 			trigger: scrollWrapper,
-	// 			start: () => {
-	// 				const scrollWrapperRect = scrollWrapper.getBoundingClientRect();
-	// 				const triggerOffset = window.innerHeight / 2 - scrollWrapperRect.height / 2;
-	// 				return `top+=${triggerOffset} center`; // Блок начнет анимацию, когда его центр совпадает с центром окна
-	// 			},
-	// 			end: () => `+=${seoWrapper.scrollWidth - scrollWrapper.clientWidth}`, // Длина горизонтального скролла
-	// 			scrub: true, // Скролл синхронизирован с колесиком мыши
-	// 			pin: scrollWrapper, // Закрепляем блок на месте
-	// 			anticipatePin: 1, // Сглаживание
-	// 			onUpdate: (self) => {
-	// 				// Горизонтальная прокрутка блока
-	// 				const progress = self.progress; // От 0 до 1
-	// 				const maxScroll = seoWrapper.scrollWidth - scrollWrapper.clientWidth;
-	// 				gsap.to(seoWrapper, {
-	// 					x: -maxScroll * progress,
-	// 					ease: "none",
-	// 					overwrite: "auto",
-	// 				});
-	// 			},
-	// 		});
-
-	// 		// Настраиваем плавный выход
-	// 		ScrollTrigger.create({
-	// 			trigger: scrollWrapper,
-	// 			start: () => `bottom top`, // Когда блок заканчивается
-	// 			end: () => `bottom+=1 top`,
-	// 			onLeaveBack: () => ScrollTrigger.refresh(true),
-	// 		});
-	// 	}
-	// }
+	
 
 	/*******вариант для what-seo-wrapper, когда он просто проезжает впрао / влево, когда в зоне видимости******** */
 	const scrollWrapper = document.querySelector('.scroll-wrapper');

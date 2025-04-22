@@ -12,8 +12,8 @@ $ft: 'Montserrat';
 	@return calc(($pxsize/19.2))*1vw;
 }
 @function remy($fzsize) {
-	@return ($fzsize/16)+rem;
-}
+	@return #{($fzsize / 16)}rem;
+  }
 // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 //     .promo {
 //         background-image: url(./../img/promo/promo-bg@2x.jpg);

@@ -1,6 +1,6 @@
 @use "var" as *;
 .inner-promo h1, .promo h1, .h1{
-	font-size: 90px;
+	font-size: remy(90);
 	color: white;
 	line-height: .89;
 	font-weight: 800;
@@ -8,7 +8,7 @@
 }
 .inner-promo h1, .inner-promo .h1{
 	font-weight: 800;
-	font-size: 96px;
+	font-size: remy(96);
 	
 	letter-spacing: -0.01em;
 	color: #f9f9f9;
@@ -17,14 +17,14 @@
 }
 .title, .big-title{
 	font-weight: 800;
-	font-size: 70px;
+	font-size: remy(70);
 	color: #4f4f4f;
-	margin-bottom: 50px;
-	max-width: 1380px;
+	margin-bottom: remy(50);
+	max-width: remy(1380);
 	
 	@media (max-width: 767px) {
-	font-size: 32px;
-	margin-bottom: 30px;
+	font-size: remy(32);
+	margin-bottom: trmy(30);
 	}
 }
 .title-white{
@@ -35,68 +35,68 @@
 		color: white;
 	
 	@media (max-width:767px) {
-		font-size: 32px;max-width: 440px;
+		font-size: remy(32);max-width: remy(440);
 	}
 }
 .h2,
 .h3{
-	font-size: 28px;
+	font-size: 2remy(28);
 	line-height: 1.2;
 	color: $lightText;
 	font-weight: 700;
 }
 .h2{
-	margin-bottom: 25px;
+	margin-bottom: remy(25);
 	color: #4f4f4f;
 	@media (max-width: 767px) {
-		font-size: 18px;
-		margin-bottom: 18px;
+		font-size: remy(18);
+		margin-bottom: remy(18);
 	}
 }
 .title-32,.title-sub {
-	font-size: 32px;
+	font-size: remy(32);
 	line-height: 1.25;
 	font-weight: 700;
 	color:#d6d6d6;
 	
-	@media (max-width: 767px) {font-size: 16px;}
+	@media (max-width: 767px) {font-size: 1rem;}
 }
 .title-sub{
 	font-weight: 600;
 	color:#898F99;
 }
 .title-group{
-	margin-bottom: 60px;
+	margin-bottom: remy(60);
 	
-	@media (max-width: 767px) {margin-bottom: 20px;}
+	@media (max-width: 767px) {margin-bottom: remy(20);}
 }
 .h3{
-	font-size: 24px;
+	font-size: remy(24);
 	color: $white;
-	@media (max-width: 767px) {font-size: 20px;}
+	@media (max-width: 767px) {font-size: remy(20);}
 }
 .title-52{
-	font-size: 52px;
+	font-size: remy(52);
 	font-weight: 600;
 	color: #4f4f4f;
 }
 .title-45{
 	font-weight: 900;
-	font-size: 45px;
+	font-size: remy(45);
 	color: #d6d6d6;
-	@media (max-width: 767px) {font-size: 24px;}
+	@media (max-width: 767px) {font-size: remy(24);}
 }
 .title-30{
-	font-size: 30px;
+	font-size: remy(30);
 	font-weight: 900;
 }
 .card-title{
 	font-weight: 600;
-	font-size: 28px;
+	font-size: remy(28);
 	color: #f9f9f9;
-	margin-bottom: 30px;
+	margin-bottom: remy(30);
 	
-	@media (max-width: 767px) {font-size: 11px;}
+	@media (max-width: 767px) {font-size: remy(11);}
 
 }
 .card-text, .card-text p{
@@ -124,9 +124,10 @@
 .subtitle{
 	font-family: $ft;
 	color: #f9f9f9;
-	strong{color: white;}
+	span{font-weight: 600;}
 	
 }
+.txt-white{color: white;}
 .txt-34{
 	font-weight: 900;
 	font-size: 34px;
@@ -167,7 +168,7 @@
 	li{
 		display: inline-block;
 		position: relative;
-		margin-right: 6px;
+		margin-right: 3px;
 		&:not(:last-child):after{
 			content: '/';
 			position: absolute;
@@ -177,15 +178,15 @@
 			
 		}
 		a{
-			font-size: 14px;
+			font-size: remy(14);
 			line-height: 1.5;
 			color: #eee;
-			padding-right: 6px;
+			padding-right: 5px;
 			font-family: $ft;
 			transition: .3s;
 			&:hover{color: #A4A6A9;}
 			@media (max-width: 767px) {
-			font-size: 10px;
+			font-size: remy(10);
 			font-family: var(--font-family);
 			}
 		}

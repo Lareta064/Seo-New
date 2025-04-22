@@ -19,7 +19,6 @@ const cached = require("gulp-cached");
 gulp.task("pug", function () {
     return gulp
         .src("./src/pug/pages/**/*.pug")
-        .pipe(cached('pug')) // Кешируем файлы, чтобы не пересобирать всё
         .pipe(
             plumber({
                 errorHandler: notify.onError(function (err) {
@@ -142,7 +141,7 @@ gulp.task("watch", function () {
     // Следим за изменениями в PUG (оптимизировано)
     watch("./src/pug/pages/**/*.pug", gulp.series("pug"));
     watch("./src/pug/ui/**/*.pug", gulp.series("pugUi"));
-
+    watch("./src/pug/{blocks,sections}/**/*.pug", gulp.series("pug"));
     // Следим за изменениями в картинках и копируем
     watch("./src/img/**/*.*", gulp.series("copy:img"));
 
