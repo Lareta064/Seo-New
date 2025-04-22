@@ -1,0 +1,137 @@
+include ../layouts/_mixins-links.pug
+include ../layouts/layout-ui.pug
+block variables
+
+	body.body-dashboard(style="background: #f0f0f0")
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Форма
+				.container-dashboard__content
+					.form-item
+						input.form-input(type="text" placeholder="Имя")
+						span.form-input-state
+					
+					pre.
+						.form-item
+							input.form-input(type="text" placeholder="Имя")
+							span.form-input-state
+					
+					br
+					h4 У невалидного input  родительский .form-item получает класс .error. 
+					//== У невалидного input  родительский .form-item получает класс .error, по которму меняется цвет текста на красный и появляется кнопка сброса - крестик. На этот крестик прописан скрипт, который по клику очищает инпут.
+					.form-item.error
+						input.form-input(type="text" placeholder="Имя")
+						span.form-input-state
+					pre.
+						.form-item.error
+							input.form-input(type="text" placeholder="Имя")
+							span.form-input-state
+			
+					.fileUpload-group
+						label.form-item.fileUpload-label
+							input.form-input.fileUploadInput(type="file")
+							| Добавить файл
+							button(type="reset").form-input-state
+						p.fileUpload-limit *Файл должен быть не более 20 мб
+					
+					h3 Атрибут disabled  задает кнопке темный цвет фона. Если его удалить, кнопка станет оранжевая
+					br
+					input.btn-primary(type="submit" value="Отправить" disabled)
+					pre.
+						input.btn-primary(type="submit" value="Отправить" disabled) 
+						Атрибут disabled  задает кнопке темный цвет фона. Если его удалить, кнопка станет оранжевая
+					
+					h3 Элемент type="submit" без атрибута disabled
+					br
+					button.btn-primary(type="submit")
+						span Отправить
+					pre.
+						input.btn-primary(type="submit" value="Отправить" disabled) 
+						Атрибут disabled  задает кнопке темный цвет фона. Если его удалить, кнопка станет оранжевая
+			
+					.form-btn-group
+						button.btn-primary(type="submit")
+							span Отправить
+						p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+					pre.
+						.form-btn-group
+							button.btn-primary(type="submit")
+								span Отправить
+							p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+					.form-btn-group.flex-column
+						button.btn-primary(type="submit")
+							span Отправить
+						p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+					pre.
+						.form-btn-group.flex-column
+							button.btn-primary(type="submit")
+								span Отправить
+							p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+					
+					h3 Кнопка вида Заполнить бриф
+					.round-btn
+						span.round-btn__name Заполнить бриф
+						span.form-input-state
+						
+					pre.
+						.round-btn.round-btn--change
+							span.round-btn__name Заполнить бриф
+							span.form-input-state.active
+					
+					h3 Кнопка вида Заполнить бриф меняет фоновый цвет и цвет текста по классу .round-btn--change, иконка .form-input-state появляется по классу active 
+					.round-btn.round-btn--change
+						span.round-btn__name Заполнить бриф
+						span.form-input-state.active
+					pre.
+						.round-btn.round-btn--change
+							span.round-btn__name Заполнить бриф
+							span.form-input-state.active
+					h3 Кнопка вида Заполнить бриф меняет фоновый цвет и цвет текста по классу .round-btn--change, иконка .form-input-state появляется по классу active  Если у .round-btn добавляется класс error , то иконка будет как крестик
+					.brif-btn.round-btn.round-btn--change.error
+						span.round-btn__name Заполнить бриф
+						span.form-input-state.active
+					pre.
+						.round-btn.round-btn--change
+							span.round-btn__name Заполнить бриф
+							span.form-input-state.active
+			
+			
+			
+			
+			script.
+				
+				const formItems = document.querySelectorAll(".form-item");
+				console.log(formItems)
+				if (formItems.length > 0) {
+					for (let item of formItems) {
+						const itemInput = item.querySelector(".form-input");
+						const itemStateIcon = item.querySelector(".form-input-state");
+
+						// Событие потери фокуса для проверки валидности
+						itemInput.addEventListener("blur", () => {
+							const value = itemInput.value.trim();
+							
+							 // Проверка, что валидное поле не пустое
+							if (value !== "") {
+								item.classList.remove("error");
+								itemStateIcon.classList.add("active");
+							} else {
+								item.classList.add("error");
+								itemStateIcon.classList.remove("active");
+							}
+						});
+
+						// Очистка поля по клику на иконку
+						itemStateIcon.addEventListener("click", () => {
+							if (item.classList.contains("error") && itemStateIcon.classList.contains("active")) {
+								itemInput.value = "";
+								item.classList.remove("error");
+								itemStateIcon.classList.remove("active");
+							}
+						});
+					}
+				}
+			

@@ -1,0 +1,141 @@
+section.promo.promo--service
+	.container
+		.breadcrumbs
+			ul
+				li 
+					a(href="#!") Главная
+				li 
+					a(href="#!") Услуги
+				li 
+					a(href="#!") Контекстная реклама
+		.promo-banner.flex
+			//=== title block ===
+			.promo-title
+				h1.h1 Контекстная реклама
+				p.subtitle Выведем ваш сайт в ТОП по нужным запросам в Яндекс и Google.<br> Результат по SEO в первый месяц работ. Закажите #[strong  бесплатный аудит сайта]
+			//====bottom row ====
+			.promo-bottom.flex
+				button.btn-accent Подать заявку
+
+
+				
+		
+		//=====seo benefits=====
+		.promo-benefits
+			.promo-benefits-grid
+				//====card #1 ===
+				.benefit-card.benefit-1
+					svg.svg-ten
+						use(href='./img/sprite.svg#svg-ten')
+					p В DIGITAL
+				
+				//====card #2 ===
+				.benefit-card.benefit-2
+					p РОССИЯ #[br] СНГ #[br] ОАЭ #[br]
+						span и многие другие
+				
+				//====card #3 ===
+				.benefit-card.benefit-3
+					p.txt-34 97%<br>клиентов
+					p.txt-semi Продолжают работать<br>с нами более 3-х лет
+					img(loading='lazy' src='./img/planet.webp' srcset="./img/planet@2x.webp 2x" width='190' height='145' alt='img')
+					p Мы тщательно изучаем особенности бизнеса каждого клиента, соблюдаем установленные сроки и решаем самые нестандартные задачи
+					a.btn-grey(href='#!') Пригласить в тендер
+				
+				//====card #4 ===
+				.benefit-card.benefit-4
+					img(loading='lazy' src='./img/dashboard.webp' srcset="./img/dashboard@2x.webp 2x" width='360' height='330' alt='img')
+				
+				//====card #5 ===
+				.benefit-card.benefit-5
+					p.txt-34 Опытная команда
+					p С вами работают профессионалы с многолетним <br>опытом в маркетинге, проходящие регулярную<br> сертификацию
+					a(href="#our-team").image-link
+						img(loading='lazy' src="./img/decor-arrow.webp", srcset="./img/decor-arrow@2x.webp 2x" width="61" height="43" alt="img")
+				
+				.benefit-card.benefit-slider
+					//====column===
+					.benefit-card__col
+						p.txt-34 Запросы в ТОП 10
+						
+						.result-slider.swiper
+							.swiper-wrapper
+								
+								.swiper-slide
+									//=== progress-card ===
+									.progress-card
+										.progress-block
+											span.txt-10 было
+											.progress-line(style="width: 22%")
+												span 6
+										
+										.progress-block.progress-block--up
+											span.txt-10 Стало
+											.progress-line(style="width: 83%")
+												span 28
+
+								.swiper-slide
+									//=== progress-card ===
+									.progress-card
+										.progress-block
+											span.txt-10 было
+											.progress-line(style="width: 30%")
+												span 10
+										
+										.progress-block.progress-block--up
+											span.txt-10 Стало
+											.progress-line(style="width: 72%")
+												span 24
+								.swiper-slide
+									//=== progress-card ===
+									.progress-card
+										.progress-block
+											span.txt-10 было
+											.progress-line(style="width: 24%")
+												span 8
+										
+										.progress-block.progress-block--up
+											span.txt-10 Стало
+											.progress-line(style="width: 60%")
+												span 20
+								.swiper-slide
+									//=== progress-card ===
+									.progress-card
+										.progress-block
+											span.txt-10 было
+											.progress-line(style="width: 33%")
+												span 11
+										
+										.progress-block.progress-block--up
+											span.txt-10 Стало
+											.progress-line(style="width: 90%")
+												span 30
+					
+					//====column===
+					.result-company
+						.company-card.active
+							.company-logo
+								img(src="./img/brend-logo/pilki.webp", srcset="./img/brend-logo/pilki@2x.webp 2x" width="110" height="38" alt="img")
+							p Ниша: салон красоты
+							p ГЕО: Санкт-Петербург
+							p Каналы: Яндекс Директ
+						.company-card
+							.company-logo
+								img(src="./img/brend-logo/tvoy-bassein.svg", width="218" height="49" alt="img")
+							p Ниша: салон красоты
+							p ГЕО: Санкт-Петербург
+							p Каналы: Яндекс Директ
+						.company-card
+							.company-logo
+								img(src="./img/brend-logo/baza-black.webp",  width="229" height="135" alt="img")
+							p Ниша: салон красоты
+							p ГЕО: Санкт-Петербург
+							p Каналы: Яндекс Директ
+						.company-card
+							.company-logo
+								img(src="./img/brend-logo/more.svg", width="200" height="70" alt="img")
+							p Ниша: салон красоты
+							p ГЕО: Санкт-Петербург
+							p Каналы: Яндекс Директ
+						//===== slider pagination===
+						.result-slider-pagination.swiper-pagination

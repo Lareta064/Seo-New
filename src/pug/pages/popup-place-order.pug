@@ -1,0 +1,45 @@
+extends ../layouts/layout-swiper.pug
+
+block content
+	.page-column
+		
+		//==== MAIN =====
+		main.inner-main
+			.container
+				button.btn-primary.btn-primary--animate(type="button" data-btn="place-order") 
+					span Оставить заявку
+		.modal-frame(data-modal="place-order")
+			.modal-frame-wrapper
+				.modal-frame-content
+					//====FORM=====
+					.modal-frame-form
+						.modal-title Оставьте заявку
+						//===== FORM =====
+						form.modal-form.grid-form(action="" method="method")
+							.form-item
+								input.form-input(type="text" placeholder="Имя")
+								span.form-input-state
+							.form-item
+								input.form-input.phone(type="tel" placeholder="+7 (     )")
+								span.form-input-state
+							.form-item
+								input.form-input.phone(type="email" placeholder="Email")
+								span.form-input-state
+							
+							//===== btn-group =====
+							.form-btn-group.flex-column
+								button.btn-primary.w-100(type="submit")
+									span Отправить
+								p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+								
+
+					//====SUCCESS MESSAGE=====
+					.modal-success
+						p Сообщение успешно отправлено!|
+						p Скоро с вами свяжуться наши специалисты 🤍
+			
+		//==== FOOTER =====
+		include ../sections/_footer.pug
+	
+block variables
+	-var title = "Оформиь заказ";

@@ -1,0 +1,77 @@
+mixin info-card(title, txt, icon, iconW, iconH)
+	.info-card
+		if icon
+			.info-card__icon
+				img(src="./img/info-cards/icon"+ icon +".svg", width= iconW height=  iconH alt="icon")
+		
+		.card-title !{title}
+		.card-text
+			p !{txt}
+
+mixin info-card-ui(title, txt, icon, iconW, iconH)
+	.info-card
+		if icon
+			.info-card__icon
+				img(src="../img/info-cards/icon1.svg", alt="icon")
+		
+		.card-title !{title}
+		.card-text
+			p !{txt}
+
+mixin flex-card(img, title, text)
+	.flex-card
+		.flex-card__img
+			img.wh-100(src="./img/techno-logo/t"+img+".webp", loading="lazy" srcset="./img/techno-logo/t"+img+"@2x.webp 2x" width="70" height="70" alt="img")
+		.flex-card__text
+			.card-title !{title}
+			.card-text
+				p !{text}
+
+mixin flip-card(img, title, text)
+	.flip-card&attributes(attributes)
+		.flip-card-inner
+			.flip-card-front
+				.flip-card__icon
+					img(src="./img/"+img+".webp", srcset="./img/"+img+"@2x.webp 2x" width='100px' height='100px' loading='lazy' alt='img')
+				.flip-card__title !{title}
+			.flip-card-back
+				p !{text}
+mixin flip-card-ui(img, title, text)
+	.flip-card&attributes(attributes)
+		.flip-card-inner
+			.flip-card-front
+				.flip-card__icon
+					img(src="../img/"+img+".webp", srcset="../img/"+img+"@2x.webp 2x" width='100px' height='100px' loading='lazy' alt='img')
+				.flip-card__title !{title}
+			.flip-card-back
+				p !{text}
+
+
+mixin techno-card(img, title, txt)
+	.techno-card
+		.techno-card__img
+			img(src='./img/techno-logo/'+img+'.webp', srcset='./img/techno-logo/'+img+'@2x.webp 2x' width='70' height='70' loading='lazy' alt='img')
+		.techno-card__txt
+			.techno-card__title !{title}
+			p  !{txt}
+mixin techno-card-ui(img, title, txt)
+	.techno-card
+		.techno-card__img
+			img(src='../img/techno-logo/'+img+'.webp', srcset='../img/techno-logo/'+img+'@2x.webp 2x' width='70' height='70' loading='lazy' alt='img')
+		.techno-card__txt
+			.techno-card__title !{title}
+			p  !{txt}
+
+mixin videoRev(ava, title, tag)
+	.video-review
+		.video-review__screen
+			img(src='../img/video-review/poster.webp', srcset='../img/video-review/poster@2x.webp 2x' width='523' height='272' loading='lazy' alt='img')
+		.video-review__body.flex
+			.video-review__img
+				img.round-img(src='../img/video-review/rev'+ ava +'.webp' width='55' height='55' loading='lazy' alt='img')
+			.video-review__box
+				.flex
+					.video-review__title #{title}
+					.tag #{tag}
+				
+				.video-review__txt  “Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска. Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска

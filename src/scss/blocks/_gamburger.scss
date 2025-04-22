@@ -1,0 +1,71 @@
+@use "base/var" as *;
+/*========GAMBURGER======*/
+.menu-toggle {
+	display: none;
+	z-index: 11;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	&:hover{
+		span,span:after,
+		span:before {background-color: #A4A6A9;}
+	}
+}
+
+@media (max-width:767px) {
+	.menu-toggle {
+		display: flex;
+	}
+}
+
+.menu-toggle span {
+	position: relative;
+	height: 2px;
+	width: 100%;
+	border-radius: 3px;
+	background-color: white;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 2px;
+	background-color: white;
+	border-radius: 5px;
+	right: 0;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after {
+	top: -7px;
+}
+.menu-toggle span:before {
+	bottom: -7px;
+}
+.active.menu-toggle span {
+	background-color: transparent !important;
+}
+.active.menu-toggle span:after {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: white;
+}
+
+.active.menu-toggle span:before {
+	bottom: 0;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	background-color: white;
+}

@@ -1,0 +1,55 @@
+@use "base/var";
+@use "base/_base";
+@use "base/_typography";
+@use "base/_buttons";
+@use "base/_icons";
+
+@use "base/_form";
+@use "base/_swiper-slider.scss";
+
+@use "blocks/_gamburger.scss";
+@use "sections/header";
+@use "blocks/_main-menu.scss";
+@use "blocks/_modal.scss";
+
+@use "blocks/_flex-card.scss";
+@use "sections/_promo";
+@use "sections/_inner-promo";
+@use "sections/_promo-seo";
+@use "sections/_our-benefits";
+@use "sections/_seo-map";
+// @use "sections/_technology.scss";
+@use "sections/_our-portfolio.scss";
+@use "blocks/_portfolio-card.scss";
+
+// @use "sections/_what-seo.scss";
+@use "sections/_custom-tabs.scss";
+@use "sections/_our-mission.scss";
+@use "sections/_team.scss";
+@use "sections/_quiz.scss";
+
+@use "sections/_geo.scss";
+
+@use "sections/_our-clients.scss";
+@use "sections/_review.scss";
+@use "sections/_services.scss";
+@use "sections/_feedback.scss";
+
+
+//targeting
+@use "blocks/_flip-card.scss";
+@use "blocks/_techno-card.scss";
+@use "blocks/_tariff-plan.scss";
+@use "blocks/_direction-card.scss";
+@use "blocks/_video-review-card.scss";
+@use "blocks/_package.scss";
+@use "blocks/_package-card.scss";
+@use "sections/_packages-section.scss";
+
+@use "sections/_footer";
+
+@use "sections/_what-seo-animate";
+
+
+
+@use "ui/_ui-navigation.scss";

@@ -1,0 +1,21 @@
+$white: white;
+$dark: #282828;
+$lightText: #A4A6A9;
+$darkBg: #131313;
+$accent:#F98836;
+$red:#FF562F;
+$lightBorder:#4D4E4F;
+$ff: "'RF Dewi Expanded'";
+$fs: "'RF Dewi Extended'";
+$ft: 'Montserrat';
+@function resp($pxsize) {
+	@return calc(($pxsize/19.2))*1vw;
+}
+@function remy($fzsize) {
+	@return ($fzsize/16)+rem;
+}
+// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//     .promo {
+//         background-image: url(./../img/promo/promo-bg@2x.jpg);
+//     }
+// }

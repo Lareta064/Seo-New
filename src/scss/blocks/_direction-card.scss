@@ -1,0 +1,44 @@
+@use "base/var" as *;
+.direction-card{
+	font-size: 10px;
+	border-radius: 2.4em;
+	width: 51.8em;
+	height: 34.2em;
+	background: var(--back-2);
+	padding: 3.2em 4.8em;
+	display: flex;
+	flex-direction: column;
+	gap: 3.2em;
+	position: relative;
+	overflow: hidden;
+	&>*{
+		position: relative;
+		z-index: 2;
+	}
+	&__title{
+		font-weight: 700;
+		font-size: 3.4em;
+		line-height: .9;
+		color: var(--white);
+		width: 100%;
+	}
+	p{
+		font-family: var(--second-family);
+		font-weight: 400;
+		font-size: 2.4em;
+		line-height: 1.20;
+		letter-spacing: -0.02em;
+		color: var(--white);
+		max-width: 14.75em;
+	}
+	&__arrow{
+		margin-top: auto;
+		align-self: flex-end;
+	}
+}
+.direction-card:after{
+	content:'';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to right, rgba(40, 40, 40, 1) 18%, rgba(40, 40, 40, .4) 120% );
+}

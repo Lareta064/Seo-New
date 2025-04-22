@@ -1,0 +1,9 @@
+@use "base/var" as *;
+.packages-content{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap:30px;
+}
+.package-list,
+.package-card-wrapper{
+}

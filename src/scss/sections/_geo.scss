@@ -1,0 +1,202 @@
+@use "base/var" as *;
+.geo{
+	@media (max-width: 767px) {
+	display: none;
+	}
+}
+.geo-map{
+	width: 1630px;
+	height:800px;
+	position: relative;
+	img{
+		object-fit: contain;
+	}
+	
+	
+}
+.country-box {
+	
+	*[class^="city-"]{opacity: 0;}
+	svg{color: transparent; transition: .3s; width:100%; height: 100%;}
+	
+}
+.country-name, 
+*[class^="city-"]{
+	font-weight: 700;
+    font-size: 12px;
+	color: white;
+	border-radius: 10px;
+	background-color: #302f2f;
+	border:1px solid #121212;
+	padding: 2px 5px 3px 20px;
+	position: absolute;
+	width:max-content;
+	left: 50%;
+	top: 50%;
+	transition: .2s; 
+	&:before{ 
+		content:'';
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #121212;
+		position: absolute;
+		z-index: 1;
+		top: 6px;
+		left: 6px;
+	}
+	&:after{
+		content:'';
+		width: 13px;
+		height: 13px;
+		display: block;
+		position: absolute;
+		top: 9px;
+		left: 0px;
+		z-index: 2;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.947 2.83314C12.1468 1.87141 10.9658 1.20064 9.57791 0.91966C8.19001 0.638677 6.66861 0.762328 5.23783 1.2724C3.80706 1.78247 2.54255 2.652 1.63059 3.75288C0.718631 4.85377 0.207437 6.1278 0.172314 7.38731C0.137192 8.64682 0.579996 9.8252 1.4355 10.7489C2.291 11.6725 3.51397 12.2927 4.92424 12.5179C6.33451 12.7431 7.85752 12.5615 9.26892 11.9999C10.2795 11.5964 10.2928 11.1963 10.2928 11.1963L9.26892 10.9878C9.26892 10.9878 9.20251 11.09 8.94043 11.1943C7.74324 11.6707 6.45138 11.8248 5.25515 11.6337C4.05892 11.4427 3.02156 10.9167 2.2959 10.1332C1.57024 9.34971 1.19464 8.35017 1.22444 7.28182C1.25423 6.21347 1.68784 5.1328 2.46139 4.199C3.23493 3.2652 4.30752 2.52765 5.52115 2.09499C6.73477 1.66233 8.02526 1.55745 9.20251 1.79579C10.3798 2.03412 11.3815 2.60308 12.0602 3.41885L12.947 2.83314Z' fill='%23FF562F' /%3e%3c/svg%3e");
+	}
+	
+}
+.country-name ~ p, .country-name:hover + svg{opacity: 0;}
+.country-name:hover{opacity: 0;}
+.country-name:hover ~ p, .country-name:hover + svg{opacity: 1;}
+.country-name:hover + svg{color: #D4DEEF;}
+
+.country-name{
+	cursor:pointer;
+	z-index: 3;
+	font-size: 15px; padding-left: 24px;padding-right: 8px;
+	
+}
+.country-belarus{
+	width: calc(( 42 / 1630)*100%);
+	
+	aspect-ratio: 21/16;
+	position: absolute;
+	top: 28%;
+	left: 52%;
+	.city-one, .country-name{
+		position: absolute;
+		top: 90%;
+	}
+
+}
+
+.svg-belarus{
+	display: block;
+	width: 42px;
+	height: 32px;
+	color:#D4DEEF;
+}
+
+.country-china{
+	
+	width: calc(( 266 / 1630)*100%);
+	aspect-ratio: 266/186;
+	position: absolute;
+	top: 31%;
+	right: 16%;
+	.city-one{
+		top:75%;
+		left:60%;
+	}
+}
+.country-russia{
+	position: absolute;
+	top: 3%;
+	right: 1%;
+	width: calc(( 754 / 1630)*100%);
+	aspect-ratio: 754 / 296;
+	.city-one{top:51%; left:7%;}
+	.city-two{top:59%; left:10%;}
+	.city-three{top:66%; left:16%;}
+	.city-four{top:75%;  left:14%;}
+	.city-five{top:85%;  left:15%;}
+	.city-six{top:56%; left:28%;}
+	.city-seven{top:47%; left:36%;}
+	.city-eight{top:62%; left:35%;}
+	.city-nine{top:72%; left:39%;}
+	.city-ten{top:63%; left:52%;}
+	.city-eleven{top:71%; left:50%;}
+	.city-twelve{top:42%; left:66%;}
+	.city-thirteen{top:83%; left:72%;}
+	.city-fourteen{top:69%; left:82%;}
+
+}
+
+.country-usa{
+	width: calc(( 450 / 1630)*100%);
+	aspect-ratio: 450 / 312;
+	position: absolute;
+    left: 0.6%;
+    top: 14.8%;
+	.city-one{
+		left: 67%;
+		top: 54%;
+	}
+	.city-two{
+		left: 50%;
+		top: 62%;
+	}
+	.city-three{
+		left: 62%;
+		top: 72%;
+	}
+}
+.country-italy{
+	width: calc(( 52 / 1630)*100%);
+	aspect-ratio: 52 /58;
+	position: absolute;
+    top: 35.8%;
+    left: 48.8%;
+	.country-name{left: 110%}
+	.city-one{
+		top:5%!important;
+	}
+}
+.country-arabia{
+	width: calc(( 94 / 1630)*100%);
+	aspect-ratio: 94 / 78;
+    position: absolute;
+    left: 56.5%;
+    top: 46.5%;
+}
+.country-latvia{
+	width: 33px;
+	height: 17px;
+	position: absolute;
+	top: 27%;
+	left: 53%;
+	.country-name{left: 0; transform: translateX(-100%);}
+	 .city-one{ transform: translateY(-100%);}
+}
+.country-kazakhstan{
+	width: 182px;
+	height: 86px;
+	position: absolute;
+	top: 29%;
+	right: 29%;
+	.country-name{left: 23%}
+}
+.geo-text{
+	width: 484px;
+	position: absolute;
+	z-index: 3;
+	left: 10%;
+	bottom: 13%;
+	backdrop-filter: blur(5px);
+	background: rgba(57, 59, 63, 0.6);
+	padding: 25px;
+	border-radius: 20px;
+	font-family: var(--second-family);
+	color: rgba(255,255,255, .65);
+	font-size:  18px;
+	line-height: 1.2;
+	.h2{
+		color: white;
+		font-weight: 600;
+		font-family: var(--second-family);
+	}
+	
+}

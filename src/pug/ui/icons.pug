@@ -1,0 +1,70 @@
+extends ../layouts/layout-ui.pug
+block variables
+
+block content
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Иконки
+
+				.container-dashboard__content
+					ul
+						li 
+							svg.svg-logo
+								use(href='../img/sprite.svg#svg-logo')
+							pre.
+								svg.svg-logo
+									use(href='./img/sprite.svg#svg-logo')
+						li 
+							svg.svg-footer-logo
+								use(href='../img/footer-logo.svg#svg-footer-logo')
+							pre.
+								svg.svg-footer-logo
+									use(href='./img/footer-logo.svg#svg-footer-logo') 
+						li
+							svg.svg-eye
+								use(href='../img/sprite.svg#svg-eye')
+							pre.
+								svg.svg-eye
+									use(href='./img/sprite.svg#svg-eye')
+						li
+							svg.svg-arrow-down
+
+								use(href='../img/sprite.svg#svg-arrow-down')
+							pre.
+								svg.svg-arrow-down
+									use(href='./img/sprite.svg#svg-arrow-down')
+						li
+							svg.svg-chevron
+								use(href='../img/sprite.svg#svg-chevron')
+							pre.
+								svg.svg-chevron
+									use(href='./img/sprite.svg#svg-chevron')
+
+						li
+							.menu-toggle#menu-toggle
+								span
+						li
+							svg.svg-check
+								use(href='../img/sprite.svg#svg-check')
+							pre.
+								svg.svg-check
+									use(href='./img/sprite.svg#svg-check') 
+						li
+							svg.svg-cross
+								use(href='../img/sprite.svg#svg-cross')
+							pre.
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross') 
+						li
+							svg.arr-right
+								use(href='../img/sprite.svg#arr-right')
+							pre.
+								svg.arr-right
+									use(href='./img/sprite.svg#arr-right')
+						li 
+					

@@ -1,0 +1,26 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Флип карта
+				.container-dashboard__content
+					+flip-card-ui('seo-icons/seo5', 'Самый конверсионный трафик', 'Пользователи доверяют результатам органической выдачи. Потенциальный клиент не чувствует, что ему что-то HABA3BIBAKOT, BeAb OH CaM opmupoBan con запрос.')
+					pre.
+						+flip-card('seo-icons/seo5', 'Самый конверсионный трафик', 'Пользователи доверяют результатам органической выдачи. Потенциальный клиент не чувствует, что ему что-то HABA3BIBAKOT, BeAb OH CaM opmupoBan con запрос.')

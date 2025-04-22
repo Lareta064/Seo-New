@@ -1,0 +1,42 @@
+//=== REVIEW ===
+section.review
+	.container
+		h2.title Отзывы
+		.swiper-box
+			//=== slider nav arrows ===
+			button.review-swiper-next.swiper-button-next
+				svg.arr-left
+					use(href='./img/sprite.svg#arr-right')
+			button.review-swiper-prev.swiper-button-prev
+				svg.arr-right
+					use(href='./img/sprite.svg#arr-left')
+			.review-swiper.swiper
+				.swiper-wrapper
+					.swiper-slide
+						//====card===
+						a(href="./img/review/review.webp" data-lightbox="review-gallery").review-card
+							img.brand-logo(src="./img/review/tvc.svg", height="30" alt="")
+							img(src="./img/review/review.webp", loading="lazy" width="318" height="449" alt="img")
+					//====card===
+					.swiper-slide
+						a(href="./img/review/review-mrt.webp" data-lightbox="review-gallery").review-card
+							img.brand-logo(src="./img/review/bassein.svg", loading="lazy" height="30" alt="")
+							img(src="./img/review/review.webp", loading="lazy" width="318" height="449" alt="img")
+					//====card===
+					.swiper-slide
+						a(href="./img/review/review-flex.webp" data-lightbox="review-gallery").review-card
+							img.brand-logo(src="./img/review/flex.svg", loading="lazy" height="30" alt="")
+							img(src="./img/review/review-flex.webp", loading="lazy" width="318" height="449" alt="img")
+					//====card===
+					.swiper-slide
+						a(href="./img/review/review.webp" data-lightbox="review-gallery").review-card
+							img.brand-logo(src="./img/review/formula.svg", loading="lazy" height="30" alt="img")
+							img(src="./img/review/review.webp", loading="lazy" width="318" height="449" alt="img")
+					//====card===
+					.swiper-slide
+						a(href="./img/review/review.webp" data-lightbox="review-gallery").review-card
+							img.brand-logo(src="./img/review/formula.svg", loading="lazy" height="30" alt="img")
+							img(src="./img/review/review.webp", loading="lazy" width="318" height="449" alt="img")
+
+				//===pagination===
+				.review-pagination.swiper-pagination

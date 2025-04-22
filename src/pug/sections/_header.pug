@@ -1,0 +1,27 @@
+header.header
+	.container
+		.header-container
+			a(href="#!").logo
+				svg.svg-logo
+					use(href='./img/sprite.svg#svg-logo')
+			//======nav menu ======
+			.main-menu-wrapper#header-menu
+				.main-menu
+					ul.menu-list
+						li.menu-item
+							a.menu-link(href="#!") Услуги
+						li.menu-item
+							a.menu-link(href="#!") Кейсы
+						li.menu-item
+							a.menu-link(href="#!") О компании
+						li.menu-item
+							a.menu-link(href="#!") Блог
+						li.menu-item
+							a.menu-link(href="#!") Контакты
+			//====== right content ======
+			.phone-contacts
+				a(href="tel:+79006566903").phone-link +7 900 656 69 03
+			button.btn-outline Заявка
+			//====== menu-toggle =====
+			button.menu-toggle#menu-toggle
+				span

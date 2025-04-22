@@ -1,0 +1,39 @@
+.seo-animate__content{
+	display: flex;
+	justify-content: space-between;
+	column-gap: 30px;
+}
+.seo-animate__text{
+	width: 49%;
+	max-width: 740px;
+}
+.seo-animate__cards{
+	width: 49%;
+	max-width: 710px;
+	flex-shrink: 0;
+}
+.seo-card{
+	display: flex;
+	padding: 30px;
+	border-radius: 20px;
+	border:1px solid #C2C6CB;
+	background-color: #000;
+}
+.seo-card__img{
+	width: 254px;
+	flex-shrink: 0;
+}
+.seo-animate__cards {
+	position: relative;
+	height: 600px; // подстраиваешь под нужное
+}
+
+.seo-card {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+opacity: 0;
+transform: translateY(100px);
+z-index: 0;
+}

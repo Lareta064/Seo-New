@@ -1,0 +1,42 @@
+@use "base/var" as *;
+.flex-card{
+	display: flex;
+	column-gap: 20px;
+	
+	&__img{
+		height: 70px;
+		width: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+		flex-shrink:0;
+		img.wh-100{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.card-title{
+		color: #BBBBBB;
+		margin-bottom: 16px;
+		font-family: var(--font-family);
+	}
+}
+.technology-slider .swiper-wrapper{
+	height: 400px;
+	
+	.swiper-slide{
+		height: calc((100% - 70px) / 3) !important;
+		width: 340px!important;
+	}
+	@media(min-width: 768px){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap:20px;
+		height: auto;
+		.swiper-slide{
+			height: auto!important;
+			width: 100%!important;
+		}
+	}
+	
+}

@@ -1,0 +1,38 @@
+@use "base/var" as *;
+.feedback{
+	position: relative;
+	padding-bottom: 240px;
+	background-image: url('../img/form-bg-new.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:contain;
+	
+	.title{ 
+		margin-bottom: 3.4em;
+		text-align: center; 
+		max-width: 1400px;
+		
+	}
+	.modal-frame-content{
+		width: min(730px, 77.5%);
+		margin-inline: auto;
+		
+		
+		@media (max-width: 767px) {
+		  width: 100%;
+		  max-width: 310px;
+		}
+	}
+	
+	
+	@media (max-width: 767px) {
+		padding-bottom: 60px;
+		.title{ margin-bottom: 40px;}
+		.feedback-bg{
+			width: 100%;
+		}
+	}
+	@media (max-width: 575px) {
+	background-size:150%
+	}
+}

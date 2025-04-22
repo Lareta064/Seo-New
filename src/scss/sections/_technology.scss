@@ -1,0 +1,8 @@
+@use "base/var" as *;
+.technology-slider .flex-card{max-width: 385px;}
+@media (max-width: 767px) {
+	.technology-slider .swiper-slide{
+		width: 340px!important;
+		.card-text p{font-size: 12px;}
+	}
+}

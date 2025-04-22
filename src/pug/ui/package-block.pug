@@ -1,0 +1,76 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Тарифы и пакеты
+
+				.container-dashboard__content
+					.packages-content
+						.package-list-wraper
+							h2.title Тарифы<br>и пакеты
+							.package-list
+								.package-list__item
+									.package
+										.package__name настройка
+										.package__price 59 000 &#8381;
+										.package__link Узнать больше 
+											svg.svg-right
+												use(href='../img/sprite.svg#svg-right')
+								.package-list__item
+									.package
+										.package__name ведение
+										.package__price 59 000 &#8381;
+										.package__link Узнать больше 
+											svg.svg-right
+												use(href='../img/sprite.svg#svg-right')
+								.package-list__item
+									.package
+										.package__name Масштабирование
+										.package__price 99 000 &#8381;
+										.package__link Почему это выгодно
+											svg.svg-right
+												use(href='../img/sprite.svg#svg-right')
+								.package-list__item
+									.package
+										.package__name аудит 
+										.package__price 19 900 &#8381;
+										.package__link Узнать больше 
+											svg.svg-right
+												use(href='../img/sprite.svg#svg-right')
+						//описание пакета
+						.package-card-wrapper
+							.package-card__img(style="background-image:url(../img/targeting/tariff-bg.webp)")
+							.package-card
+								.package-card__head
+									.package-card__title Ведение
+									.package-card__subtitle Ведение уже существующих рекламных кампаний
+
+								.package-card__list
+									.package-label.label-1
+										.package-label-txt Тестирование гипотез
+									.package-label.label-2
+										.package-label-txt Внесение изменений
+									.package-label.label-3
+										.package-label-txt Анализ статистики
+									.package-label.label-4
+										.package-label-txt Отчётность
+								
+								.package-card__btn
+									button.btn.btn-blue.br-15 Заявка на мечту

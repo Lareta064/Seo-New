@@ -1,0 +1,72 @@
+@use "base/var" as *;
+.techno-card-wrapper {
+	display: grid;
+	font-size: 10px;;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3.2em 2.4em;
+	align-content: center;
+	position: relative;
+	height: 33em;
+	grid-auto-rows: 1fr; // фиксирует строки
+}
+
+.techno-card {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	padding: 2.2em;
+	column-gap: 2em;
+	border-radius: 2.4em;
+	width: 38.5em;
+	background: #282828;
+	position: relative;
+	transition: transform 0.3s ease;
+	transform-origin: top; // ключевой момент
+	align-self: flex-start;
+	grid-column: span 1;
+	
+	&:nth-child(-n+4){
+		transform-origin: bottom; // ключевой момент
+		align-self: flex-end;
+	}
+	&__img {
+		width: 7em;
+		height: 7em;
+		flex-shrink: 0;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 2.4em;
+		line-height: 1;
+		color: #bbb;
+	}
+
+	&__txt {
+		overflow: hidden;
+
+		p {
+			font-family: var(--second-family);
+			font-weight: 400;
+			// font-size: 0; // скрыто изначально
+			line-height: 1.2;
+			letter-spacing: -0.02em;
+			color: #7a7a7a;
+			margin-top: 0.9em;
+			max-height: 0;
+			transition: all 0.3s ease;
+			opacity: 0;
+			overflow: hidden;
+		}
+	}
+
+	&:hover {
+		transform: scaleY(1.065); // растёт вверх
+
+		.techno-card__txt p {
+			font-size: 1.8em;
+			max-height: 66px;
+			opacity: 1;
+		}
+	}
+}

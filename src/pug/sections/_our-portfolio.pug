@@ -1,0 +1,74 @@
+mixin portfolio-card
+	.portfolio-card
+		.portfolio-card__header
+			.portfolio-card__title Компания<br>«Автоэстетика»
+			a.btn-light.h-50(href="#!") Хочу так же  
+		
+		.portfolio-card__body
+			.portfolio-card__left
+				//=== company-info===
+				.portfolio-card__company
+					.icon-decor-text
+						img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+						.txt-20 Центр судебных экспертиз и исследований Проведение судебных экспертиз в различных отраслях
+					.icon-decor-text
+						img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+						a(href="#!").txt-20 https://sudekspertiza.com
+				
+				//===список услуг ===
+				.serv-list
+					.serv-list__title Предоставленные услуги
+					p Продвижение сайта
+					p Контекстная реклама
+				
+				//===карточки сравнения ===
+				.portfolio-card__compare
+					.compare-card
+						.compare-card__title Было
+						ul.compare-card__list
+							li
+								p В ТОП 10<br>Яндекс
+								p #[span 56]<br>запросов
+							li
+								p Трафик
+								p #[span 320]<br>пос/мес
+
+					.compare-card.compare-card--after
+						.compare-card__title Стало
+						ul.compare-card__list
+							li
+								p В ТОП 10<br>Яндекс
+								p #[span 56]<br>запросов
+							li
+								p Трафик
+								p #[span 320]<br>пос/мес
+			
+			//===графики справа ===
+			.portfolio-card__chart
+				.chart__title Количество<br>запросов в ТОП-10
+				
+				.chart__img
+					img(src="./img/chart.webp", loading="lazy" width="354" height="306" alt="chart")
+				
+				.chart__subtext
+					p Было
+					p Стало
+section.our-portfolio
+	.container
+		h1.title Кейсы
+		//==== slider ====
+		.portfolio-slider.swiper
+			.swiper-wrapper
+				.swiper-slide
+					+portfolio-card
+				.swiper-slide
+					+portfolio-card
+				.swiper-slide
+					+portfolio-card
+				.swiper-slide
+					+portfolio-card
+				.swiper-slide
+					+portfolio-card
+			
+			//=== pagination ====
+			.portfolio-pagination.swiper-pagination

@@ -1,0 +1,44 @@
+@use "base/var" as *;
+.our-mission-title{
+	padding-left: 16px;
+	padding-right: 16px;
+	width: fit-content;
+	max-width: 1394px;
+	text-align: center;
+	margin-inline: auto;
+	position: relative;
+}
+.search-decore{
+	position: absolute;
+	top: -20%;
+	left: 44%;
+	width: 258px;
+	aspect-ratio: 258/221;
+	&:before{
+		width: 106px;
+		width: 41%;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		display: block;
+		content:'';
+		background-color: rgba(40, 40, 40, 0.1);
+		backdrop-filter: blur(3px);
+		position: absolute;
+		top: 16%;
+		left: 43%;
+	}
+	@media (max-width: 1199px) {
+		width: 180px;
+		left: 42%;
+	}
+	@media (max-width: 1023px) {
+		width: 35%;
+		top: -10%;
+	}
+	
+}
+.our-mission-title{
+	@media(min-width: 1200px){
+		margin-top: 60px;
+	}
+}

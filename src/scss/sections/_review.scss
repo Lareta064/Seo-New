@@ -1,0 +1,41 @@
+@use "base/var" as *;
+.review{
+	overflow: hidden;
+}
+.review-swiper{
+	padding-bottom: 60px;
+	@media (max-width: 767px) {
+		max-width: 250px!important;
+	    padding-bottom: 40px;
+	 
+	}
+}
+.review-card{
+	border: 1px solid #c2c6cb;
+	background-color: #282828;;
+    padding: 22px 25px;
+	display: flex;
+	flex-direction: column;
+	row-gap:30px;
+	border-radius: 12px;
+	img{width: 100%; object-fit: contain;}
+	.brand-logo{
+		height: 30px;
+		width: 100%;
+		object-fit: contain;
+	}
+	@media (max-width: 767px) {
+	
+	}
+}
+.lb-data .lb-close {
+	position: absolute;
+    top: -30px;
+    right: 60px; 
+    bottom: auto; 
+    left: auto;
+	@media (max-width: 1023px) {
+	right: 17px;
+	top: -27px;
+	}
+}

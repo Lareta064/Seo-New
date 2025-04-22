@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+
+block content
+	.start-page
+		h1 Savov
+		.start-page__cards
+			a(href="./ui/colors.html") UI-KIT PAGE
+			
+			a(href="seo.html")
+				span SEO
+			a(href="contextual.html")
+				span Контекстная реклама
+			a(href="popup-place-order.html")
+				span popUp Оформление заказа
+			
+			a(href="popup-place-order-large.html")
+				span широкое окно Оформление заказа
+block variables
+	-var title = "Savov";

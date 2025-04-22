@@ -1,0 +1,77 @@
+include ../layouts/_mixins-links.pug
+include ../layouts/layout-ui.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Кнопки
+
+				.container-dashboard__content
+					div(style="padding: 30px; background-color: #cecece;")
+						button(type="button").btn-dark Кнопка
+						pre.
+							button(type="button").btn-dark Кнопка
+					
+					br
+					button(type="button").btn-grey Кнопка
+					pre.
+						button(type="button").btn-grey Кнопка
+					br
+					p(style="margin-bottom:12px;") Кнопка высотой 54 пикселя
+					button(type="button").btn-grey.h-54 Кнопка
+					pre.
+						button(type="button").btn-grey.h-54 Кнопка
+					br
+					
+					button(type="button").btn-light.h-52 Кнопка
+					pre.
+						button(type="button").btn-light.h-52 Кнопка
+					
+					br
+					button.btn.btn-blue.br-15 Заявка на мечту
+					pre.
+						button.btn.btn-blue.br-15 Заявка на мечту
+					br
+					button(type="button").btn-blue.h-52 Кнопка
+					pre.
+						button(type="button").btn-blue.h-52 Кнопка
+					br
+					a(href="#!").btn-accent Заявка
+					pre.
+						.btn-accent Заявка
+
+					br
+					a(href="#!").btn-primary Заявка
+					pre.
+						.btn-primary Заявка
+					br
+					.btn-primary.btn-primary--animate  button animate
+					br
+					button.btn-play
+					pre.
+						button.btn-play
+					hr
+					.btn-outline Заявка
+					pre.
+						.btn-outline Заявка
+					br
+					.btn-outline.black-bg Заявка
+					pre.
+						.btn-outline.black-bg Заявка
+					

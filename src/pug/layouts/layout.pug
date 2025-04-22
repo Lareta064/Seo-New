@@ -1,0 +1,154 @@
+include ../mixins/mixins.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+
+		style.
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-Light.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 300;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-Regular.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-Semibold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-Bold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-UltraBold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 800;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-Black.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 900;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("./fonts/RFDewiExtended-Bold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("./fonts/RFDewiExtended-Semibold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 800;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("./fonts/RFDewiExtended-Ultrabold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 900;
+				font-display: swap;
+				}
+			
+			
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("./fonts/Montserrat-Regular.woff2") format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("./fonts/Montserrat-SemiBold.woff2") format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("./fonts/Montserrat-Bold.woff2") format("woff2");
+				font-weight: bold;
+				font-style: normal;
+				font-display: swap;
+			}
+			
+		link(rel="stylesheet", href="./css/main.css")
+		title !{title}
+		
+	body
+		
+		block content
+		
+		//=============== мои скрипты ===================
+		script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js')
+		script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js')
+		script.
+			
+			gsap.registerPlugin(ScrollTrigger);
+			
+			// Объявим переменные
+			const cards = document.querySelectorAll('.seo-card');
+			
+			// Фиксируем блок, когда он доходит до центра
+			ScrollTrigger.create({
+				trigger: '.seo-animate',
+				start: 'top center',
+				end: () => `+=${cards.length * 100}`, // прокрутка зависит от кол-ва карточек
+				pin: true,
+				scrub: true,
+				onEnter: () => {
+					// Показываем текст и первую карточку
+					gsap.to('.seo-animate__text', { opacity: 1, y: 0, duration: 0.6 });
+					gsap.to(cards[0], { opacity: 1, y: 0, duration: 0.6 });
+				}
+			});
+			
+			// Анимация карточек по скроллу
+			cards.forEach((card, index) => {
+				if (index === 0) return; // первую уже показали
+			
+				gsap.to(card, {
+					scrollTrigger: {
+						trigger: '.seo-animate',
+						start: `top+=${index * 100} center`, // шаг по скроллу
+						scrub: true
+					},
+					opacity: 1,
+					y: index * 45,
+					zIndex: index + 1,
+					duration: 0.6
+				});
+			});
+			
+		script(src="js/main.js")

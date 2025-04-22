@@ -1,0 +1,122 @@
+include ../mixins/mixins.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../libs/swiper/swiper.min.css")
+		
+		title !{title}
+		style.
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("../fonts/RFDewiExpanded-Light.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 300;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("../fonts/RFDewiExpanded-Regular.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("../fonts/RFDewiExpanded-Semibold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("../fonts/RFDewiExpanded-Bold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("./fonts/RFDewiExpanded-UltraBold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 800;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Expanded";
+				src: url("../fonts/RFDewiExpanded-Black.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 900;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("../fonts/RFDewiExtended-Semibold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 800;
+				font-display: swap;
+				}
+
+			@font-face {
+				font-family: "RF Dewi Extended";
+				src: url("../fonts/RFDewiExtended-Ultrabold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 900;
+				font-display: swap;
+				}
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face{
+				font-family: 'Montserrat';
+				src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+				font-weight: bold;
+				font-style: normal;
+				font-display: swap;
+			}
+		link(rel="stylesheet", href="../css/main.css")
+			
+	body.body-dashboard
+
+		include ../ui/ui-navigation.pug
+		block content
+			
+		
+		
+		//=============== jquery ===================
+		script(src="../libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== jquery lazy load===================
+		script(src="../libs/jquery.lazy.min.js")
+		
+		script(src="../libs/swiper/swiper.js")
+		//=============== мои скрипты ===================
+		
+		script(src="../js/main.js")
