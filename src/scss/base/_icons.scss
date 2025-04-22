@@ -48,3 +48,14 @@
 	display: inline-block;
 	cursor:pointer;
 }
+.svg-decor-arrow{
+	width: remy(61);
+	height:remy(42);
+	display: block;
+}
+.svg-next, .svg-prev{
+	width: remy(17);
+	height: remy(14);
+	display: block;
+	color:#D4DEEF;
+}

@@ -1,28 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
     const resultSlider = new Swiper('.result-slider', {
-        
-        speed: 800,
+        speed: 400,
+        effect: "fade",
+    });
+    const resultCompany= new Swiper('.result-company-slider', {
+        speed: 400,
+        navigation: {
+        nextEl: ".result-company-next",
+        prevEl: ".result-company-prev",
+      },
         pagination: {
-            el: ".result-slider-pagination",
+            el: ".result-company-pagination",
 			clickable: true,
         },
     });
+    resultSlider.controller.control = resultCompany;
+    resultCompany.controller.control = resultSlider;
+    // resultSlider.on('slideChange', function () {
+    //     // Получаем индекс активного слайда
+    //     const activeIndex = resultSlider.activeIndex;
 
-    resultSlider.on('slideChange', function () {
-        // Получаем индекс активного слайда
-        const activeIndex = resultSlider.activeIndex;
+    //     // Находим все элементы .company-card
+    //     const companyNames = document.querySelectorAll('.company-card');
 
-        // Находим все элементы .company-card
-        const companyNames = document.querySelectorAll('.company-card');
+    //     // Удаляем класс 'active' у всех .company-name
+    //     companyNames.forEach(name => name.classList.remove('active'));
 
-        // Удаляем класс 'active' у всех .company-name
-        companyNames.forEach(name => name.classList.remove('active'));
-
-        // Добавляем класс 'active' элементу с текущим индексом
-        if (companyNames[activeIndex]) {
-			companyNames[activeIndex].classList.add('active');
-        }
-    });
+    //     // Добавляем класс 'active' элементу с текущим индексом
+    //     if (companyNames[activeIndex]) {
+	// 		companyNames[activeIndex].classList.add('active');
+    //     }
+    // });
 
     // technoSlider
     let technoSlider;
