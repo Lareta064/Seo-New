@@ -25,7 +25,7 @@
 	height: 2px;
 	width: 100%;
 	border-radius: 3px;
-	background-color: white;
+	background-color: #D6D6D6;
 	-webkit-transition: .2s;
 	-o-transition: .2s;
 	transition: .2s;
@@ -37,7 +37,7 @@
 	position: absolute;
 	left: 0;
 	height: 2px;
-	background-color: white;
+	background-color: #D6D6D6;
 	border-radius: 5px;
 	right: 0;
 	-webkit-transition: .2s;
@@ -59,7 +59,7 @@
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
-	background-color: white;
+	background-color: #D6D6D6;
 }
 
 .active.menu-toggle span:before {
@@ -67,5 +67,5 @@
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-	background-color: white;
+	background-color: #D6D6D6;
 }

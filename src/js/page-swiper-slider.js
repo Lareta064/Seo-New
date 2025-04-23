@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const resultSlider = new Swiper('.result-slider', {
-        speed: 400,
+        speed: 300,
         effect: "fade",
         pagination: {
             el: ".result-slider-pagination",
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
     const resultCompany= new Swiper('.result-company-slider', {
-        speed: 400,
+        speed: 300,
         navigation: {
         nextEl: ".result-company-next",
         prevEl: ".result-company-prev",
@@ -20,22 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     resultSlider.controller.control = resultCompany;
     resultCompany.controller.control = resultSlider;
-    // resultSlider.on('slideChange', function () {
-    //     // Получаем индекс активного слайда
-    //     const activeIndex = resultSlider.activeIndex;
-
-    //     // Находим все элементы .company-card
-    //     const companyNames = document.querySelectorAll('.company-card');
-
-    //     // Удаляем класс 'active' у всех .company-name
-    //     companyNames.forEach(name => name.classList.remove('active'));
-
-    //     // Добавляем класс 'active' элементу с текущим индексом
-    //     if (companyNames[activeIndex]) {
-	// 		companyNames[activeIndex].classList.add('active');
-    //     }
-    // });
-
+    
+    
+    const seoCards= new Swiper('.seo-cards-swiper', {
+        speed: 500,
+        slidesPerView: 'auto',
+        pagination: {
+            el: ".seo-cards-pagination",
+			clickable: true,
+        },
+        spaceBetween: 16,
+    });
     // technoSlider
     let technoSlider;
     function toggleSlider() {

@@ -170,7 +170,9 @@ main{
 .d-none{display: none;}
 .inner-main{
   row-gap: remy(120);
-  
+  @media (max-width: 767px) {
+    row-gap: remy(40)
+  }
   // background-image: url('../img/logo-bg.svg');
   // background-repeat: no-repeat;
   // background-size: 29%;

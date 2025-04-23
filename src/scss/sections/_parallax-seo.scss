@@ -1,7 +1,10 @@
 @use "base/var" as *;
-.parallax-seo{
+.seo-benefits{
 	overflow: hidden;
+	background-image: url('../img/vector/orange-bg.svg');
+	background-size: 570px
 }
+
 .parallax-seo__bg{
 	
 	display: flex;
@@ -19,10 +22,10 @@
 .parallax-seo__map{
 	position: relative;
 	width: 100%;
-	height: 52vw;
-	max-height: 1000px;
+	height: remy(780);
+	// max-height: 1000px;
 	// margin-top: -10vw;
-	.big-title{
+	.title{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -30,17 +33,18 @@
 	}
 	@media (max-width: 767px) {
 		height: 570px;
-		.big-title{position: relative;}
+		.title{position: relative;}
 	   
 	   }
 }
 .parallax-scene__center{
 	position: absolute;
-	top: 50%;left: 50%;
+	top: 58%;left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	 @media (max-width: 767px) {
 		font-size: 60px;
+		top: 50%;left: 52%;
 	 }
 }
 .parallax-scene{
@@ -249,6 +253,37 @@
 		&.prx-27{
 			bottom: 34%;
             right: 34%;
+		}
+	}
+}
+.seo-benefits-cards{
+	margin-top: remy(60);
+	@media (max-width: 767px) {
+		margin-top: 60px;
+	}
+}
+.seo-cards-grid{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap:remy(32);
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+.seo-cards-swiper{
+	display: none;
+	.swiper-slide{
+		height: unset;
+		display: flex;
+		width: 356px!important;
+	}
+	@media (max-width: 767px) {
+		display: block;
+		.swiper-pagination{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			margin-top: 32px;
 		}
 	}
 }

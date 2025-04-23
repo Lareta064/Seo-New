@@ -328,13 +328,14 @@
 		  width: 100px;
 		  border:0;
 		  margin-top:0;
+		 
 	     .swiper-slide{
 			padding-left: 10px;
 			
 			.company-logo{
 				margin-bottom: 0; 
 				height: 37px;
-				
+				align-items: stretch;
 			}
 
 		}

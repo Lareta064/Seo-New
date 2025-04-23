@@ -1,53 +1,98 @@
-section.parallax-seo
+section.seo-benefits
 	.container
-		.parallax-seo-grid
-			.parallax-seo__map
-				h2.big-title Преимущества SEO - продвижения
-				.parallax-seo__bg
-					img.visible-768(src='./img/vector/orange-bg.svg', width='1843' height='1083' loading='lazy' alt='img')
-					
-					
-				.parallax-scene
-					.parallax-scene__center.h1 SEO
-					.parallax-item.prx-1
-						img(src='./img/vector/v1.svg' width='24' height='24' loading='lazy' alt='img')
-						p Мониторинг<br>траифка
-					.parallax-item.prx-2
-						img(src='./img/vector/v2.svg' width='24' height='24' loading='lazy' alt='img')
-						p Подбор<br>ключевых слов
-					.parallax-item.prx-3
-						img(src='./img/vector/v3.svg' width='24' height='24' loading='lazy' alt='img')
-						p Стратегия
-					.parallax-item.prx-4
-						img(src='./img/vector/v4.svg' width='24' height='24' loading='lazy' alt='img')
-						p Оптимизация<br>карты сайта
-					.parallax-item.prx-5
-						img(src='./img/vector/v5.svg' width='24' height='24' loading='lazy' alt='img')
-						p Линкбилдинг
-					.parallax-item.prx-6
-						img(src='./img/vector/v6.svg' width='24' height='24' loading='lazy' alt='img')
-						p Разработка
-					.parallax-item.prx-7
-						img(src='./img/vector/v7.svg' width='24' height='24' loading='lazy' alt='img')
-						p Социальные сети
-					.parallax-item.prx-21
-						img(src='./img/vector/21.svg' width='24' height='24' loading='lazy' alt='img')
-						p Ранжирование
-					.parallax-item.prx-22
-						img(src='./img/vector/22.svg' width='24' height='24' loading='lazy' alt='img')
-						p Контент
-					.parallax-item.prx-23
-						img(src='./img/vector/23.svg' width='24' height='24' loading='lazy' alt='img')
-						p TF/IDF
-					.parallax-item.prx-24
-						img(src='./img/vector/24.svg' width='24' height='24' loading='lazy' alt='img')
-						p Анализ<br>трафика
-					.parallax-item.prx-25
-						img(src='./img/vector/25.svg' width='24' height='24' loading='lazy' alt='img')
-						p Оптимизация<br>сайта
-					.parallax-item.prx-26
-						img(src='./img/vector/26.svg' width='24' height='24' loading='lazy' alt='img')
-						p Веб-дизайн
-					.parallax-item.prx-27
-						img(src='./img/vector/27.svg' width='24' height='24' loading='lazy' alt='img')
-						p Обратная связь
+		
+		.parallax-seo__map
+			h2.title Преимущества SEO-продвижения
+			.parallax-seo__bg
+				img.visible-768(src='./img/vector/orange-bg.svg', width='1843' height='1083' loading='lazy' alt='img')
+				
+				
+			.parallax-scene
+				.parallax-scene__center.h1 SEO
+				.parallax-item.prx-1
+					img(src='./img/vector/v1.svg' width='24' height='24' loading='lazy' alt='img')
+					p Мониторинг<br>траифка
+				.parallax-item.prx-2
+					img(src='./img/vector/v2.svg' width='24' height='24' loading='lazy' alt='img')
+					p Подбор<br>ключевых слов
+				.parallax-item.prx-3
+					img(src='./img/vector/v3.svg' width='24' height='24' loading='lazy' alt='img')
+					p Стратегия
+				.parallax-item.prx-4
+					img(src='./img/vector/v4.svg' width='24' height='24' loading='lazy' alt='img')
+					p Оптимизация<br>карты сайта
+				.parallax-item.prx-5
+					img(src='./img/vector/v5.svg' width='24' height='24' loading='lazy' alt='img')
+					p Линкбилдинг
+				.parallax-item.prx-6
+					img(src='./img/vector/v6.svg' width='24' height='24' loading='lazy' alt='img')
+					p Разработка
+				.parallax-item.prx-7
+					img(src='./img/vector/v7.svg' width='24' height='24' loading='lazy' alt='img')
+					p Социальные сети
+				.parallax-item.prx-21
+					img(src='./img/vector/21.svg' width='24' height='24' loading='lazy' alt='img')
+					p Ранжирование
+				.parallax-item.prx-22
+					img(src='./img/vector/22.svg' width='24' height='24' loading='lazy' alt='img')
+					p Контент
+				.parallax-item.prx-23
+					img(src='./img/vector/23.svg' width='24' height='24' loading='lazy' alt='img')
+					p TF/IDF
+				.parallax-item.prx-24
+					img(src='./img/vector/24.svg' width='24' height='24' loading='lazy' alt='img')
+					p Анализ<br>трафика
+				.parallax-item.prx-25
+					img(src='./img/vector/25.svg' width='24' height='24' loading='lazy' alt='img')
+					p Оптимизация<br>сайта
+				.parallax-item.prx-26
+					img(src='./img/vector/26.svg' width='24' height='24' loading='lazy' alt='img')
+					p Веб-дизайн
+				.parallax-item.prx-27
+					img(src='./img/vector/27.svg' width='24' height='24' loading='lazy' alt='img')
+					p Обратная связь
+
+		//Карточки
+		.seo-benefits-cards
+			//статичные карточки
+			.seo-cards-grid
+				+flip-card('seo-icons/seo5', 'Увеличение<br>трафика', 'Привлечение больше посетителей, целевую аудиторию, которая интересуется именно вашими товарами и услугами благодаря точному SEO-анализу и оптимизации. <span>Профессиональное продвижение в Яндекс</span> гарантирует приток потенциальных клиентов.')
+				+flip-card('seo-icons/seo8', 'Экономия бюджета на рекламе', 'Органический трафик обходится дешевле, чем контекстная реклама. Благодаря <span>SEO-продвижению сайта</span> вы будете получать клиентов без необходимости постоянных вложений в рекламу. <span>Цена продвижения сайта</span> окупается за счет стабильного притока новых клиентов.')
+				+flip-card('seo-icons/seo6', 'Рост доверия<br>и репутации', 'Сайты, которые находятся в топе поисковой выдачи, вызывают больше доверия у пользователей. Мы поможем вашему сайту попасть в лидеры. <span>Продвижение сайта в топ</span> поисковых систем – это инвестиция в репутацию вашей компании.')
+				+flip-card('seo-icons/seo7', 'Долгосрочный результат', 'SEO — это инвестиция в будущее. Ваш сайт будет привлекать клиентов стабильно, даже через годы после завершения оптимизации. Это решение с <span>долгосрочным эффектом</span> для развития вашего бизнеса. Продвижение сайтов от агентства SAVOV обеспечивает стабильный результат.')
+			
+			//слайдер
+			.seo-cards-swiper.swiper
+				.swiper-wrapper
+					.swiper-slide
+						.seo-benefit-card
+							.seo-benefit__icon
+								img(src='./img/seo-icons/seo5.webp', srcset='./img/seo-icons/seo5@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.seo-benefit__txt
+								.seo-benefit__title Увеличение трафика
+								p Привлечение больше посетителей, целевую аудиторию, которая интересуется именно вашими товарами и услугами благодаря точному SEO-анализу и оптимизации. Профессиональное продвижение в Яндекс гарантирует приток потенциальных клиентов.
+
+					.swiper-slide
+						.seo-benefit-card
+							.seo-benefit__icon
+								img(src='./img/seo-icons/seo8.webp', srcset='./img/seo-icons/seo8@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.seo-benefit__txt
+								.seo-benefit__title Экономия бюджета на рекламе
+								p Органический трафик обходится дешевле, чем контекстная реклама. Благодаря <span>SEO-продвижению сайта</span> вы будете получать клиентов без необходимости постоянных вложений в рекламу. <span>Цена продвижения сайта</span> окупается за счет стабильного притока новых клиентов.
+					.swiper-slide
+						.seo-benefit-card
+							.seo-benefit__icon
+								img(src='./img/seo-icons/seo6.webp', srcset='./img/seo-icons/seo6@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.seo-benefit__txt
+								.seo-benefit__title Рост доверия<br>и репутации
+								p Сайты, которые находятся в топе поисковой выдачи, вызывают больше доверия у пользователей. Мы поможем вашему сайту попасть в лидеры. <span>Продвижение сайта в топ</span> поисковых систем – это инвестиция в репутацию вашей компании.
+					.swiper-slide
+						.seo-benefit-card
+							.seo-benefit__icon
+								img(src='./img/seo-icons/seo7.webp', srcset='./img/seo-icons/seo7@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+							.seo-benefit__txt
+								.seo-benefit__title Долгосрочный результат
+								p SEO — это инвестиция в будущее. Ваш сайт будет привлекать клиентов стабильно, даже через годы после завершения оптимизации. Это решение с <span>долгосрочным эффектом</span> для развития вашего бизнеса. Продвижение сайтов от агентства SAVOV обеспечивает стабильный результат.
+				
+				//pagination
+				.seo-cards-pagination.swiper-pagination
