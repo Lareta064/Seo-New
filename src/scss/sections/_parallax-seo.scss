@@ -1,0 +1,161 @@
+@use "base/var" as *;
+.parallax-seo__bg{
+	
+	display: flex;
+	justify-content: center;
+}
+.parallax-seo__map{
+	position: relative;
+	width: 100%;
+	height: 52vw;
+	max-height: 1000px;
+	// margin-top: -10vw;
+	.big-title{position: absolute;top: 0;
+	left: 0;}
+}
+.parallax-scene__center{
+	position: absolute;
+	top: 50%;left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.parallax-scene{
+	position: absolute;
+	inset:0;
+	z-index: 2;
+}
+.parallax-item{
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: remy(18);
+	line-height: 120%;
+	color: var(--white);
+	column-gap: remy(20);
+	position: absolute;
+	
+	img{
+		width: remy(24);
+		height: remy(24);flex-shrink: 0;object-fit:contain;	}
+	@media (max-width: 767px) {
+	 font-size: 10px;
+	}
+}
+.parallax-item{
+	&.prx-1{
+		top: 221px;
+		left: 269px;
+	}
+	&.prx-2{
+		top: 326px;
+		left: 77px;
+	}
+	&.prx-3{
+		top: 345px;
+		left: 451px;
+	}
+	&.prx-4{
+		top: 461px;
+		left: 250px;
+	}
+	&.prx-5{
+		top: 614px;
+		left: 96px;
+	}
+	&.prx-6{
+		top: 576px;
+		left: 441px;
+	}
+	&.prx-7{
+		bottom: 250px;
+		left: 326px;
+	}
+	&.prx-21{
+		top: 240px;
+		right: 267px;
+	}
+	&.prx-22{
+		top: 346px;
+		right: 528px;
+	}
+	&.prx-23{
+		top: 365px;
+		right: 173px;
+	}
+	&.prx-24{
+		top: 480px;
+		right: 346px;
+	}
+	&.prx-25{
+		top: 634px;
+		right: 442px;
+	}
+	&.prx-26{
+		top: 595px;
+		right:115px;
+	}
+	&.prx-27{
+		bottom: 236px;
+		right: 211px;
+	}
+}
+@media (max-width: 1919px) {
+	.parallax-item{
+		&.prx-1{
+			top: 11.5vw;
+			left: 14vw;
+		}
+		&.prx-2{
+			top: 17vw;
+			left: 4vw;
+		}
+		&.prx-3{
+			top: 18vw;
+			left: 23.5vw;
+		}
+		&.prx-4{
+			top: 24vw;
+			left: 13vw;
+		}
+		&.prx-5{
+			top: 32vw;
+			left: 5vw;
+		}
+		&.prx-6{
+			top: 30vw;
+			left: 23vw;
+		}
+		&.prx-7{
+			bottom: 13vw;
+			left: 17vw;
+		}
+		&.prx-21{
+			top: 12.5vw;
+			right: 14vw;
+		}
+		&.prx-22{
+			top: 18vw;
+			right: 27.5vw;
+		}
+		&.prx-23{
+			top: 19vw;
+			right: 9vw;
+		}
+		&.prx-24{
+			top: 25vw;
+			right: 18vw;
+		}
+		&.prx-25{
+			top: 33vw;
+			right: 23vw;
+		}
+		&.prx-26{
+			top: 31vw;
+			right: 6vw;
+		}
+		&.prx-27{
+			bottom: 12vw;
+			right: 11vw;
+		}
+	}
+}

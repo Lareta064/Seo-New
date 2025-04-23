@@ -169,14 +169,14 @@ main{
 }
 .d-none{display: none;}
 .inner-main{
-  row-gap: 140px;
+  row-gap: remy(120);
   
-  background-image: url('../img/logo-bg.svg');
-  background-repeat: no-repeat;
-  background-size: 29%;
-  background-position: right;
-  &>*{position: relative;
-  }
+  // background-image: url('../img/logo-bg.svg');
+  // background-repeat: no-repeat;
+  // background-size: 29%;
+  // background-position: right;
+  // &>*{position: relative;
+  // }
 
 }
 .page-column{
