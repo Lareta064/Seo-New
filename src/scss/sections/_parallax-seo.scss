@@ -1,10 +1,12 @@
 @use "base/var" as *;
 .seo-benefits{
 	overflow: hidden;
-	background-image: url('../img/vector/orange-bg.svg');
-	background-size: 570px
+	
 }
-
+// .seo-benefits .container{
+// 	background-image: url('../img/vector/orange-bg.svg');
+// 	background-size: 970px;
+// }
 .parallax-seo__bg{
 	
 	display: flex;
@@ -15,7 +17,21 @@
 		max-width: 360px;
 		margin-left: auto;
 		margin-right: auto;
-		
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			width: 970px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			background-image: url(../img/vector/orange-bg.svg);
+			height: 700px;
+			background-position: top center;
+			background-size: 700px;
+			background-repeat: no-repeat;
+		}
 		
 	}
 }
