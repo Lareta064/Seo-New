@@ -1,8 +1,20 @@
 @use "base/var" as *;
+.parallax-seo{
+	overflow: hidden;
+}
 .parallax-seo__bg{
 	
 	display: flex;
 	justify-content: center;
+	@media (max-width: 767px) {
+		height: 570px;
+		width: 100%;
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		
+	}
 }
 .parallax-seo__map{
 	position: relative;
@@ -10,19 +22,36 @@
 	height: 52vw;
 	max-height: 1000px;
 	// margin-top: -10vw;
-	.big-title{position: absolute;top: 0;
-	left: 0;}
+	.big-title{
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+	}
+	@media (max-width: 767px) {
+		height: 570px;
+		.big-title{position: relative;}
+	   
+	   }
 }
 .parallax-scene__center{
 	position: absolute;
 	top: 50%;left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
+	 @media (max-width: 767px) {
+		font-size: 60px;
+	 }
 }
 .parallax-scene{
 	position: absolute;
 	inset:0;
 	z-index: 2;
+	@media (max-width: 767px) {
+		width: 360px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 .parallax-item{
 	display: flex;
@@ -31,7 +60,7 @@
 	font-size: remy(18);
 	line-height: 120%;
 	color: var(--white);
-	column-gap: remy(20);
+	column-gap: remy(16);
 	position: absolute;
 	
 	img{
@@ -39,6 +68,8 @@
 		height: remy(24);flex-shrink: 0;object-fit:contain;	}
 	@media (max-width: 767px) {
 	 font-size: 10px;
+	 column-gap: 10px;
+	 img{width: 12px;height: 12px;}
 	}
 }
 .parallax-item{
@@ -156,6 +187,68 @@
 		&.prx-27{
 			bottom: 12vw;
 			right: 11vw;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.parallax-item{
+		&.prx-1{
+			top: 107px;
+			left: 37%;
+		}
+		&.prx-2{
+			top: 149px;
+			left: 5px;
+		}
+		&.prx-3{
+			top: 150px;
+			left: auto;
+			right: 41px;
+		}
+		&.prx-4{
+			top: 181px;
+           left: 39%;
+		}
+		&.prx-5{
+			top: 220px;
+			left: 25px;
+			
+		}
+		&.prx-6{
+			top: 39%;
+            left: 74%;
+		}
+		&.prx-7{
+			bottom: 26%;
+			left: 61%;
+		}
+		&.prx-21{
+			top: 60%;
+			right: 1%;
+		}
+		&.prx-22{
+			top: 49%;
+            right: 76%;
+		}
+		&.prx-23{
+			top: 49%;
+			right: 4%;
+		}
+		&.prx-24{
+			top: 60%;
+            right: 75%;
+		}
+		&.prx-25{
+			top: 80%;
+			right: 30%;
+		}
+		&.prx-26{
+			top: 72%;
+			right: 59%;
+		}
+		&.prx-27{
+			bottom: 34%;
+            right: 34%;
 		}
 	}
 }

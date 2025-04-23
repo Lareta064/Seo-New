@@ -29,7 +29,7 @@
 	
 	@media (max-width: 767px) {
 	font-size: remy(32);
-	margin-bottom: trmy(30);
+	margin-bottom: remy(30);
 	}
 }
 .title-white{
@@ -41,6 +41,7 @@
 	
 	@media (max-width:767px) {
 		font-size: remy(32);max-width: remy(440);
+		width: 100%;
 	}
 }
 .h2,
