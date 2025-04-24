@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	//======= CUSTOM TABS=====
 	
 	const customTabs = document.querySelectorAll('.custom-tab-item');
-	const breakpoint = 1200; // Ширина экрана для переключения логики
+	const breakpoint = 768; // Ширина экрана для переключения логики
 
 	// Функция для управления поведением на экранах больше 1200px (ховер)
 	function enableHoverBehavior() {

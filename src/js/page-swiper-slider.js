@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 technoSlider = new Swiper('.techno-swiper', {
                     slidesPerView: 'auto',
-                    spaceBetween: 35, // Пример настройки отступов между слайдами
+                    spaceBetween: 16, // Пример настройки отступов между слайдами
                     grid:{
                         rows: 2
                     },

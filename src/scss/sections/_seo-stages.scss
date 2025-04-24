@@ -3,4 +3,9 @@
 	.title{
 		margin-bottom: remy(32);
 	}
+	@media (max-width: 767px) {
+		.title-group{margin-bottom: 40px;}
+		.title{margin-bottom: remy(17);}
+		.title-sub{font-size: 14px;}
+	}
 }

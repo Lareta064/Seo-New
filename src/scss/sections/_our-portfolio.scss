@@ -1,6 +1,10 @@
 @use "base/var" as *;
 .our-portfolio{
   overflow: hidden;
+  margin-top: remy(-120);
+  @media (max-width: 767px) {
+    margin-top: remy(-40);
+  }
 }
 .portfolio-slider.swiper{
     width: 95%;
@@ -20,4 +24,10 @@
   .portfolio-slider .swiper-slide{
     padding-bottom: remy(5);
   }
-  
+  .portfolio-pagination.swiper-pagination{
+    justify-content: flex-end;
+    display: flex;
+    @media (max-width: 767px) {
+    justify-content: center;
+    }
+  }

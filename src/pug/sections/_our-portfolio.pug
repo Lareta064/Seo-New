@@ -2,8 +2,8 @@ mixin portfolio-card
 	.portfolio-card
 		.portfolio-card__header
 			.portfolio-card__title Компания<br>«Автоэстетика»
-			a.btn-light.h-50(href="#!") Хочу так же  
-		
+			a.btn-white(href="#!") Хочу так же
+			
 		.portfolio-card__body
 			.portfolio-card__left
 				//=== company-info===
@@ -53,6 +53,8 @@ mixin portfolio-card
 				.chart__subtext
 					p Было
 					p Стало
+
+		a.btn-outline(href="#!") Хочу так же
 section.our-portfolio
 	.container
 		h1.title Кейсы
@@ -65,10 +67,7 @@ section.our-portfolio
 					+portfolio-card
 				.swiper-slide
 					+portfolio-card
-				.swiper-slide
-					+portfolio-card
-				.swiper-slide
-					+portfolio-card
-			
+				
+
 			//=== pagination ====
 			.portfolio-pagination.swiper-pagination

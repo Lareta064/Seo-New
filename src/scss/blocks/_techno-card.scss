@@ -8,8 +8,8 @@
 	padding: 2.2em;
 	column-gap: 2em;
 	border-radius: 2.4em;
-	// width: 38.5em;
-	width: 100%;
+	width: 358px!important;
+	
 	height: auto;
 	// height: remy(114);
 	background: #282828;
@@ -64,6 +64,7 @@
 		grid-auto-rows: 1fr; // фиксирует строки
 	}
 	.techno-card{
+		width: 100%!important;
 		&:nth-child(-n+4){
 			transform-origin: bottom; // ключевой момент
 			align-self: flex-end;
