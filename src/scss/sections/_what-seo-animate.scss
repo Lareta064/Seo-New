@@ -1,39 +1,107 @@
-.seo-animate__content{
+@use "base/var" as *;
+.what-seo{padding-top: 100px;}
+.what-seo__content{
 	display: flex;
-	justify-content: space-between;
+	position: relative;
+	align-items:flex-end;
 	column-gap: 30px;
 }
-.seo-animate__text{
+.what-seo__text{
 	width: 49%;
 	max-width: 740px;
+	font-family: var(--second-family);
+	
+	p{
+		font-weight: 400;
+	font-size: remy(28);
+	line-height: 117%;
+	letter-spacing: -0.02em;
+	color: var(--white);
+	}
+	p +p{margin-top: remy(24);}
 }
-.seo-animate__cards{
+.what-seo-swiper{
+	height: remy(408);
+	
+}
+.what-seo-swiper-box{
 	width: 49%;
 	max-width: 710px;
 	flex-shrink: 0;
+	position: relative;
+	&:after{
+		content:'';
+		width: 100%;
+		height: remy(510);
+		background-image: url('../img/vert-slider.webp');
+		background-position: top;
+		background-size: cover;
+		position: absolute;
+		bottom:0;
+		background-repeat: no-repeat;
+
+	}
 }
-.seo-card{
+.what-seo-swiper .seo-card{
 	display: flex;
-	padding: 30px;
-	border-radius: 20px;
+	column-gap: remy(36);
+	align-items: center;
+	padding: remy(40);
+	border-radius: remy(20);
 	border:1px solid #C2C6CB;
-	background-color: #000;
+	background-color: var(--back-2);
+	height: remy(408);
+	position: relative;
+	
+	&__title{
+		font-family: var(--font-family);
+		font-weight: 800;
+		font-size: remy(40);
+		color: #d6d6d6;
+		
+	}
+	p{
+		font-weight: 600;
+		font-size: remy(24);
+		line-height: 120%;
+		letter-spacing: -0.02em;
+		color: #898f99;
+		font-family: var(--second-family);
+		margin-top: 1em;
+	}
+	&__num{
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: remy(34);
+		line-height: 100%;
+		text-align: right;
+		color: #4d4e4f;
+		position: absolute;
+		bottom: 40px;
+		right: 40px;
+	}
 }
-.seo-card__img{
-	width: 254px;
+.what-seo-swiper .seo-card__img{
+	width: remy(254);
 	flex-shrink: 0;
 }
-.seo-animate__cards {
-	position: relative;
-	height: 600px; // подстраиваешь под нужное
-}
 
-.seo-card {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-opacity: 0;
-transform: translateY(100px);
-z-index: 0;
+.what-seo-pagination.swiper-pagination {
+	right: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: remy(16);
+	transform: unset;
+	.swiper-pagination-bullet{
+		width: 10px;
+		height: 117px;
+		margin: 0;
+		&:after{
+			background:rgba(255,255,255,.4);
+			height: 100%;
+			width: 3px;
+		}
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active:after{background:rgba(255,255,255,1);}
 }

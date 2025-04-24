@@ -31,6 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         spaceBetween: 16,
     });
+
+    const whatSeoSwiper = new Swiper('.what-seo-swiper',{
+        direction: "vertical",
+        spaceBetween:16,
+        pagination: {
+          el: ".what-seo-pagination",
+          clickable: true,
+        },
+    })
     // technoSlider
     let technoSlider;
     function toggleSlider() {
