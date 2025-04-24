@@ -38,10 +38,10 @@
 }
 .round-btn{
 	position: relative;
-	height: 37px;
-	border-radius: 50px;
-	padding-inline: 40px;
-	font-size: 14px;
+	height: remy(37);
+	border-radius: remy(50);
+	padding-inline: remy(40);
+	font-size: remy(14);
 	font-weight: 400;
 	font-family: var(--second-family);
 	background-color:  #d4deef;
@@ -84,7 +84,7 @@
 }
 .fileUpload-group{
 	display: flex;
-	column-gap: 10px;
+	column-gap: remy(10);
 	align-items: center;
 
 	
@@ -104,7 +104,7 @@
 		pointer-events: all;
 	}
 	.fileUpload-name{
-		max-width: 150px;
+		max-width: remy(150);
 		font-weight: 600;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -134,8 +134,8 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 37px;
-	height: 37px;
+	width: remy(37);
+	height: remy(37);
 	display: flex;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.57812 8.76428L8.76492 16L17.4652 1.5' stroke='%2370BD0B' stroke-width='2' stroke-linecap='round' /%3e%3c/svg%3e");
 	background-size: 19px;

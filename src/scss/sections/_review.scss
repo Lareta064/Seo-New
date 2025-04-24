@@ -3,7 +3,7 @@
 	overflow: hidden;
 }
 .review-swiper{
-	padding-bottom: 60px;
+	padding-bottom: remy(60);
 	@media (max-width: 767px) {
 		max-width: 250px!important;
 	    padding-bottom: 40px;
@@ -13,25 +13,24 @@
 .review-card{
 	border: 1px solid #c2c6cb;
 	background-color: #282828;;
-    padding: 22px 25px;
+    padding: remy(22) remy(25);
 	display: flex;
 	flex-direction: column;
-	row-gap:30px;
-	border-radius: 12px;
+	row-gap:remy(30);
+	border-radius: remy(12);
 	img{width: 100%; object-fit: contain;}
 	.brand-logo{
-		height: 30px;
+		height: remy(30);
 		width: 100%;
 		object-fit: contain;
 	}
-	@media (max-width: 767px) {
 	
-	}
+	
 }
 .lb-data .lb-close {
 	position: absolute;
-    top: -30px;
-    right: 60px; 
+    top: remy(-30);
+    right:remy(60); 
     bottom: auto; 
     left: auto;
 	@media (max-width: 1023px) {

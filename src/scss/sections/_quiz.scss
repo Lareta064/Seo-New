@@ -2,14 +2,15 @@
 .quiz-form{
 	
 	position: relative;
-	min-height: 470px;
+	min-height: remy(470);
 	
 	&__plate {
         
-		padding: 35px 35px 40px 35px;
-		border-radius: 24px;
+		padding: remy(35);
+		padding-bottom: remy(40);
+		border-radius: remy(24);
         background: #2b2c2e;
-        min-height: 470px;
+        min-height: remy(470);
         display: flex;
         flex-direction: column;
 		box-shadow: 7px 7px 16px 0 rgba(24, 24, 24, 0.45),
@@ -39,7 +40,7 @@
     }
 	.title{
 		color: #d6d6d6;
-		font-size: 60px;;
+		font-size:remy(60);
 		@media (max-width: 1799px) {
 		font-size: calc(25px + (60 - 35) * ((100vw - 390px) / (1620 - 390)));
 		}
@@ -47,31 +48,29 @@
 	}
 	.title-32{
 		color:  #4d4e4f;
-		@media (max-width: 1023px) {
-			font-size: 20px;
-		}
+		
 	}
 	&__body{
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: remy(30);
+		padding-bottom: remy(30);
 		flex-grow: 1;
-		width: min(1076px, 100%);
+		width: min(remy(1076), 100%);
 	}
 	&__group{
 		display: flex;
 		flex-wrap: wrap;
-		column-gap: 20px;
-		row-gap:27px;
+		column-gap: remy(20);
+		row-gap:remy(27);
 		@media (max-width: 767px) {
 			column-gap: 7px;
 		    row-gap:14px;
 		}
 	}
-	&__group + &__group{margin-top: 27px;}
+	&__group + &__group{margin-top: remy(27);}
 	&__footer{
 	 display: flex;
 	 justify-content: space-between;
-	 column-gap:16px;
+	 column-gap:remy(16);
 	 &>*{flex-shrink: 0;}
 	 .btn-next{margin-left: auto;
 	 }
@@ -101,11 +100,11 @@
 	&__grid{
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 1100px;
-		gap: 30px;
-		column-gap: 54px;
+		max-width: remy(1100);
+		gap: remy(30);
+		column-gap: remy(54);
 	    .form-item{
-			width: calc((100% - 54px) / 2);
+			width: calc((100% - remy(54)) / 2);
 		}
 		@media (max-width: 767px) {
 			gap: 24px;
@@ -139,24 +138,17 @@
 	display: inline-block;
 	font-family: var(--second-family);
 	font-weight: 700;
-	font-size: 18px;
+	font-size: remy(18);
 	color: #c6d0df;
 	height: 3.5555em;
 	line-height: 3.5555em;
 	padding-inline: 1.8em;
-	border-radius: 50px;
+	border-radius: remy(50);
 	transition: .3s; 
 	text-align: center;
 	white-space: nowrap;
 	background-color: rgba(77, 78, 79, .7);
-	@media (max-width: 1919px) {
-		height: 50px;
-		line-height: 50px;
-	}
-	@media (max-width: 1439px) {
-		height: 46px;
-		line-height: 46px;
-	}
+	
 	@media (max-width: 767px) {
 		font-size: 14px;
 	}

@@ -4,7 +4,7 @@
 }
 .portfolio-slider.swiper{
     width: 95%;
-    max-width: 1285px;
+    max-width: remy(1285);
      margin-inline: auto;
     @media (max-width: 1439px) {
       width: 80%;
@@ -15,9 +15,9 @@
 
   }
   .portfolio-slider{
-    padding-bottom: 40px;
+    padding-bottom: remy(40);
   }
   .portfolio-slider .swiper-slide{
-    padding-bottom: 5px;
+    padding-bottom: remy(5);
   }
   

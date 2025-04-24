@@ -1,9 +1,8 @@
 @use "var" as *;
  .swiper-pagination .swiper-pagination-bullet{
-	height: 10px;
+	height: remy(10);
 	position: relative;
-	
-	width: 150px;
+	width: remy(150);
 
 	border-radius: 0;
 	background: transparent;
