@@ -1,24 +1,28 @@
 @use "base/var" as *;
-.what-seo{padding-top: 100px;}
+.what-seo{
+	padding-top: remy(32);
+	padding-bottom: remy(29);
+}
 .what-seo__content{
 	display: flex;
 	position: relative;
 	align-items:flex-end;
-	column-gap: 30px;
+	column-gap: remy(85);
 }
 .what-seo__text{
 	width: 49%;
 	max-width: 740px;
-	font-family: var(--second-family);
+	
 	
 	p{
 		font-weight: 400;
-	font-size: remy(28);
-	line-height: 117%;
-	letter-spacing: -0.02em;
-	color: var(--white);
+		font-size: remy(28);
+		line-height: 117%;
+		letter-spacing: -0.02em;
+		color: var(--white);
+		font-family: var(--second-family);
 	}
-	p +p{margin-top: remy(24);}
+	p +p{margin-top: remy(32);}
 }
 .what-seo-swiper{
 	height: remy(408);
@@ -88,9 +92,11 @@
 
 .what-seo-pagination.swiper-pagination {
 	right: 0;
-	top: 0;
+	bottom: 0;
+	top:0;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
 	row-gap: remy(16);
 	transform: unset;
 	.swiper-pagination-bullet{

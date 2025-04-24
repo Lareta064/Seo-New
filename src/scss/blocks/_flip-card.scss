@@ -18,7 +18,7 @@
 		width: 10em;
 		height: 10em;
 		flex-shrink: 0;
-		margin-bottom: 3.2em;
+		margin-bottom: 6em;
 	}
   }
   
@@ -48,7 +48,7 @@
   .flip-card-front {
 	background-color: #282828;
 	color: #f9f9f9;
-	
+	padding: remy(40);
   }
   
   .flip-card-back {

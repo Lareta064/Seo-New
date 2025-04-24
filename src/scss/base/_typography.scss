@@ -28,10 +28,11 @@
 	max-width: remy(1380);
 	
 	@media (max-width: 767px) {
-	font-size: remy(32);
-	margin-bottom: remy(30);
+		font-size: remy(32);
+		margin-bottom: remy(30);
 	}
 }
+h2.title{line-height: 1;}
 .title-white{
 	color: #e2eaf0;
 }
