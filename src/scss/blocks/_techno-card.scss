@@ -1,14 +1,5 @@
 @use "base/var" as *;
-.techno-card-wrapper {
-	display: grid;
-	font-size: 10px;;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 3.2em 2.4em;
-	align-content: center;
-	position: relative;
-	height: remy(155 + 155 + 24);
-	grid-auto-rows: 1fr; // фиксирует строки
-}
+
 
 .techno-card {
 	display: flex;
@@ -19,6 +10,7 @@
 	border-radius: 2.4em;
 	// width: 38.5em;
 	width: 100%;
+	height: auto;
 	// height: remy(114);
 	background: #282828;
 	position: relative;
@@ -55,20 +47,41 @@
 			letter-spacing: -0.02em;
 			color: #7a7a7a;
 			margin-top: 0.9em;
+		}
+	}
+
+	
+}
+@media (min-width: 768px) {
+	.techno-card-wrapper {
+		display: grid;
+		font-size: 10px;;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 3.2em 2.4em;
+		align-content: center;
+		position: relative;
+		height: remy(155 + 155 + 24);
+		grid-auto-rows: 1fr; // фиксирует строки
+	}
+	.techno-card{
+		&:nth-child(-n+4){
+			transform-origin: bottom; // ключевой момент
+			align-self: flex-end;
+		}
+		&__txt p {
 			max-height: 0;
 			transition: all 0.1s ease;
 			opacity: 0;
 			overflow: hidden;
 		}
-	}
-
-	&:hover {
-		transform: scaleY(1.02); // растёт вверх
-		// height: remy(150);
-		.techno-card__txt p {
-			font-size: 1.8em;
-			max-height: 66px;
-			opacity: 1;
+		&:hover {
+			transform: scaleY(1.02); // растёт вверх
+			// height: remy(150);
+			.techno-card__txt p {
+				font-size: 1.8em;
+				max-height: 66px;
+				opacity: 1;
+			}
 		}
 	}
 }
