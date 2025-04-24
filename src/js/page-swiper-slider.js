@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (screenWidth < 768) {
             if (!technoSlider) {
                 
-                technoSlider = new Swiper('.technology-slider', {
+                technoSlider = new Swiper('.techno-card-slider', {
                     slidesPerView: 'auto',
                     spaceBetween: 35, // Пример настройки отступов между слайдами
                     grid:{
-                        rows: 3
+                        rows: 2
                     },
                     pagination: {
                         el: '.technology-pagination',
