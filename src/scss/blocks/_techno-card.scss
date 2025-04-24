@@ -13,11 +13,12 @@
 .techno-card {
 	display: flex;
 	align-items: center;
-	font-size: 10px;
+	font-size: remy(10);
 	padding: 2.2em;
 	column-gap: 2em;
 	border-radius: 2.4em;
-	width: 38.5em;
+	// width: 38.5em;
+	width: 100%;
 	// height: remy(114);
 	background: #282828;
 	position: relative;

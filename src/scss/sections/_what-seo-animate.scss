@@ -10,7 +10,7 @@
 	column-gap: remy(85);
 }
 .what-seo__text{
-	width: 49%;
+	width: 38.54vw;
 	max-width: 740px;
 	
 	
@@ -29,7 +29,7 @@
 	
 }
 .what-seo-swiper-box{
-	width: 49%;
+	width: 37vw;
 	max-width: 710px;
 	flex-shrink: 0;
 	position: relative;
@@ -39,7 +39,7 @@
 		height: remy(510);
 		background-image: url('../img/vert-slider.webp');
 		background-position: top;
-		background-size: cover;
+		background-size: contain;
 		position: absolute;
 		bottom:0;
 		background-repeat: no-repeat;
