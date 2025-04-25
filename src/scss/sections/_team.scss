@@ -112,8 +112,15 @@
 }
 
 @media (max-width: 767px) {
+	.team-swiper{
+		height: 560px;
+	}
+	.team-swiper .swiper-slide{
+		width: 358px!important;
+	}
 	.team-card{
 		font-size: 10px;
+		
 		&__img, &__icon{
 			width: 133px;
 			height: 133px;

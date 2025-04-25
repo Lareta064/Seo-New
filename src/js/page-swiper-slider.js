@@ -40,16 +40,39 @@ document.addEventListener("DOMContentLoaded", function () {
           clickable: true,
         },
     });
-    //packages
-    const packagesCards= new Swiper(' .packages-swiper', {
-        speed: 500,
-        slidesPerView: 3,
-        pagination: {
-            el: ".packages-pagination",
-			clickable: true,
-        },
-        spaceBetween: 40,
-    });
+    
+    let packagesSlider;
+    function togglePackagesSlider() {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+            if (!packagesSlider) {
+                
+                packagesSlider = new Swiper('.packages-swiper', {
+                    slidesPerView: '1',
+                    spaceBetween: 16, // Пример настройки отступов между слайдами
+                    
+                    pagination: {
+                        el: '.packages-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            if (packagesSlider) {
+                // Уничтожаем слайдер, если экран больше 768px
+                packagesSlider.destroy(true, true);
+                packagesSlider = null; // Сбрасываем переменную
+            }
+        }
+    }
+    
+    // Вызываем функцию при загрузке страницы
+    togglePackagesSlider();
+    
+    // Добавляем слушатель для события изменения размера экрана
+    window.addEventListener('resize', togglePackagesSlider);
+   
     // technoSlider
     let technoSlider;
     function toggleSlider() {
@@ -144,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Инициализация слайдера
                     clientsSlider = new Swiper('.clients-swiper', {
                         slidesPerView: 'auto',
-                        spaceBetween: 20,
+                        spaceBetween: 15,
                         grid: {
                             rows: 3
                         },

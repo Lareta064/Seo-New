@@ -1,13 +1,16 @@
 @use "base/var" as *;
 .review{
 	overflow: hidden;
+	@media (max-width: 767px) {
+	.review-swiper-next, .review-swiper-prev{display: none;}
+	}
 }
 .review-swiper{
 	padding-bottom: remy(60);
 	@media (max-width: 767px) {
 		max-width: 250px!important;
 	    padding-bottom: 40px;
-	 
+		
 	}
 }
 .review-card{

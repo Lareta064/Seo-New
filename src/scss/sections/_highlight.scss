@@ -8,7 +8,7 @@
 	text-align: center;
 	position: relative;
 	color: transparent;
-	height: remy(560);
+	height: remy(600);
 	
 	display: flex;
 	justify-content: center;
@@ -30,4 +30,11 @@
 	-webkit-text-fill-color: transparent;
   
 	transition: background-image 0.3s ease;
+  }
+  @media (max-width: 767px) {
+	.highlight-text {
+		height: 510px;
+		font-size: 34px;
+		line-height: 0.9;
+	}
   }

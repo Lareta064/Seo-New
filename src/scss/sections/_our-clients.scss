@@ -1,66 +1,45 @@
 @use "base/var" as *;
 .our-clients .title{
 	
-	@media(min-width: 1024px){max-width: 20ch;}
+	max-width: remy(880);
 }
 .clients-swiper{
 	.swiper-wrapper{
 		@media(min-width:768px){
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			gap: remy(20) remy(20);
+			grid-template-columns: repeat(6, 1fr);
+			.swiper-slide{grid-column: span 1;}
 		}
-		@media (min-width: 1024px) {
-			grid-template-columns: repeat(4, 1fr);
-		}
-		@media (min-width: 1280px) {
-			grid-template-columns: repeat(5, 1fr);
-		}
+		
 		@media (max-width: 767px) {
 			.swiper-slide{
-				width: 200px!important;
-				height: 130px!important;
+				width: 170px!important;
+				height: 124px!important;
+				.client-card{width: 100%;height: 100%;}
 			  }
-			height: 470px;
+			
 		}
 	}
+	@media (max-width: 767px) {height: 450px;}
 }
 .client-card{
-	height: 208px;
+	
+	height: remy(186);
 	width: 100%;
 	flex-shrink: 0;border-radius: 26px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 30px 15px;
-	background-color: transparent;
-	
-	
 	position: relative;
-	img{object-fit: contain;}
-	&>*{
-		position: relative;
-		z-index: 2;
+	img{
+		object-fit: cover;
+		flex-shrink: 0;
 	}
-	&:after{
-		content:'';
-		position: absolute;
-		inset:0;
-		border-radius: inherit;
-		background-color: #d4deef;
-		opacity: 0;
-		transition: .3s;
-	}
-	
-	&.active:after{
-		opacity: 1;
-	}
-	@media (max-width: 767px) {
-	
-	  height: 130px;
-	  img{
-		width: 100%;
-		height: 100%;
-
-	  }
-	}
+	.img-mono{display: block;}
+	.img-color{display: none;}
+}
+.client-card:hover{
+	.img-color{display: block;}
+	.img-mono{display: none;}
 }

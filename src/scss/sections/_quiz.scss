@@ -41,8 +41,9 @@
 	.title{
 		color: #d6d6d6;
 		font-size:remy(60);
-		@media (max-width: 1799px) {
-		font-size: calc(25px + (60 - 35) * ((100vw - 390px) / (1620 - 390)));
+		@media (max-width: 767px) {
+		  font-size: 28px;
+		  font-weight: 800;
 		}
 		
 	}
