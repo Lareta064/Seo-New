@@ -1,10 +1,9 @@
 @use "base/var" as *;
 .package-card-wrapper{
 	width: 84em;
-	font-size: 10px;
+	font-size: remy(10);
     position: relative;
-	padding-right: 3em;
-
+	
 }
 .package-card__img{
 	position: absolute;
