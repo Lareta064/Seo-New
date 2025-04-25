@@ -49,9 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!packagesSlider) {
                 
                 packagesSlider = new Swiper('.packages-swiper', {
-                    slidesPerView: '1',
-                    spaceBetween: 16, // Пример настройки отступов между слайдами
-                    
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 16, 
+                    initialSlide: 1,
                     pagination: {
                         el: '.packages-pagination',
                         clickable: true,

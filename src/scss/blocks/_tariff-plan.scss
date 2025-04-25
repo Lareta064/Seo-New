@@ -23,6 +23,16 @@
 		z-index: 3;
 	}
 	&>*{width: 100%;}
+	@media (max-width: 767px) {
+		border-radius: 14px;
+		max-width: 290px;
+		.tariff-label{
+			width: 47px;
+			height: 42px;
+			right: 30px;
+			background-size: 22px 33px;
+		}
+	}
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .tariff-plan .tariff-label {
@@ -33,19 +43,32 @@
 	
 	font-weight: 400;
 	font-size: 4em;
+	@media (max-width: 767px) {
+		font-size: 21px;
+		
+		}
 }
 .tariff__name{
 	font-weight: 800;
 	color: #f9f9f9;
 	margin-bottom: remy(35);
+	@media (max-width: 767px) {
+		margin-bottom: 16px;
+	}
 }
 .tariff__list-name {
 	font-family: var(--second-family);
 	color: var(--white);
 	margin-bottom: remy(14);
+	@media (max-width: 767px) {
+	  line-height: 1.48;	
+	}
 }
 .tariff__list ul{
 	padding-left: 1em;
+	@media (max-width: 767px) {
+	  padding-left: 6px;
+	}
 }
 .tariff__list li{
 	position: relative;
@@ -65,17 +88,33 @@
 		background-color: #fff;
 		flex-shrink: 0;
 	}
+	@media (max-width: 767px) {
+		font-size: 13px;
+		line-height: 1.20;
+	}
 }
 .tariff__list li +li{margin-top: remy(7);}
 .tariff-plan__body{
 	padding: 3.2em 3.9em 7.5em;
 	flex-grow:1;
+	@media (max-width: 767px) {
+		padding: 20px 18px;
+		.tariff__list li +li{margin-top: remy(5);}
+	}
 }
 .tariff-plan__footer{
 	padding: 1.7em 3.4em 3.2em;
 	border-top: 1px solid white;
 	flex-shrink: 0;
-	.btn-outline{margin-top: reny(30);font-size: remy(28);font-family: var(--second-family);}
+	.btn-outline{margin-top: remy(30);font-size: remy(28);font-family: var(--second-family);}
+	@media (max-width: 767px) {
+		padding: 10px 18px 20px;
+		.btn-outline{
+			height: 35px;
+			font-size: 15px;
+			margin-top: 14px;
+		}
+	}
 }
 .tariff-price{
 	font-family: var(--font-family);
@@ -103,6 +142,9 @@
 		transition: .3s; 
 		
 	}
+	@media (max-width: 767px) {
+		font-size: 26px;
+	}
 }
 .tariff-plan:hover{
 	.tariff-price:after{transform: translate(-50%, -50%) scale(1);}
@@ -118,5 +160,17 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: remy(40)
+	}
+}
+.packages .container{
+	@media (max-width: 767px) {
+	   width: 100%;
+	   padding-left: 0;
+	   padding-right: 0;
+	   .swiper-slide{width: 290px!important;}
+	   .title{
+		padding-left: 16px;
+		padding-right: 16px;
+	   }
 	}
 }
