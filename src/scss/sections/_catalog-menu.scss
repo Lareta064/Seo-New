@@ -1,0 +1,25 @@
+@use "base/var" as *;
+.header{
+	position: sticky;
+	top:0;
+	z-index: 10;
+	background-color: #131313;
+	
+}
+.has-drop-menu{
+	position: absolute;
+	top: remy(90);
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background-color: red;
+}
+.has-drop-list{
+	width: 100%;
+	max-width: remy(1668);
+	padding-inline: remy(16);
+	margin: 0 auto;
+}
+.has-drop-list{
+	
+}
