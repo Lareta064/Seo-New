@@ -39,7 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
           el: ".what-seo-pagination",
           clickable: true,
         },
-    })
+    });
+    //packages
+    const packagesCards= new Swiper(' .packages-swiper', {
+        speed: 500,
+        slidesPerView: 3,
+        pagination: {
+            el: ".packages-pagination",
+			clickable: true,
+        },
+        spaceBetween: 40,
+    });
     // technoSlider
     let technoSlider;
     function toggleSlider() {

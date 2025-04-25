@@ -23,14 +23,14 @@
         &.active {
             display: flex;
 			animation-name: scaleShow;
-			animation-duration: .8s;
+			animation-duration: .3s;
 			animation-fill-mode: forwards;
         }
 
         &.done {
             display: none;
 			animation-name: scaleReview;
-			animation-duration: .8s;
+			animation-duration: .3s;
 			animation-fill-mode: forwards;
         }
 		@media (max-width: 767px) {

@@ -1,0 +1,85 @@
+//Подсветка текста
+section.highlight
+	
+	.highlight-text *SEO продвижение —<br>это работа на перспективу
+	script.
+		document.querySelectorAll('.highlight').forEach(section => {
+			//-  const text = section.querySelector('.highlight-text');
+
+			//- let targetX = 0;
+			//- let targetY = 0;
+			//- let currentX = 0;
+			//- let currentY = 0;
+
+			//- // Устанавливаем стартовую точку (как в CSS)
+			//- const rect = text.getBoundingClientRect();
+			//- currentX = targetX = rect.width * 0.4;
+			//- currentY = targetY = rect.height * 0.5;
+
+			//- // Плавное приближение к целевой точке
+			//- function animate() {
+			//- const lerp = 0.1; // плавность (0.1 — мягко, 1 — мгновенно)
+			//- currentX += (targetX - currentX) * lerp;
+			//- currentY += (targetY - currentY) * lerp;
+
+			//- text.style.setProperty('--x', `${currentX}px`);
+			//- text.style.setProperty('--y', `${currentY}px`);
+
+			//- requestAnimationFrame(animate);
+			//- }
+
+			//- animate(); // запускаем анимацию
+
+			//- section.addEventListener('mousemove', (e) => {
+			//- const rect = text.getBoundingClientRect();
+			//- targetX = e.clientX - rect.left;
+			//- targetY = e.clientY - rect.top;
+			//- });
+			const text = section.querySelector('.highlight-text');
+
+			let targetX = 0;
+			let targetY = 0;
+			let currentX = 0;
+			let currentY = 0;
+
+			const rect = text.getBoundingClientRect();
+			currentX = targetX = rect.width * 0.4;
+			currentY = targetY = rect.height * 0.5;
+
+			function animate() {
+			const lerp = 0.1;
+			currentX += (targetX - currentX) * lerp;
+			currentY += (targetY - currentY) * lerp;
+			text.style.setProperty('--x', `${currentX}px`);
+			text.style.setProperty('--y', `${currentY}px`);
+			requestAnimationFrame(animate);
+			}
+
+			animate();
+
+			// 🖱️ Десктоп
+			section.addEventListener('mousemove', (e) => {
+			const rect = text.getBoundingClientRect();
+			targetX = e.clientX - rect.left;
+			targetY = e.clientY - rect.top;
+			});
+
+			// 🤳 Мобильные устройства
+			section.addEventListener('touchmove', (e) => {
+			const touch = e.touches[0];
+			if (!touch) return;
+
+			const rect = text.getBoundingClientRect();
+			targetX = touch.clientX - rect.left;
+			targetY = touch.clientY - rect.top;
+			}, { passive: true });
+
+			section.addEventListener('touchstart', (e) => {
+			const touch = e.touches[0];
+			if (!touch) return;
+
+			const rect = text.getBoundingClientRect();
+			targetX = touch.clientX - rect.left;
+			targetY = touch.clientY - rect.top;
+			}, { passive: true });
+		});

@@ -1,6 +1,6 @@
 @use "base/var" as *;
 .tariff-plan{
-	font-size: 10px;
+	font-size: remy(10);
 	border-radius: 2.4em;
 	display: flex;
 	flex-direction: column;
@@ -37,12 +37,12 @@
 .tariff__name{
 	font-weight: 800;
 	color: #f9f9f9;
-	margin-bottom: .75em;
+	margin-bottom: remy(35);
 }
 .tariff__list-name {
 	font-family: var(--second-family);
 	color: var(--white);
-	margin-bottom: .25em;
+	margin-bottom: remy(14);
 }
 .tariff__list ul{
 	padding-left: 1em;
@@ -66,7 +66,7 @@
 		flex-shrink: 0;
 	}
 }
-.tariff__list li +li{margin-top: 0.4em;}
+.tariff__list li +li{margin-top: remy(7);}
 .tariff-plan__body{
 	padding: 3.2em 3.9em 7.5em;
 	flex-grow:1;
@@ -75,7 +75,7 @@
 	padding: 1.7em 3.4em 3.2em;
 	border-top: 1px solid white;
 	flex-shrink: 0;
-	.btn-outline{margin-top: 30px;}
+	.btn-outline{margin-top: 30px;font-size: remy(28);font-family: var(--second-family);}
 }
 .tariff-price{
 	font-family: var(--font-family);
@@ -110,5 +110,6 @@
 		background-color:  #f98836;
 		color: #1d1d1d;
 		border-color: #f98836;
+		
 	}
 }

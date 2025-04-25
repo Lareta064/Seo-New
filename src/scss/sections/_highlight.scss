@@ -1,0 +1,33 @@
+@use "base/var" as *;
+.highlight{}
+.highlight-text {
+	font-size: remy(70);
+	font-weight: 800;
+	font-family: var(--font-family);
+	line-height: 100%;
+	text-align: center;
+	position: relative;
+	color: transparent;
+	height: remy(560);
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   padding-inline: 16px;
+	/* Изначальная позиция подсветки — можно подвинуть ближе к началу */
+	--x: 40%;
+	--y: 50%;
+  
+	background-image: radial-gradient(
+	  circle 400px at var(--x) var(--y),
+	  #f98836 0%,
+	  rgba(249, 136, 54, 0.6) 60%,
+	  transparent 100%
+	);
+  
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  
+	transition: background-image 0.3s ease;
+  }

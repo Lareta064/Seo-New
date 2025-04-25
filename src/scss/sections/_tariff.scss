@@ -1,0 +1,7 @@
+@use "base/var" as *;
+.packages-swiper{
+	.swiper-slide{
+		height: unset;
+		display: flex;
+	}
+}
