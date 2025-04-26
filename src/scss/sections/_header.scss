@@ -13,7 +13,7 @@
 	}
 	@media (max-width: 767px) {
 	 padding-top: 16px;
-	 .container{width: 100%;}
+	 .container{max-width: 100%;}
 	}
 }
 .svg-logo{
@@ -60,12 +60,7 @@
 	
 	@media (max-width: 767px) {font-size: remy(14);}
 }
-@keyframes menuItem{
-	from{
-		transform: scale(0);
-	}
-	to{transform: scale(1);}
-}
+
 .header-container .btn{
 	font-family: $ft;
 	background-color: transparent;
