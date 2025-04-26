@@ -10,12 +10,14 @@
 		 right: 0;
 		 display: flex;
 		 z-index: 5;
-		 background-color: rgba(255,255,255, .7);
+		 background-color: #131313;
 		 transform: translateX(-110%);
 		 transition: .3s; 
 		 &.active{transform: translateX(0);}
 		}
-		
+		@media (max-width: 767px) {
+		 
+		}
 		
 	}
 	.main-menu{
@@ -26,7 +28,13 @@
 			width: 100%;
 			// max-width: 390px;
 			background-color: #131313;
-			padding: 10px 20px 40px;
+			padding: 10px 20px 70px;
+			height: calc(100vh - 145px);
+			
+			scrollbar-width: none;
+			overflow: hidden;
+			overflow-y: auto;
+			&::-webkit-scrollbar{display: none;}
 		}
 		
 	}

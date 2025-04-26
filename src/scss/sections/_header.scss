@@ -39,12 +39,12 @@
 	
 	@media (max-width: 767px) {
 		padding: 18px 20px 17px;
-		
+		column-gap:24px;
 		background: #282828;
 		border-radius: 17px;
 		border-bottom: 0;
 		justify-content: space-between;
-		.phone-contacts, .btn-outline{display: none;}
+		.btn-outline{display: none;}
 	}
 }
 .header-container{
@@ -64,4 +64,24 @@
 .header-container .btn{
 	font-family: $ft;
 	background-color: transparent;
+}
+.header-container{
+	.phone-contacts .phone-link__icon{display: none;}
+	@media (max-width: 767px) {
+		.phone-contacts {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+			.phone-link{font-size: 0;}
+			
+			
+		}
+	} 
+}
+.lock {
+	@media (max-width: 767px) {
+		.phone-contacts {
+			.phone-link__icon{display: block;}
+		}
+	} 
 }
