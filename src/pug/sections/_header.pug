@@ -1,4 +1,4 @@
-header.header
+header.header#header
 	.container
 		.header-container
 			a(href="#!").logo
@@ -7,19 +7,41 @@ header.header
 			//======nav menu ======
 			.main-menu-wrapper#header-menu
 				.main-menu
-					ul.menu-list.has-drop
-						li.menu-item
+					ul.menu-list
+						li.menu-item.has-drop-menu
 							a.menu-link(href="#!") Услуги
-							.has-drop-menu
-								.has-drop__grid
-									.has-drop-list
-										a(href="#") link
-										a(href="#") link
-										a(href="#") link
-										a(href="#") link
-										a(href="#") link
-										a(href="#") link
-									.has-drop-image
+							.drop-menu-wrapper
+								.drop-menu__grid
+									ul.drop-menu-list
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Контекстная реклама
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Таргетированная реклама
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Комплексный маркетинг
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SEO продвижение 
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Веб-дизайн / Иллюстрация
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Разработка сайтов
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SMM
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SERM
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Видео продакшн
+											
+									.drop-menu-box
+										img(src='./img/placeholder.webp', srcset='./img/placeholder@2x.webp 2x' width='402' height='248' loading='lazy' alt='img')
 						
 						li.menu-item
 							a.menu-link(href="#!") Кейсы
@@ -27,8 +49,25 @@ header.header
 							a.menu-link(href="#!") О компании
 						li.menu-item
 							a.menu-link(href="#!") Блог
-						li.menu-item
+						li.menu-item.has-drop-menu
 							a.menu-link(href="#!") Контакты
+						
+							.drop-menu-wrapper
+								.drop-menu__grid
+									ul.drop-menu-list
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Контакты
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Контакты
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Контакты
+											
+										
+											
+									.drop-menu-box
+										img(src='./img/placeholder.webp', srcset='./img/placeholder@2x.webp 2x' width='402' height='248' loading='lazy' alt='img')
 			//====== right content ======
 			.phone-contacts
 				a(href="tel:+79006566903").phone-link +7 900 656 69 03

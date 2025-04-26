@@ -1,6 +1,9 @@
 @use "base/var" as *;
 .header{
-	
+	position: sticky;
+	top:0;
+	z-index: 10;
+	background-color: #131313;
 	.logo{
 		flex-shrink: 0;
 		width: remy(159);
@@ -10,6 +13,7 @@
 	}
 	@media (max-width: 767px) {
 	 padding-top: 16px;
+	 .container{width: 100%;}
 	}
 }
 .svg-logo{
