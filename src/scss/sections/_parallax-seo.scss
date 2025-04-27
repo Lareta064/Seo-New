@@ -55,7 +55,7 @@
 }
 .parallax-scene__center{
 	position: absolute;
-	top: 58%;left: 50%;
+	top: 63%;left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	 @media (max-width: 767px) {
@@ -118,7 +118,7 @@
 		left: 441px;
 	}
 	&.prx-7{
-		bottom: 250px;
+		bottom: 36px;
 		left: 326px;
 	}
 	&.prx-21{
@@ -146,7 +146,7 @@
 		right:115px;
 	}
 	&.prx-27{
-		bottom: 236px;
+		bottom: 22px;
 		right: 211px;
 	}
 }
@@ -177,7 +177,7 @@
 			left: 23vw;
 		}
 		&.prx-7{
-			bottom: 13vw;
+			bottom: 1.875vw;
 			left: 17vw;
 		}
 		&.prx-21{
@@ -205,7 +205,7 @@
 			right: 6vw;
 		}
 		&.prx-27{
-			bottom: 12vw;
+			bottom: 1.145vw;
 			right: 11vw;
 		}
 	}
@@ -275,7 +275,7 @@
 .seo-benefits-cards{
 	margin-top: remy(60);
 	@media (max-width: 767px) {
-		margin-top: 60px;
+		margin-top: -18px;
 	}
 }
 .seo-cards-grid{
@@ -302,4 +302,27 @@
 			margin-top: 32px;
 		}
 	}
+}
+.parallax-scene__sector1,
+.parallax-scene__sector2,
+.parallax-scene__sector3,
+.parallax-scene__sector4,
+.parallax-scene__sector5{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 20%;
+	z-index: 3;
+	
+}
+.parallax-scene__sector1{left: 0;}
+.parallax-scene__sector2{left: 20.1%;}
+.parallax-scene__sector3{left: 40.1%; border:1px solid red;}
+.parallax-scene__sector4{left: 60.1%;}
+.parallax-scene__sector5{left: 80.1%;}
+
+.parallax-item img,
+.parallax-item p,
+.parallax-scene__center {
+  transition: transform 0.5s ease;
 }

@@ -444,3 +444,85 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
 });
+
+// parallax seo map
+document.addEventListener('DOMContentLoaded', () => {
+	const sectors = [
+	  { element: document.querySelector('.parallax-scene__sector1'), group: ['.prx-1', '.prx-2', '.prx-5', '.prx-21', '.prx-23', '.prx-26', '.prx-27'], isCenter: false },
+	  { element: document.querySelector('.parallax-scene__sector2'), group: ['.prx-3', '.prx-4', '.prx-6', '.prx-7', '.prx-22', '.prx-24', '.prx-25'], isCenter: false },
+	  { element: document.querySelector('.parallax-scene__sector3'), group: [], isCenter: true },
+	  { element: document.querySelector('.parallax-scene__sector4'), group: ['.prx-3', '.prx-4', '.prx-6', '.prx-7', '.prx-22', '.prx-24', '.prx-25'], isCenter: false },
+	  { element: document.querySelector('.parallax-scene__sector5'), group: ['.prx-1', '.prx-2', '.prx-5', '.prx-21', '.prx-23', '.prx-26', '.prx-27'], isCenter: false },
+	];
+  
+	const center = document.querySelector('.parallax-scene__center');
+  
+	let active = false;
+	let currentGroup = [];
+	let isCenterActive = false;
+	let lastTime = 0;
+  
+	function randomShift(max) {
+	  return (Math.random() - 0.5) * 2 * max;
+	}
+  
+	function animate(time) {
+	  if (!active) return;
+  
+	  if (time - lastTime > 80) { // дергаем раз в 80 мс
+		lastTime = time;
+  
+		if (currentGroup.length) {
+		  currentGroup.forEach(selector => {
+			const item = document.querySelector(selector);
+			if (item) {
+			  const img = item.querySelector('img');
+			  const text = item.querySelector('p');
+			  if (img) img.style.transform = `translate(${randomShift(6)}px, ${randomShift(6)}px)`;
+			  if (text) text.style.transform = `translate(${randomShift(12)}px, ${randomShift(12)}px)`;
+			}
+		  });
+		}
+  
+		if (isCenterActive && center) {
+		  center.style.transform = `translate(-50%, -50%) translate(${randomShift(8)}px, ${randomShift(8)}px)`;
+		}
+	  }
+  
+	  requestAnimationFrame(animate);
+	}
+  
+	function start(group = [], centerFlag = false) {
+	  currentGroup = group;
+	  isCenterActive = centerFlag;
+	  if (!active) {
+		active = true;
+		requestAnimationFrame(animate);
+	  }
+	}
+  
+	function stop() {
+	  active = false;
+	  currentGroup.forEach(selector => {
+		const item = document.querySelector(selector);
+		if (item) {
+		  const img = item.querySelector('img');
+		  const text = item.querySelector('p');
+		  if (img) img.style.transform = 'translate(0, 0)';
+		  if (text) text.style.transform = 'translate(0, 0)';
+		}
+	  });
+	  if (center) {
+		center.style.transform = 'translate(-50%, -50%) translate(0, 0)';
+	  }
+	  currentGroup = [];
+	  isCenterActive = false;
+	}
+  
+	sectors.forEach(sector => {
+	  if (sector.element) {
+		sector.element.addEventListener('mouseenter', () => start(sector.group, sector.isCenter));
+		sector.element.addEventListener('mouseleave', stop);
+	  }
+	});
+  });

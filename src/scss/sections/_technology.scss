@@ -6,6 +6,11 @@
 // 		.card-text p{font-size: 12px;}
 // 	}
 // }
+.technology .technology-pagination.swiper-pagination{display: none;}
+@media (max-width: 767px) {
+	.technology .technology-pagination.swiper-pagination{display:flex; justify-content: center; position: relative;
+	   margin-top: 30px;}
+}
 .techno-swiper{
 	@media (max-width: 767px) {
 	   height: 396px;

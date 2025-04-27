@@ -41,15 +41,14 @@
 	
 }
 .modal-title, .modal-subtitle{
-	font-family: var(--second-family);
-	font-weight: 500;
-	font-size: 32px;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: remy(34);
 	line-height: 120%;
 	text-align: center;
 	color: var(--white);
-	@media (max-width: 1439px) {
-		font-size: 24px;
-	}
+	
+	
 	@media (max-width: 767px) {
 		font-size: 18px;
 	}

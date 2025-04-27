@@ -7,7 +7,7 @@
 }
 .drop-menu-wrapper{
 	position: absolute;
-	top: remy(90);
+	top: remy(92);
 	left: 0;
 	right: 0;
 	z-index: 5;
@@ -34,9 +34,11 @@
 	padding-bottom: remy(70);
 	column-gap:remy(70);
 	display: flex;
+	border-top:1px solid rgba(214, 214, 214, .4);
 	@media (max-width: 767px) {
 	padding-top: 0;
 	padding-bottom: 0;
+	border-top:0;
 	}
 }
 .drop-menu-list{
