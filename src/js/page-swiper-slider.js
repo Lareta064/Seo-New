@@ -198,15 +198,48 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener('resize', toggleClientsSlider);
     });
   
-    let portfolioSlider = new Swiper('.portfolio-slider', {
-        effect: "cards",
-        grabCursor: true,
-        pagination: {
-            el: '.portfolio-pagination',
-            clickable: true,
-        },
-        speed: 1000,
-    });
+  let portfolioSlider = null;
+
+function initPortfolioSlider() {
+    const windowWidth = window.innerWidth;
+
+    if (portfolioSlider) {
+        portfolioSlider.destroy(true, true);
+    }
+
+    if (windowWidth >= 768) {
+        portfolioSlider = new Swiper('.portfolio-slider', {
+            effect: "cards",
+            grabCursor: true,
+            spaceBetween: 16,
+            pagination: {
+                el: '.portfolio-pagination',
+                clickable: true,
+            },
+            speed: 800,
+        });
+    } else {
+        portfolioSlider = new Swiper('.portfolio-slider', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            pagination: {
+                el: '.portfolio-pagination',
+                clickable: true,
+            },
+            speed: 800,
+        });
+    }
+}
+
+// Инициализация при загрузке
+initPortfolioSlider();
+
+// И переинициализация при ресайзе
+window.addEventListener('resize', () => {
+    initPortfolioSlider();
+});
+
+   
     // reviewSwiper
     let reviewSwiper;
 

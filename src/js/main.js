@@ -525,4 +525,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		sector.element.addEventListener('mouseleave', stop);
 	  }
 	});
+	    /*portfolio card togggle */
+		const portfolioSliderToggle = document.querySelectorAll('.portfolio-card');
+		if(portfolioSliderToggle.length > 0){
+			portfolioSliderToggle.forEach((item)=>{
+				const itemToggle1 = item.querySelector('[data-toggle="1"]');
+				const itemToggle2 = item.querySelector('[data-toggle="2"]');
+				if(itemToggle1){
+					const itemChild1 = item.querySelectorAll('[data-child="1"]');
+					const itemChild2 = item.querySelectorAll('[data-child="2"]');
+					itemToggle1.addEventListener('click', ()=>{
+						itemChild2.forEach((el)=>{
+							el.classList.remove('active');
+						});
+						itemChild1.forEach((el)=>{
+							el.classList.add('active');
+						});
+					});
+					itemToggle2.addEventListener('click', ()=>{
+						console.log('555');
+						itemChild1.forEach((el)=>{
+							el.classList.remove('active');
+						});
+						itemChild2.forEach((el)=>{
+							console.log('444');
+							el.classList.add('active');
+						});
+					});
+				}
+			});
+		}
   });

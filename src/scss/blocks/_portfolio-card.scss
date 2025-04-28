@@ -47,6 +47,7 @@
 		@media (max-width: 767px) {
 			grid-template-columns: 1fr;
 			row-gap:16px;
+			padding-top: 14px;
 		}
 	}
 	&__left{
@@ -121,6 +122,7 @@
 	line-height: 1.2;
 	&__title{font-weight: 700; margin-bottom:remy(7);}
 	@media (max-width: 767px) {
+		margin-top: 17px;
 		&__title{font-size:12px; margin-bottom:remy(5);}
 		p{font-size: 12px; }
 	}
@@ -157,15 +159,16 @@
 		}
 		
 		@media (max-width: 767px) {
+			column-gap:8px;
 			span{font-size: 1.3em;}
 		}
 	}
 	&__list li +li{border-top: 1px solid white;}
 	
 	@media (max-width: 767px) {
-	  padding: 10px;
-	  &__title{font-size: 13px;}
-	  &__list li{font-size: 6px; span{font-size: 11px;}}
+	  padding: 8px;
+	  &__title{font-size: 12px;}
+	  &__list li{font-size: 6px; span{font-size: 10px;}}
 	}
 }
 .compare-card.compare-card--after{
@@ -181,23 +184,60 @@
 @media (max-width: 767px) {
 	.portfolio-card{
 		position: relative;
-		
+		height: 470px;
 		padding: 14px;
 		
 		.btn-outline{
 			display: flex;
-			margin-top: 32px;
+			margin-top: 14px;
 				
 		}
 	}
-	.portfolio-card__header{margin-bottom: remy(10);}
-	.portfolio-card__left{row-gap:remy(9);}
+	.portfolio-card__header{padding-top: 14px; margin-bottom:0;}
+	.portfolio-card__left{row-gap:9px;}
 	.portfolio-card__compare{
-		flex-direction: column;
-		row-gap: remy(9);
+		// flex-direction: column;
+		column-gap:7px;
+		row-gap: 9px;
+		padding-top: 13px;
+		.compare-card{
+			flex:1;
+			border-radius: 9px;
+
+		}
+		.compare-card__list li *:last-child{
+			width: fit-content;
+			min-width: 37px;
+		}
 	}
 	.icon-decor-text img{
 		width: remy(22);
 		height:remy(22);
+	}
+}
+.portfolio-card-toggle{
+	display: none;
+	@media (max-width: 767px) {
+		display: flex;
+		border-bottom: 1px solid #d4deef;
+		.card-toggle{
+			flex:1;
+			display: flex;
+			font-family: var(--second-family);
+			font-weight: 600;
+			font-size: 14px;
+			color: #d4deef;
+			justify-content: center;
+			align-items: center;
+			height: 43px;
+		}
+		.card-toggle+.card-toggle{border-left: 1px solid #d4deef; }
+	}
+}
+.portfolio-card{
+	@media (max-width: 767px) {
+	*[data-child]{display: none;}
+	*[data-child].active{display: block;}
+	.btn-outline.active[data-child]{display: flex;}
 	}
 }
