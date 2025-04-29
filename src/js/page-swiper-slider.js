@@ -200,46 +200,44 @@ document.addEventListener("DOMContentLoaded", function () {
   
   let portfolioSlider = null;
 
-function initPortfolioSlider() {
-    const windowWidth = window.innerWidth;
+    function initPortfolioSlider() {
+        const windowWidth = window.innerWidth;
 
-    if (portfolioSlider) {
-        portfolioSlider.destroy(true, true);
+        if (portfolioSlider) {
+            portfolioSlider.destroy(true, true);
+        }
+
+        if (windowWidth >= 768) {
+            portfolioSlider = new Swiper('.portfolio-slider', {
+                effect: "cards",
+                grabCursor: true,
+                spaceBetween: 16,
+                pagination: {
+                    el: '.portfolio-pagination',
+                    clickable: true,
+                },
+                speed: 800,
+            });
+        } else {
+            portfolioSlider = new Swiper('.portfolio-slider', {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                pagination: {
+                    el: '.portfolio-pagination',
+                    clickable: true,
+                },
+                speed: 800,
+            });
+        }
     }
 
-    if (windowWidth >= 768) {
-        portfolioSlider = new Swiper('.portfolio-slider', {
-            effect: "cards",
-            grabCursor: true,
-            spaceBetween: 16,
-            pagination: {
-                el: '.portfolio-pagination',
-                clickable: true,
-            },
-            speed: 800,
-        });
-    } else {
-        portfolioSlider = new Swiper('.portfolio-slider', {
-            slidesPerView: 1,
-            spaceBetween: 16,
-            pagination: {
-                el: '.portfolio-pagination',
-                clickable: true,
-            },
-            speed: 800,
-        });
-    }
-}
-
-// Инициализация при загрузке
-initPortfolioSlider();
-
-// И переинициализация при ресайзе
-window.addEventListener('resize', () => {
+    // Инициализация при загрузке
     initPortfolioSlider();
-});
 
-   
+    // И переинициализация при ресайзе
+    window.addEventListener('resize', () => {
+        initPortfolioSlider();
+    });
     // reviewSwiper
     let reviewSwiper;
 
@@ -285,4 +283,12 @@ window.addEventListener('resize', () => {
     
     // Отслеживание изменения размера экрана
     window.addEventListener('resize', initReviewSwiper);
+
+    let targetPromoSlider = new Swiper('.promo-target-swiper', {
+        spaceBetween:16,
+        pagination: {
+            el: '.promo-target-pagination',
+            clickable: true,
+        },
+    });
 });

@@ -9,14 +9,52 @@ section.promo.promo-inner.promo--target
 				li 
 					a(href="#!") Таргетированная реклама
 		.promo-banner.flex
-		
 			//=== title block ===
 			.promo-title
 				h1.h1 Таргетированная<br>реклама			
 				p.subtitle Настройка и ведение:<br>от 150 000 руб.
 			//====bottom row ====
 			.promo-button
-				button.btn-accent2 Подать заявку
+				button.btn-accent2 
+					span Подать заявку
+			
+			//slider
+			.promo-target-swiper.swiper
+				.swiper-wrapper
+					//slide
+					.swiper-slide
+						.team-slide
+							.team-slide__ava
+								img.wh-100.round-img(src='./img/target/team-slider-ava.webp', srcset='./img/target/team-slider-ava@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+							.team-slide__txt
+								.team-slide__title Максим/ TBC
+								p “Глеб Савов и его команда эффективно выстроили стратегию продвижения нашего сайта, обеспечив выгодные позиции в поисковых системах.”
+					//slide
+					.swiper-slide
+						.team-slide
+							.team-slide__ava
+								img.wh-100.round-img(src='./img/targeting/team-slider-ava.webp', srcset='./img/targeting/team-slider-ava@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+							.team-slide__txt
+								.team-slide__title Глеб
+								p “Глеб Савов и его команда эффективно выстроили стратегию продвижения нашего сайта, обеспечив выгодные позиции в поисковых системах.”
+					//slide
+					.swiper-slide
+						.team-slide
+							.team-slide__ava
+								img.wh-100.round-img(src='./img/targeting/team-slider-ava.webp', srcset='./img/targeting/team-slider-ava@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+							.team-slide__txt
+								.team-slide__title Артем
+								p “Глеб Савов и его команда эффективно выстроили стратегию продвижения нашего сайта, обеспечив выгодные позиции в поисковых системах.”
+					//slide
+					.swiper-slide
+						.team-slide
+							.team-slide__ava
+								img.wh-100.round-img(src='./img/target/team-slider-ava.webp', srcset='./img/target/team-slider-ava@2x.webp 2x' width='56' height='56' loading='lazy' alt='img')
+							.team-slide__txt
+								.team-slide__title Максим/ TBC
+								p “Глеб Савов и его команда эффективно выстроили стратегию продвижения нашего сайта, обеспечив выгодные позиции в поисковых системах.”
+				//pagination
+				.promo-target-pagination.swiper-pagination.bullit-pagination
 	
 	//БЛОК С КАРТОЧКАМИ 
 	.promo-benefits
@@ -44,7 +82,7 @@ section.promo.promo-inner.promo--target
 				
 				//====card #4 ===
 				.benefit-card.benefit-4
-					img(loading="lazy" src='./img/dashboard.webp' srcset="./img/dashboard@2x.webp 2x" width='360' height='330' alt='img')
+					img(loading="lazy" src='./img/targeting/target.webp' srcset="./img/targeting/target@2x.webp 2x" width='360' height='330' alt='img')
 				
 				//====card #5 ===
 				.benefit-card.benefit-5
@@ -66,16 +104,16 @@ section.promo.promo-inner.promo--target
 								
 								.swiper-slide
 									.chart-card
-										img(src='./img/result-slider/slider1.webp', srcset='./img/result-slider/slider1@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
+										img(src='./img/targeting/result-slider1.webp', srcset='./img/targeting/result-slider1@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
 								.swiper-slide
 									.chart-card
-										img(src='./img/result-slider/slider2.webp', srcset='./img/result-slider/slider2@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
+										img(src='./img/targeting/result-slider1.webp', srcset='./img/targeting/result-slider1@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
 								.swiper-slide
 									.chart-card
-										img(src='./img/result-slider/slider3.webp', srcset='./img/result-slider/slider3@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
+										img(src='./img/targeting/result-slider1.webp', srcset='./img/targeting/result-slider1@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
 								.swiper-slide
 									.chart-card
-										img(src='./img/result-slider/slider4.webp', srcset='./img/result-slider/slider4@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
+										img(src='./img/targeting/result-slider1.webp', srcset='./img/targeting/result-slider1@2x.webp 2x' width='506' height='171' loading='lazy' alt='img')
 							
 							//slider pagination
 							.result-slider-pagination.swiper-pagination

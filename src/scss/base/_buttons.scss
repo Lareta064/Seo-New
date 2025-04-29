@@ -17,6 +17,7 @@
 	transition: .3s; 
 	width: fit-content;
 	overflow: hidden;
+	span{position: relative;z-index: 3;}
 	
 	@media (max-width: 767px) {
 	height: remy(46);
@@ -65,12 +66,7 @@
 	&:hover{color: $dark; background-color: #fff;border: 1px solid #fff;}
 	&:active{color: white; border: 1px solid #d4deef; background-color: $dark;}
 }
-// form{
-//  	.btn-dark, .btn-dark[type="submit"]{
-// 		font-weight: 400;
-	
-// 	}
-// }
+
 *.h-50{
 	height: remy(50);
 }
@@ -90,6 +86,34 @@
 
 
 .btn-accent{background-color: $accent;}
+
+
+.btn-overlay{
+  position: relative;
+  overflow: hidden;
+  span{position: relative; z-index: 3;}
+	&:before{
+		content:'';
+		position: absolute;
+		top: 0;
+		bottom: 0;;
+		right: 0;
+		width: 100%;
+		border-radius: inherit;
+		transform: translateX(110%);
+		transition: .2s; 
+	}
+	&:hover:before{
+		transform: translateX(0);
+		z-index: 2;
+	}
+}
+.btn-accent.btn-overlay:before{
+	background: linear-gradient(152deg, #f98836 0%, #ffb9a8 100%);
+}
+.btn-accent.btn-overlay:active{
+	background: var(--back-2);
+}
 .btn-primary {background-color: $red; }
 .btn-primary:active{
 	background-color: $dark; 
