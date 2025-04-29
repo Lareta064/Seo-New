@@ -1,8 +1,7 @@
 @use "base/var" as *;
-
-.promo.promo--seo{
-	
+.promo.promo-inner{
 	.promo-banner{
+
 		margin-top: remy(55);
 		padding-top: remy(50);
 		padding-bottom: remy(55);
@@ -10,40 +9,25 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
-		background-image: -webkit-image-set(
-			url(../img/seo-promo.webp) 1x,
-			url(../img/seo-promo@2x.webp) 2x
-		);
-		background-image: image-set(
-			url(../img/seo-promo.webp) 1x,
-			url(../img/seo-promo@2x.webp) 2x
-		);
 		background-position: right;
 		background-size: cover;
 		background-repeat: no-repeat;
+		min-height: remy(623);
 		@media (max-width: 767px) {
 			padding: 21px 13px 24px 14px;
-		    margin-top: 16px;
+			margin-top: 16px;
 			
-			background-image: -webkit-image-set(
-				url(../img/seo-promo-mob.webp) 1x,
-				url(../img/seo-promo-mob@2x.webp) 2x
-			);
-			background-image: image-set(
-				url(../img/seo-promo-mob.webp) 1x,
-				url(../img/seo-promo-mob@2x.webp) 2x
-			);
 			min-height: 560px;
 			.promo-button {width: 100%;max-width: 330px; display: flex; justify-content: center;}
-			.promo-button .btn-accent{padding-left: 22px;
-				padding-right: 22px; height: 50px; font-size: 20px; width: fit-content;}
+			.promo-button [class^="btn-"]{
+				padding-left: 22px;
+				padding-right: 22px; 
+				height: 50px; 
+				font-size: 20px; 
+				width: fit-content;
+			}
 		}
-		
-			
-			
-		
 	}
-	
 	.promo-title{
 		width: min(1180px, 100%);
 		margin-bottom: 0;
@@ -71,23 +55,33 @@
 			line-height: 1.2;
 			span{font-weight: 400!important; color: #e7e7e7!important;}
 		}
-	}
-	
+	}	
 }
-// @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-//        (min-width: 768px) and (min-resolution: 192dpi) {
-//     .promo.promo--seo .promo-banner {
-//         background-image: url('./../img/seo-promo@2x.webp');
-//     }
-// }
-
-// /* Retina mobile */
-// @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
-//        (max-width: 767px) and (min-resolution: 192dpi) {
-//     .promo.promo--seo .promo-banner {
-//         background-image: url('https://funik.ru/wp-content/uploads/2018/10/17478da42271207e1d86.jpg');
-//     }
-// }
-
-
-
+.promo.promo--seo{
+	
+	.promo-banner{
+		
+		background-image: -webkit-image-set(
+			url(../img/seo-promo.webp) 1x,
+			url(../img/seo-promo@2x.webp) 2x
+		);
+		background-image: image-set(
+			url(../img/seo-promo.webp) 1x,
+			url(../img/seo-promo@2x.webp) 2x
+		);
+		
+		@media (max-width: 767px) {
+			
+			background-image: -webkit-image-set(
+				url(../img/seo-promo-mob.webp) 1x,
+				url(../img/seo-promo-mob@2x.webp) 2x
+			);
+			background-image: image-set(
+				url(../img/seo-promo-mob.webp) 1x,
+				url(../img/seo-promo-mob@2x.webp) 2x
+			);
+			
+		}
+		
+	}
+}

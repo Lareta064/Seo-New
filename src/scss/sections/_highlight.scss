@@ -1,5 +1,9 @@
 @use "base/var" as *;
-.highlight{}
+.highlight{
+	@media (max-width: 767px) {
+	display: none;
+	}
+}
 .highlight-text {
 	font-size: remy(70);
 	font-weight: 800;

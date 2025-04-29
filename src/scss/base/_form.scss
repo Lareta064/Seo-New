@@ -105,19 +105,19 @@
 	}
 	.fileUpload-name{
 		max-width: remy(150);
-		font-weight: 600;
+		font-weight: 400;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
 	
 	.fileUpload-limit{
-		font-size: 14px;
+		font-size: remy(18);
 		line-height: 1.43;
 		font-family: var(--second-family);
 		font-weight: 400;
 		color: #d4deef;
-		max-width: 150px;
+		max-width: remy(190);
 
 	}
 	@media (max-width: 767px) {
@@ -194,7 +194,7 @@
 	  border-radius: 12px;
 	}
 }
-*[type="submit"]{font-family: var(--second-family);}
+// *[type="submit"]{font-family: var(--second-family);}
 .form-btn .btn[type]{
 	height: 46px;
 	
@@ -213,8 +213,8 @@
 .accept-terms{
 	font-family: var(--second-family);
 	font-weight: 400;
-	font-size: 13px;
-	line-height: 1.25;
+	font-size: remy(14);
+	line-height: 1.43;
 	color: var(--white);
 	a{
 		text-decoration: underline;

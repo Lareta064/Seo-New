@@ -1,5 +1,5 @@
 @use "var" as *;
-.btn-dark, .btn-grey, .btn-light, .btn-blue, .btn-accent, .btn-primary, .btn-outline{
+.btn-dark, .btn-grey, .btn-light, .btn-blue, .btn-accent, .btn-primary, .btn-outline,.btn-accent2{
 	height: remy(64);
 	padding-left: remy(46);
 	padding-right: remy(46);
@@ -62,15 +62,15 @@
 .btn-blue{
 	background: #c6dbff;
 	
-	&:hover{color: $dark;}
+	&:hover{color: $dark; background-color: #fff;border: 1px solid #fff;}
 	&:active{color: white; border: 1px solid #d4deef; background-color: $dark;}
 }
-form{
- 	.btn-dark, .btn-dark[type="submit"]{
-		font-weight: 400;
+// form{
+//  	.btn-dark, .btn-dark[type="submit"]{
+// 		font-weight: 400;
 	
-	}
-}
+// 	}
+// }
 *.h-50{
 	height: remy(50);
 }
@@ -99,7 +99,7 @@ form{
 	background-color: var(--dark);
 	border:0;
 }
-.btn-primary--animate {
+.btn-primary--animate  {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -132,14 +132,27 @@ form{
 		transition: .8s; 
 	}
 }
-
-.btn-primary--animate:hover:before {
+.btn-accent--animate{
+	cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.8s ease-in-out;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23f98836' /%3e%3cstop offset='100%25' stop-color='%23f98836' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
+	&:before{background: #f98836;}
 	
-	opacity:0 ;
 }
+.btn-primary--animate:hover:before,
+.btn-accent--animate:hover:before {opacity:0 ;}
+
 .btn-primary--animate:hover{
 	animation: gradientMoveRed 1.6s linear infinite alternate;
 }
+.btn-accent--animate:hover{
+	animation: gradientMoveOrange 1.6s linear infinite alternate;
+}
+.btn-accent--animate:active:before{opacity: 0;}
+.btn-accent--animate:active{background: var(--back-2);animation: none;}
 @keyframes gradientMoveRed {
 	0%{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23ff562f' /%3e%3cstop offset='100%25' stop-color='%23ff562f' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
@@ -152,5 +165,19 @@ form{
     }
 	100%{
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23ff562f' /%3e%3cstop offset='100%25' stop-color='%23ff562f' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
+	}
+}
+@keyframes gradientMoveOrange {
+	0%{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23f98836' /%3e%3cstop offset='100%25' stop-color='%23f98836' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
+	}
+    33% {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23f98836' /%3e%3cstop offset='100%25' stop-color='%23ffb9a8' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
+    }
+    66% {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='end' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23ffb9a8' /%3e%3cstop offset='100%25' stop-color='%23f98836' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23end)' /%3e%3c/svg%3e");
+    }
+	100%{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50' viewBox='0 0 100 50' preserveAspectRatio='none'%3e%3clinearGradient id='start' x1='0' y1='0' x2='1' y2='0'%3e%3cstop offset='0%25' stop-color='%23f98836' /%3e%3cstop offset='100%25' stop-color='%23f98836' /%3e%3c/linearGradient%3e%3crect width='100' height='50' fill='url(%23start)' /%3e%3c/svg%3e");
 	}
 }

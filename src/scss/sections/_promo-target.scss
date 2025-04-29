@@ -1,0 +1,34 @@
+@use "base/var" as *;
+
+.promo.promo--target{
+	
+	.promo-banner{
+		
+		background-image: -webkit-image-set(
+			url(../img/targeting/promo-bg.webp) 1x,
+			url(../img/targeting/promo-bg@2x.webp) 2x
+		);
+		background-image: image-set(
+			url(../img/targeting/promo-bg.webp) 1x,
+			url(../img/targeting/promo-bg@2x.webp) 2x
+		);
+		
+		@media (max-width: 767px) {
+			
+			
+			background-image: -webkit-image-set(
+				url(../img/seo-promo-mob.webp) 1x,
+				url(../img/seo-promo-mob@2x.webp) 2x
+			);
+			background-image: image-set(
+				url(../img/seo-promo-mob.webp) 1x,
+				url(../img/seo-promo-mob@2x.webp) 2x
+			);
+			
+		}
+	}
+}
+
+.btn-accent2{
+	background-color: var(--target);
+}

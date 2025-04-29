@@ -57,7 +57,7 @@
   --white: white;
   --dark: #131313;
   --back-2: #282828;
-  
+  --target: #3A7FF5;
 }
 * {
 	  box-sizing: border-box;
@@ -127,7 +127,7 @@
     width: 100%;
     height: 100%;
   }
-  img.round-img{border-radius: 50%}
+  img.round-img{border-radius: 50%;}
   input,
   button, button:focus, input:focus {
 	outline: none;
