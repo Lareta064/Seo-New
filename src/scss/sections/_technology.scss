@@ -1,11 +1,20 @@
 @use "base/var" as *;
-// .technology-slider .flex-card{max-width: 385px;}
-// @media (max-width: 767px) {
-// 	.technology-slider .swiper-slide{
-// 		width: 340px!important;
-// 		.card-text p{font-size: 12px;}
-// 	}
-// }
+.technology {
+	@media (min-width: 768px) {
+		.techno-swiper{height: 150px;}
+		
+	}
+}
+.technology.technology-rows {
+	
+	@media (min-width: 768px) {
+		.techno-swiper{height: 334px;}
+		.techno-card:nth-child(-n+4){
+			transform-origin: bottom; // ключевой момент
+			align-self: flex-end;
+		}
+	}
+}
 .technology .technology-pagination.swiper-pagination{display: none;}
 @media (max-width: 767px) {
 	.technology .technology-pagination.swiper-pagination{display:flex; justify-content: center; position: relative;

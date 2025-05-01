@@ -13,21 +13,25 @@
 			url(../img/targeting/promo-bg.webp) 1x,
 			url(../img/targeting/promo-bg@2x.webp) 2x
 		);
-		
+		.promo-title .subtitle{font-size: remy(30);}
 		@media (max-width: 767px) {
-			
-			
+			row-gap: 16px;
+				background-position: center bottom;
+				background-size: contain;
 			background-image: -webkit-image-set(
-				url(../img/seo-promo-mob.webp) 1x,
-				url(../img/seo-promo-mob@2x.webp) 2x
+				url(../img/targeting/promo-bg-mob.webp) 1x,
+				url(../img/targeting/promo-bg-mob@2x.webp) 2x
 			);
 			background-image: image-set(
-				url(../img/seo-promo-mob.webp) 1x,
-				url(../img/seo-promo-mob@2x.webp) 2x
+				url(../img/targeting/promo-bg-mob.webp) 1x,
+				url(../img/targeting/promo-bg-mob@2x.webp) 2x
 			);
+			.promo-title .h1{font-size: 28px;}
+			.promo-title .subtitle{font-size: 16px; max-width: 130px; margin-top: 10px;}
 			
 		}
 	}
+	
 }
 
 .btn-accent2{
@@ -61,6 +65,16 @@
 	right: remy(40);
 	bottom: remy(54);
 	z-index: 2;
+	@media (max-width: 767px) {
+		width: 260px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin-top: auto;
+	}
 }
 .team-slide{
 	display: flex;
@@ -75,6 +89,10 @@
 		width: remy(56);
 		height: remy(56);
 		flex-shrink:0;
+		@media (max-width: 767px) {
+			width: remy(43);
+			height: remy(43);
+		}
 	}
 	&__txt{flex: 1;}
 	&__title{
@@ -83,6 +101,13 @@
 		font-size: remy(20);
 		line-height: 1.30;
 		margin-bottom: remy(10);
+		@media (max-width: 767px) {
+		font-size: 14px;
+		}
+	}
+	@media (max-width: 767px) {
+	  font-size: 10px;
+	  &__txt{max-width: 230px;}
 	}
 }
 .promo--target .benefit-card.benefit-slider .result-slider .chart-card{

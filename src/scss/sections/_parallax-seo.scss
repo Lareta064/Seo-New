@@ -71,6 +71,7 @@
 		width: 360px;
 		left: 50%;
 		transform: translateX(-50%);
+		top:26px;
 	}
 }
 .parallax-item{
@@ -309,11 +310,15 @@
 .parallax-scene__sector4,
 .parallax-scene__sector5{
 	position: absolute;
-	top: 0;
+	top: remy(140);
 	bottom: 0;
 	width: 20%;
 	z-index: 3;
-	
+	@media (max-width: 767px) {
+		top: 90px;
+		bottom:60px;
+		
+	}
 }
 .parallax-scene__sector1{left: 0;}
 .parallax-scene__sector2{left: 20.1%;}

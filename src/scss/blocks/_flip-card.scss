@@ -63,7 +63,7 @@
 	p{font-size: 1.8em; }
   }
 
-  .seo-benefit-card{
+.seo-benefit-card{
 	display: flex;
 	column-gap: remy(13);
 	padding: remy(15);
@@ -94,5 +94,15 @@
 		color: rgba(206, 206, 206, .65);
 		span{font-weight: 600; opacity: 1;}
 		font-family: var(--second-family);
+	}
+}
+.what-targeting .seo-benefit-card
+ .flip-card-back{
+	background-image: url('../img/targeting/union.webp');
+	
+}
+.what-targeting .seo-benefit-card{
+	@media (max-width: 767px) {
+		background-image: url('../img/targeting/union-mobile.webp');
 	}
 }
