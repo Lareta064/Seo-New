@@ -100,3 +100,11 @@
 }
 .swiper-arrow-next{right:remy(-60);}
 .swiper-arrow-prev{left: remy(-60);}
+@media (max-width: 1439px) {
+	.swiper-arrow-next{right:remy(-30);}
+	.swiper-arrow-prev{left: remy(-30);}
+}
+@media (max-width: 1199px) {
+	.swiper-arrow-next{right:remy(-16);}
+	.swiper-arrow-prev{left: remy(-16);}
+}

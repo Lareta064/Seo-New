@@ -42,20 +42,22 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+   @media (max-width: 767px) {
+   background: none;
+   }
   }
   .portfolio-slider2{
     
     max-width: 1285px;
     margin-left: auto;
     margin-right: auto;
-   width: 100%;
-   
-   
+      width: 100%;
     z-index: 5;
     border: 1px solid #c2c6cb;
     border-radius: remy(24);
     @media (max-width: 767px) {
-     border: 0;
+      border: 0;
+      width: 328px;
      }
   }
   .portfolio-pagination2.swiper-pagination{

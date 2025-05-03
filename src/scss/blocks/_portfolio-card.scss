@@ -63,7 +63,7 @@
 		margin-bottom: remy(24);
 		@media (max-width: 767px) {
 			font-size: 18px;
-			margin-bottom: 0;
+			margin-bottom:14px;
 		}
 		
 	}
@@ -71,6 +71,17 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		width: remy(367);
+		flex-shrink: 0;
+		img{
+			width: 100%;height: remy(264);object-fit:contain;}
+		@media (max-width: 767px) {
+			width:100%;
+			img{
+				height: 210px; 
+			}
+			
+		}
 	}
 	.chart__subtext{
 		display: grid;
@@ -81,14 +92,20 @@
 		margin-top:remy(10);
 		max-width: remy(300);
 		@media (max-width: 767px) {
-		font-size: 14px;
-		margin-top: 0;
-		max-width: 190px;
+			font-size: 16px;
+			margin-top: 0;
+			width: 100%;
+			max-width: 290px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+			&+.btn-outline {margin-top: 30px; width: 280px;margin-left: auto;
+			margin-right: auto;
+			}
 		}
 	}
-	@media (max-width: 767px) {
-	   padding: 16px 22px 30px;
-	}
+	
 }
 .icon-decor-text{
 	display: flex;
@@ -108,8 +125,8 @@
 		column-gap:12px;
 		.txt-20{font-size:12px;}
 		img{
-			width: 34px;
-			height: 34px;
+			width: 36px;
+			height: 36px;
 			
 		}
 		
@@ -184,8 +201,18 @@
 @media (max-width: 767px) {
 	.portfolio-card{
 		position: relative;
-		height: 470px;
-		padding: 14px;
+		height: 480px;
+		@media (max-width: 767px) {
+			padding: 0;
+			.portfolio-card__header,
+			.portfolio-card__title,
+			.portfolio-card__body,
+			.btn-outline, .portfolio-card__chart {
+				width: 280px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		 }
 		
 		.btn-outline{
 			display: flex;
@@ -193,13 +220,13 @@
 				
 		}
 	}
-	.portfolio-card__header{padding-top: 14px; margin-bottom:0;}
+	.portfolio-card__header{padding-top: 12px; margin-bottom:0;}
 	.portfolio-card__left{row-gap:9px;}
 	.portfolio-card__compare{
 		// flex-direction: column;
 		column-gap:7px;
-		row-gap: 9px;
-		padding-top: 13px;
+		row-gap: 7px;
+		padding-top: 12px;
 		.compare-card{
 			flex:1;
 			border-radius: 9px;
@@ -210,10 +237,7 @@
 			min-width: 37px;
 		}
 	}
-	.icon-decor-text img{
-		width: remy(22);
-		height:remy(22);
-	}
+	
 }
 .portfolio-card-toggle{
 	display: none;
@@ -238,6 +262,7 @@
 	@media (max-width: 767px) {
 	*[data-child]{display: none;}
 	*[data-child].active{display: block;}
+	.portfolio-card__chart[data-child].active{display: flex;}
 	.btn-outline.active[data-child]{display: flex;}
 	}
 }
