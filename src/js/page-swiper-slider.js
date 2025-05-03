@@ -238,6 +238,22 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', () => {
         initPortfolioSlider();
     });
+
+    // .portfolio-slider2
+    portfolioSlider2 = new Swiper('.portfolio-slider2', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        // effect:'fade',
+        navigation: {
+            nextEl: ".portfolio-button-next",
+            prevEl: ".portfolio-button-prev",
+          },
+        pagination: {
+            el: '.portfolio-pagination2',
+            clickable: true,
+        },
+        speed: 800,
+    });
     // reviewSwiper
     let reviewSwiper;
 

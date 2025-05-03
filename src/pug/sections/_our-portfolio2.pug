@@ -1,0 +1,136 @@
+mixin portfolio-card
+	.portfolio-card
+		.portfolio-card-toggle
+			.card-toggle(data-toggle="1") Цифры
+			.card-toggle(data-toggle="2") Результат
+		.portfolio-card__header.active(data-child="1")
+			.portfolio-card__title Компания<br>«Автоэстетика»
+			a.btn-white(href="#!") Хочу так же
+			
+		.portfolio-card__body
+			.portfolio-card__left.active(data-child="1")
+				//=== company-info===
+				.portfolio-card__company
+					.icon-decor-text
+						img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+						.txt-20 Центр судебных экспертиз и исследований<br>Проведение судебных экспертиз в различных отраслях
+					.icon-decor-text
+						img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+						a(href="#!").txt-20 https://sudekspertiza.com
+				
+				//===список услуг ===
+				.serv-list
+					.serv-list__title Предоставленные услуги
+					p Продвижение сайта
+					p Контекстная реклама
+				
+				//===карточки сравнения ===
+				.portfolio-card__compare
+					.compare-card
+						.compare-card__title Было
+						ul.compare-card__list
+							li
+								p В ТОП 10<br>Яндекс
+								p #[span 56]<br>запросов
+							li
+								p Трафик
+								p #[span 320]<br>пос/мес
+
+					.compare-card.compare-card--after
+						.compare-card__title Стало
+						ul.compare-card__list
+							li
+								p В ТОП 10<br>Яндекс
+								p #[span 56]<br>запросов
+							li
+								p Трафик
+								p #[span 320]<br>пос/мес
+			
+			//===графики справа ===
+			.portfolio-card__chart(data-child="2")
+				.chart__title Количество<br>запросов в ТОП-10
+				
+				.chart__img
+					img(src="./img/chart.webp", srcset="./img/chart@2x.webp 2x" loading="lazy" width="280" height="218" alt="chart")
+				
+				.chart__subtext
+					p Было
+					p Стало
+				a.btn-outline(href="#!" data-child="1") Хочу так же
+		
+		a.btn-outline.active(href="#!" data-child="1") Хочу так же
+section.our-portfolio
+	.container
+		h1.title Кейсы
+		//==== slider ====
+		.portfolio-slider-back
+			
+			//slider-body
+			.portfolio-slider2.swiper
+				.swiper-wrapper
+					//SLIDE
+					.swiper-slide
+						+portfolio-card
+					
+					//SLIDE
+					.swiper-slide
+						.portfolio-card
+							.portfolio-card-toggle
+								.card-toggle(data-toggle="1") Цифры
+								.card-toggle(data-toggle="2") Результат
+							.portfolio-card__header.active(data-child="1")
+								.portfolio-card__title Компания<br> «Альфа Мастер Клининг»
+								a.btn-white(href="#!") Хочу так же
+								
+							.portfolio-card__body
+								.portfolio-card__left.active(data-child="1")
+									//=== company-info===
+									.portfolio-card__company
+										.icon-decor-text
+											img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+											.txt-20 Профессиональные услуги уборки и наведения порядка в помещениях
+										.icon-decor-text
+											img(src="img/text-icon.webp", loading="lazy" srcset="img/text-icon.webp" width="47" height="47" alt="icon")
+											a(href="#!").txt-20 https://clean-alfa.ru
+									
+									//===список услуг ===
+									.serv-list
+										.serv-list__title Предоставленные услуги
+										p Продвижение сайта
+										p Контекстная реклама
+									
+									//===карточки сравнения ===
+									.portfolio-card__compare
+										.compare-card
+											.compare-card__title Было
+											ul.compare-card__list
+												li
+													p В ТОП 10<br>Яндекс
+													p #[span 0]<br>запросов
+												li
+													p Трафик
+													p #[span 320]<br>пос/мес
+
+										.compare-card.compare-card--after
+											.compare-card__title Стало
+											ul.compare-card__list
+												li
+													p В ТОП 10<br>Яндекс
+													p #[span 92]<br>запросов
+												li
+													p Трафик
+													p #[span 320]<br>пос/мес
+					.swiper-slide
+						+portfolio-card
+					
+
+				//=== pagination ====
+			.portfolio-pagination2.swiper-pagination.swiper-pagination-right
+			
+			// slider arrows
+			.portfolio-button-next.swiper-arrow-next
+				svg.arr-right
+					use(href='./img/sprite.svg#arr-right')
+			.portfolio-button-prev.swiper-arrow-prev
+				svg.arr-left
+					use(href='./img/sprite.svg#arr-left')

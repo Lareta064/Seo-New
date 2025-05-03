@@ -3,7 +3,7 @@
 	border: 1px solid #c2c6cb;
     border-radius: remy(24);
     background-color: #282828;
-	padding: remy(40) remy(50);
+	padding: remy(48) remy(50);
 	.btn-outline{display: none; height: 52px; font-size: 20px; padding-inline:10px; width: 100%;}
 	.btn-white{
 		background: var(--white);
@@ -117,10 +117,10 @@
 }
 .portfolio-card__company>*+*{margin-top: remy(10);}
 .serv-list{
-	font-size:remy(18);
+	
 	font-family: var(--second-family);
 	line-height: 1.2;
-	&__title{font-weight: 700; margin-bottom:remy(7);}
+	&__title{font-weight: 700; margin-bottom:remy(7); font-size:remy(20);font-family: var(--font-family);}
 	@media (max-width: 767px) {
 		margin-top: 17px;
 		&__title{font-size:12px; margin-bottom:remy(5);}
