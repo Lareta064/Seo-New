@@ -53,7 +53,7 @@ footer.footer{
 		column-gap: 15px;
 	}
 }
-.nav{
+.footer-nav .nav{
 	.nav-title{
 		margin-bottom: remy(23);
 		font-size: remy(18);
@@ -63,7 +63,7 @@ footer.footer{
 			}
 	}
 }
-.nav-list{
+.footer-nav .nav-list{
 	display: flex;
 	flex-direction: column;
 	row-gap:remy(10);
@@ -82,6 +82,7 @@ footer.footer{
 .footer-bottom{
 	margin-top: remy(34);
 	font-family: $ft;
+	max-width: remy(530);
 	p{
 		max-width: remy(1280);
 		font-size: remy(12);
