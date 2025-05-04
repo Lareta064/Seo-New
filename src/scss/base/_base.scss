@@ -95,7 +95,16 @@
 	-ms-touch-action: none;
 	height: 100vh;
   }
-  
+  .back-overlay{
+    position: fixed;
+    inset:0;
+    background-color: rgba(0,0,0, .64);
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+    z-index: 3;
+    &.back-overlay--show{height: 100vh;}
+  }
   a{color: inherit; display: inline-block;}
   a,
   a:hover {

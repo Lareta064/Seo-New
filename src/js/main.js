@@ -36,24 +36,27 @@ document.addEventListener("DOMContentLoaded", function () {
 	/*Catalogy Menu */
 	
 	const hasDropMenu = document.querySelectorAll('.has-drop-menu');
-
+	const backOverlay = document.querySelector('.back-overlay');
 	if (hasDropMenu.length > 0) {
 		hasDropMenu.forEach((item) => {
 			item.addEventListener('click', (e) => {
 				e.stopPropagation(); // чтобы клик по ссылке не закрыл меню сразу
 
 				const isAlreadyOpen = item.classList.contains('drop-menu--open');
+				
 
 				// Закрываем всё
 				hasDropMenu.forEach((el) => {
 					el.classList.remove('drop-menu--open');
 				});
 				pageHeader.classList.remove('header-open-menu');
+				backOverlay.classList.remove('back-overlay--show');
 
 				// Если пункт ещё не был открыт — открываем
 				if (!isAlreadyOpen) {
 					item.classList.add('drop-menu--open');
 					pageHeader.classList.add('header-open-menu');
+					backOverlay.classList.add('back-overlay--show');
 				}
 			});
 		});
@@ -64,8 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (!e.target.closest('.drop-menu-wrapper')) {
 				hasDropMenu.forEach((el) => {
 					el.classList.remove('drop-menu--open');
+
 				});
 				pageHeader.classList.remove('header-open-menu');
+				backOverlay.classList.remove('back-overlay--show');
 			}
 		});
 	}
