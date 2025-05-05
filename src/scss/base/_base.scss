@@ -102,7 +102,7 @@
     height: 0;
     overflow: hidden;
     transition: .2s;
-    z-index: 3;
+    z-index: 12;
     &.back-overlay--show{height: 100vh;}
   }
   a{color: inherit; display: inline-block;}

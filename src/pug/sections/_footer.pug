@@ -5,7 +5,7 @@ footer.footer
 				a(href="index.html").logo
 					svg.svg-footer-logo
 						use(href='./img/footer-logo.svg#svg-footer-logo')
-				.visible-1200
+				.visible-768
 					a(href="#!").link Политика конфиденциальности
 					a(href="#!").link Публичная оферта
 				.bank-details
@@ -27,30 +27,26 @@ footer.footer
 						a.nav-item(href="#!") Команда
 						a.nav-item(href="#!") Блог
 						a.nav-item(href="#!") Кейсы
-						a(href="#!") Контакты
-						a(href="#!") Инструменты
+						a.nav-item(href="#!") Контакты
+						a.nav-item(href="#!") Инструменты
 				
 				
 				
-				.nav
+				.nav.nav-contacts
 					.nav-title Контакты
-					p 
+					.nav-contacts__mess.flex
 						span в whatsapp
 						span в telegram
 					nav.nav-list
 						a(href="").email-link info@savov.ru
 						a(href="").icon-link.nav-item
 							img(src="./img/phone.webp", loading="lazy" alt="")
-							span 8 (900) 656- 69-03
+							span 8 (900) 656-69-03
 						a(href="").icon-link.nav-item
 							img(src="./img/whatsapp.webp",loading="lazy" alt="") 
-							span 8 (900) 656- 69-03
-						a(href="").icon-link.nav-item
-							img(src="./img/telegram.webp", loading="lazy" alt="")
-							span @savov
-						a(href="").icon-link.nav-item
-							img(src="./img/youtube.webp",loading="lazy"  alt="")
-							span @savov
+							span 8 (900) 656-69-03
+						
+						
 			
 			//===visible mobile ===
 			.footer-mobile-content
@@ -68,4 +64,5 @@ footer.footer
 				a(href="#!").link Политика конфиденциальности
 		
 		.footer-bottom
-			p Использование материалов с данного сайта разрешено только по согласию с владельцем. Владелец оставляет за собой право воспользоваться 146 статьей УК&nbsp;РФ при нарушении авторских и смежных прав. Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+			p.visible-768 Использование материалов с данного сайта разрешено только по согласию с владельцем. Владелец оставляет за собой право воспользоваться 146 статьей УК&nbsp;РФ при нарушении авторских и смежных прав. Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
+			p.hide-768 Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик. Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
