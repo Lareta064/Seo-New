@@ -1,6 +1,6 @@
 @use "base/var" as *;
 .package{
-	font-size: 10px;
+	font-size: remy(10);
 	border-radius: 2.4em;
     transition: .3s; 
 	padding: 3.4em 3.8em;
@@ -21,7 +21,7 @@
 	}
 	&__price{
 		font-weight: 700;
-		font-size: 32px;
+		font-size: remy(32);
 	}
 	&__link{
 		font-family: var(--second-family);
@@ -32,17 +32,17 @@
 		font-size: 2em;
 		line-height: 1.10;
 		svg{
-			width: 33px;
-			height: 23px;
+			width: remy(33);
+			height: remy(23);
 			vertical-align: middle;
 		}
 	}
 }
 .package-list{
 	display: grid;
-	font-size: 10px;
+	font-size: remy(10);
 	grid-template-columns: 1fr 1fr;
-	width: 804px;
+	width: remy(804);
 	&__item:nth-child(1){
 		padding-bottom: 1.2em;
 		padding-right: 1.2em;

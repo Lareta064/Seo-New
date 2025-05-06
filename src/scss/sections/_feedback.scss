@@ -36,3 +36,24 @@
 	background-size:150%
 	}
 }
+.btn-dark.seo-feedback-btn{position: relative;}
+
+.btn-dark.seo-feedback-btn:after{
+	content:'';
+		position: absolute;
+		top: 0;
+		bottom: 0;;
+		right: 0;
+		width: 100%;
+		border-radius: inherit;
+		transform: translateX(110%);
+		transition: .1s; 
+		background: linear-gradient(152deg, #f98836 0%, #ffb9a8 100%);
+}
+.btn-dark.seo-feedback-btn:hover:after{
+	transform: translateX(0);
+}
+.btn-dark.seo-feedback-btn:active:after{
+	transform: translateX(0);
+	background: linear-gradient(152deg, #f98836 0%, #f98836  100%);
+}
