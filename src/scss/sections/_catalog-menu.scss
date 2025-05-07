@@ -108,8 +108,13 @@
 	border-color: #F98836;
 }
 .header--target .drop-menu__link:hover:after{
-	background-color: #3A7FF5;
-	border-color: #3A7FF5
+	
+	background-color: var(--target);
+	border-color: var(--target);
+}
+.header--utm .drop-menu__link:hover:after{
+	background-color: var(--utm);
+	border-color: var(--utm);
 }
 @media (max-width: 767px) {
 	.main-menu .has-drop-menu{position: relative;}

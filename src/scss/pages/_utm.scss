@@ -1,0 +1,15 @@
+.promo.promo--utm{
+	
+	.promo-banner{
+		position: relative;
+		
+		background-image: -webkit-image-set(
+			url(../img/utm/utm-header-bg.webp) 1x,
+			url(../img/utm/utm-header-bg@2x.webp) 2x
+		);
+		background-image: image-set(
+			url(../img/utm/utm-header-bg.webp) 1x,
+			url(../img/utm/utm-header-bg@2x.webp) 2x
+		);
+	}
+}

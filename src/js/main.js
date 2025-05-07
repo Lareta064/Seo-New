@@ -561,3 +561,61 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		}
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+	const BREAKPOINT = 768;
+	const blocks = document.querySelectorAll('.toggles-block');
+
+	blocks.forEach(block => {
+		const buttons = block.querySelectorAll('.toggles-block-btn');
+		const contents = block.querySelectorAll('.toggles-block-content');
+
+		let currentActiveIndex = -1;
+
+		function deactivateAll() {
+			buttons.forEach(btn => btn.classList.remove('toggles-block-btn-active'));
+			contents.forEach(content => content.classList.remove('toggles-block-content-visible'));
+		}
+
+		function activateByIndex(index) {
+			deactivateAll();
+			buttons[index].classList.add('toggles-block-btn-active');
+			contents[index].classList.add('toggles-block-content-visible');
+			currentActiveIndex = index;
+		}
+
+		function setupHover() {
+			buttons.forEach((btn, index) => {
+				btn.removeEventListener('click', btn._clickHandler);
+				btn._hoverHandler = () => activateByIndex(index);
+				btn.addEventListener('mouseenter', btn._hoverHandler);
+			});
+		}
+
+		function setupClick() {
+			buttons.forEach((btn, index) => {
+				btn.removeEventListener('mouseenter', btn._hoverHandler);
+				btn._clickHandler = () => activateByIndex(index);
+				btn.addEventListener('click', btn._clickHandler);
+			});
+		}
+
+		function setupListeners() {
+			if (window.innerWidth >= BREAKPOINT) {
+				setupHover();
+			} else {
+				setupClick();
+			}
+		}
+
+		// Определяем начальный активный элемент
+		const initialIndex = Array.from(buttons).findIndex(btn =>
+			btn.classList.contains('toggles-block-btn-active')
+		);
+		activateByIndex(initialIndex !== -1 ? initialIndex : 0);
+		activateByIndex(currentActiveIndex);
+
+		setupListeners();
+		window.addEventListener('resize', setupListeners);
+	});
+});

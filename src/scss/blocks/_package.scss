@@ -1,4 +1,5 @@
 @use "base/var" as *;
+
 .package{
 	font-size: remy(10);
 	border-radius: 2.4em;
@@ -38,6 +39,7 @@
 		}
 	}
 }
+.toggles-block-btn-active .package{background: linear-gradient(180deg, #2e77f7 0%, #13346d 100%);}
 .package-list{
 	display: grid;
 	font-size: remy(10);

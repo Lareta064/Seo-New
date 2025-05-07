@@ -34,31 +34,7 @@
 	
 }
 
-.btn-accent2{
-	background: var(--target);
-	position: relative;
-	overflow: hidden;
-	// span{position: relative;
-	// z-index: 3;}
-	&:before{
-		content:'';
-		position: absolute;
-		top: 0;
-		bottom: 0;;
-		right: 0;
-		width: 100%;
-		background: linear-gradient(152deg, #3a7ff5 0%, #d4deef 100%);
-		transform: translateX(110%);
-		transition: .2s; 
-	}
-	&:hover:before{
-		transform: translateX(0);
-		z-index: 2;
-	}
-	&:active{
-		background: var(---back-2);
-	}
-}
+
 .promo-target-swiper{
 	width: remy(419);
 	position: absolute;

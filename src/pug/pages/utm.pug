@@ -1,0 +1,15 @@
+extends ../layouts/layout-swiper.pug
+
+block content
+	.page-column
+		include ../sections/_header-utm.pug
+		//==== MAIN =====
+		main.inner-main.inner-main--utm
+			include ../sections/_promo-utm.pug
+			
+			
+		//==== FOOTER =====
+		include ../sections/_footer.pug
+	
+block variables
+	-var title = "UTM";

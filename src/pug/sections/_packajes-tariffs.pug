@@ -1,32 +1,32 @@
 //ТАРИФЫ И ПАКЕТЫ
 section.packages
 	.container
-		.packages-content
+		.packages-content.toggles-block
 			.package-list-wraper
 				h2.title Тарифы<br>и пакеты
 				.package-list
-					a(href="#!").package-list__item
+					a(href="#!").package-list__item.toggles-block-btn
 						.package
 							.package__name настройка
 							.package__price 59 000 &#8381;
 							.package__link Узнать больше 
 								svg.svg-right
 									use(href='./img/sprite.svg#svg-right')
-					a(href="#!").package-list__item
+					a(href="#!").package-list__item.toggles-block-btn
 						.package
 							.package__name ведение
 							.package__price 59 000 &#8381;
 							.package__link Узнать больше 
 								svg.svg-right
 									use(href='./img/sprite.svg#svg-right')
-					a(href="#!").package-list__item
+					a(href="#!").package-list__item.toggles-block-btn
 						.package
 							.package__name Масштабирование
 							.package__price 99 000 &#8381;
 							.package__link Почему это выгодно
 								svg.svg-right
 									use(href='./img/sprite.svg#svg-right')
-					a(href="#!").package-list__item
+					a(href="#!").package-list__item.toggles-block-btn
 						.package
 							.package__name аудит 
 							.package__price 19 900 &#8381;
@@ -34,7 +34,7 @@ section.packages
 								svg.svg-right
 									use(href='./img/sprite.svg#svg-right')
 			//описание пакета
-			.package-card-wrapper.package-card-wrapper--visible
+			.package-card-wrapper.toggles-block-content
 				.package-card__img(style="background-image:url(./img/targeting/tariff-bg.webp)")
 				.package-card
 					.package-card__head
@@ -54,7 +54,7 @@ section.packages
 					.package-card__btn
 						button.btn.btn-blue.br-15 Заявка на мечту
 			//описание пакета
-			.package-card-wrapper
+			.package-card-wrapper.toggles-block-content
 				.package-card__img(style="background-image:url(./img/targeting/tariff-bg.webp)")
 				.package-card
 					.package-card__head
@@ -74,7 +74,7 @@ section.packages
 					.package-card__btn
 						button.btn.btn-blue.br-15 Заявка на мечту
 			//описание пакета
-			.package-card-wrapper
+			.package-card-wrapper.toggles-block-content
 				.package-card__img(style="background-image:url(./img/targeting/tariff-bg.webp)")
 				.package-card
 					.package-card__head
@@ -94,7 +94,7 @@ section.packages
 					.package-card__btn
 						button.btn.btn-blue.br-15 Заявка на мечту
 			//описание пакета
-			.package-card-wrapper
+			.package-card-wrapper.toggles-block-content
 				.package-card__img(style="background-image:url(./img/targeting/tariff-bg.webp)")
 				.package-card
 					.package-card__head
@@ -113,3 +113,4 @@ section.packages
 					
 					.package-card__btn
 						button.btn.btn-blue.br-15 Заявка на мечту
+						

@@ -4,9 +4,10 @@
 	font-size: remy(10);
     position: relative;
 	display: none;
-	&.package-card-wrapper--visible{display: block;}
+	
 	
 }
+.package-card-wrapper
 .package-card__img{
 	position: absolute;
 	inset: 0;

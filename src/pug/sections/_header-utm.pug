@@ -1,0 +1,65 @@
+header.header.header--utm#header
+	.container
+		.header-container
+			a(href="#!").logo
+				svg.svg-logo
+					use(href='./img/sprite.svg#svg-logo')
+			//======nav menu ======
+			.main-menu-wrapper#header-menu
+				.main-menu
+					ul.menu-list
+						li.menu-item.has-drop-menu
+							a.menu-link(href="#!") Услуги
+							.drop-menu-wrapper
+								.drop-menu__grid
+									ul.drop-menu-list
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Контекстная реклама
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Таргетированная реклама
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Комплексный маркетинг
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SEO продвижение 
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Веб-дизайн / Иллюстрация
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Разработка сайтов
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SMM
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link SERM
+											
+										li.drop-menu-list__item
+											a(href="#").drop-menu__link Видео продакшн
+											
+									//right column
+									.drop-menu-box
+										img(src='./img/placeholder.webp', srcset='./img/placeholder@2x.webp 2x' width='402' height='248' loading='lazy' alt='img')
+						
+						li.menu-item
+							a.menu-link(href="#!") Кейсы
+						li.menu-item
+							a.menu-link(href="#!") О компании
+						li.menu-item
+							a.menu-link(href="#!") Блог
+						li.menu-item
+							a.menu-link(href="#!") Контакты
+						
+					
+			//====== right content ======
+			.phone-contacts
+				a(href="tel:+79006566903").phone-link +7 900 656 69 03
+					svg.svg-phone.phone-link__icon
+						use(href='./img/sprite.svg#svg-phone')
+			button.btn-outline Заявка
+			//====== menu-toggle =====
+			button.menu-toggle#menu-toggle
+				span
