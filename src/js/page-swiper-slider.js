@@ -1,25 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const resultSlider = new Swiper('.result-slider', {
-        speed: 300,
-        effect: "fade",
+    const resultSlider = new Swiper('.benefit-slider', {
+        speed: 600,
+        spaceBetween:20,
         pagination: {
-            el: ".result-slider-pagination",
+            el: ".benefit-slider-pagination",
 			clickable: true,
         },
-    });
-    const resultCompany= new Swiper('.result-company-slider', {
-        speed: 300,
         navigation: {
-        nextEl: ".result-company-next",
-        prevEl: ".result-company-prev",
-      },
-        pagination: {
-            el: ".result-company-pagination",
-			clickable: true,
+            nextEl: ".benefit-slider-next",
+            prevEl: ".benefit-slider-prev",
         },
     });
-    resultSlider.controller.control = resultCompany;
-    resultCompany.controller.control = resultSlider;
+    
+    
     
     
     const seoCards= new Swiper('.seo-cards-swiper', {
