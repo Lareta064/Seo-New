@@ -255,10 +255,12 @@
 			font-family: var(--second-family);
 			font-weight: 600;
 			font-size: 14px;
-			color: #d4deef;
+			
+			color: #797979;
 			justify-content: center;
 			align-items: center;
 			height: 43px;
+			&.active{color: #d4deef;}
 		}
 		.card-toggle+.card-toggle{border-left: 1px solid #d4deef; }
 	}

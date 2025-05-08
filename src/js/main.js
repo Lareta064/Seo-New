@@ -542,26 +542,30 @@ document.addEventListener('DOMContentLoaded', () => {
 					itemToggle1.addEventListener('click', ()=>{
 						itemChild2.forEach((el)=>{
 							el.classList.remove('active');
+							itemToggle2.classList.remove('active');
 						});
 						itemChild1.forEach((el)=>{
 							el.classList.add('active');
+							itemToggle1.classList.add('active');
 						});
 					});
 					itemToggle2.addEventListener('click', ()=>{
-						console.log('555');
+						
 						itemChild1.forEach((el)=>{
 							el.classList.remove('active');
+							itemToggle1.classList.remove('active');
 						});
 						itemChild2.forEach((el)=>{
-							console.log('444');
+							
 							el.classList.add('active');
+							itemToggle2.classList.add('active');
 						});
 					});
 				}
 			});
 		}
   });
-
+//toggle block
   document.addEventListener('DOMContentLoaded', () => {
 	const BREAKPOINT = 768;
 	const blocks = document.querySelectorAll('.toggles-block');
