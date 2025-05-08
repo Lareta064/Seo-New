@@ -41,9 +41,7 @@
 		display: grid;
 		grid-template-columns: 1fr remy(354);
 		column-gap: remy(40);
-		@media (max-width: 1799px) {
-			grid-template-columns: 1fr remy(300);
-		}
+		
 		@media (max-width: 767px) {
 			grid-template-columns: 1fr;
 			row-gap:16px;
@@ -92,7 +90,7 @@
 		font-size: remy(20);
 		font-weight: 700;
 		margin-top:remy(10);
-		max-width: remy(300);
+		max-width: remy(354);
 		@media (max-width: 767px) {
 			font-size: 16px;
 			margin-top: 0;

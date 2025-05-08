@@ -3,6 +3,7 @@
 	.title{
 		margin-bottom: remy(32);
 	}
+	.round-link.flex{column-gap:10px; align-items: center;}
 	@media (max-width: 767px) {
 		.title-group{margin-bottom: 40px;}
 		.title{margin-bottom: remy(17);}
