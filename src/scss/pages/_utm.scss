@@ -28,12 +28,19 @@
 	row-gap: 3em;
 	background-color: var(--back-2);
 	font-family: var(--second-family);
+	@media (max-width: 767px) {
+		padding: 38px 29px;
+		row-gap: 20px;
+	}
 	&__title{
 		font-family: var(--font-family);
 		font-weight: 700;
 		font-size: 3.4em;
 		line-height: 1;
 		color: #d6d6d6;
+		@media (max-width: 767px) {
+		   font-size: 24px;
+		}
 	}
 	&__txt{
 
@@ -41,21 +48,32 @@
 		font-size: 1.8em;
 		letter-spacing: -0.02em;
 		color: rgba(249, 249, 249, .75);
+		@media (max-width: 767px) {
+		font-size: 12px;
+		}
 	}
 	&__icon{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-shrink: 0;
-		height: 19em;
+		height: 17em;
+		img{max-height: 100%; width: auto;}
+		@media (max-width: 767px) {
+			height: 120px;
+		}
 	}
 
 }
+.promo-benefits-utm .swiper-slide{
+	width: 100%;
+	max-width: 358px!important;
+}
 @media (min-width: 768px) {
 	.promo-benefits-utm .swiper-wrapper{
-		display: flex;
+		display:grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap:remy(60);
-		.swiper-slide{grid-column: span 4;}
+		.swiper-slide{grid-column: span 4;max-width: unset!important;width: auto!important;}
 	}
 }

@@ -307,4 +307,39 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
     });
+
+    //utm-benefits
+
+    let utmSlider;
+    function toggleUtmSlider() {
+        const screenWidth = window.innerWidth;
+    
+        if (screenWidth < 768) {
+            if (!utmSlider) {
+                
+                utmSlider = new Swiper('.promo-benefits-utm', {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16, // Пример настройки отступов между слайдами
+                   
+                    
+                    pagination: {
+                        el: '.utmSlider-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            if (utmSlider) {
+                // Уничтожаем слайдер, если экран больше 768px
+                utmSlider.destroy(true, true);
+                utmSlider = null; // Сбрасываем переменную
+            }
+        }
+    }
+    
+    // Вызываем функцию при загрузке страницы
+    toggleUtmSlider();
+    
+    // Добавляем слушатель для события изменения размера экрана
+    window.addEventListener('resize', toggleSlider);
 });
