@@ -1,3 +1,4 @@
+@use "base/var" as *;
 .promo.promo--utm{
 	
 	.promo-banner{
@@ -11,5 +12,50 @@
 			url(../img/utm/utm-header-bg.webp) 1x,
 			url(../img/utm/utm-header-bg@2x.webp) 2x
 		);
+	}
+}
+.promo-benefits-utm{
+	
+	margin-top: remy(60);
+	
+}
+.utm-benefit{
+	display: flex;
+	font-size: remy(10);
+	flex-direction: column;
+	border-radius: 2.4em;
+	padding: 4em;
+	row-gap: 3em;
+	background-color: var(--back-2);
+	font-family: var(--second-family);
+	&__title{
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 3.4em;
+		line-height: 1;
+		color: #d6d6d6;
+	}
+	&__txt{
+
+		font-weight: 400;
+		font-size: 1.8em;
+		letter-spacing: -0.02em;
+		color: rgba(249, 249, 249, .75);
+	}
+	&__icon{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		height: 19em;
+	}
+
+}
+@media (min-width: 768px) {
+	.promo-benefits-utm .swiper-wrapper{
+		display: flex;
+		grid-template-columns: repeat(12, 1fr);
+		gap:remy(60);
+		.swiper-slide{grid-column: span 4;}
 	}
 }
