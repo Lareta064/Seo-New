@@ -187,7 +187,8 @@ main{
   &>*{position: relative;
   }
   @media (max-width: 767px) {
-    row-gap: remy(40)
+    row-gap: remy(40);
+    background-image: none;
   }
 
 }
