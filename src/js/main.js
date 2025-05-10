@@ -623,3 +623,52 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.addEventListener('resize', setupListeners);
 	});
 });
+// DROP SELECT
+document.addEventListener('DOMContentLoaded', () => {
+	const dropdowns = document.querySelectorAll('.custom-select');
+	dropdowns.forEach(function (dropDownWrapper) {
+		const dropDownBtn = dropDownWrapper.querySelector('.custom-select__button');
+		const dropDownValue = dropDownWrapper.querySelector('.custom-select__value');
+		const dropDownList = dropDownWrapper.querySelector('.custom-select__list');
+		const dropDownListItems = dropDownList.querySelectorAll('.custom-select__list-item');
+		const dropDownSelected = dropDownList.querySelector('.selected');
+		const dropDownHiidenInput = dropDownList.querySelector('.selected');
+		
+
+		// Клик по инпуту. Открыть/Закрыть select
+		dropDownBtn.addEventListener('click', function (e) {
+			dropDownList.classList.toggle('custom-select__list--visible');
+			this.classList.toggle('custom-select__input--active');
+			
+		});
+
+		// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+		dropDownListItems.forEach(function (listItem) {
+			listItem.addEventListener('click', function (e) {
+				e.stopPropagation();
+				dropDownListItems.forEach(function (item) { item.classList.remove('selected') });
+				
+				dropDownValue.textContent = this.dataset.value;
+				this.classList.add('selected');
+				dropDownList.classList.remove('custom-select__list--visible');
+				dropDownBtn.classList.remove('custom-select__input--active');				
+			});
+		});
+
+		// Клик снаружи дропдауна. Закрыть дропдаун
+		document.addEventListener('click', function (e) {
+			if (!dropDownWrapper.contains(e.target)) {
+				dropDownBtn.classList.remove('custom-select__input--active');
+				dropDownList.classList.remove('custom-select__list--visible');
+			}
+		});
+
+		// Нажатие на Tab или Escape. Закрыть дропдаун
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Tab' || e.key === 'Escape') {
+				dropDownBtn.classList.remove('custom-select__input--active');
+				dropDownList.classList.remove('custom-select__list--visible');
+			}
+		});
+	});
+})

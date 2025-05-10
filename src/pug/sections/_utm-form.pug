@@ -1,0 +1,61 @@
+section.utm-form
+	.container
+		.utm-form-content
+			.utm-form__fieldset
+				.utm-form__title Адрес вашей страницы
+				.utm-address
+					.utm-address__select.custom-select
+						button.custom-select__button(type="button")
+							span.custom-select__value https://
+							span.custom-select__arrow
+						.custom-select__list
+							ul.custom-select__ul
+								li.custom-select__list-item(data-value="https://") https://
+								li.custom-select__list-item(data-value="http://") http://
+								li.custom-select__list-item(data-value="https://") https://
+								
+
+						//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+						input.custom-select__input-hidden(type="hidden", name="select_value" value="")
+				
+					.utm-address__field
+						input.utm-address-input(type="text" name="site__address" placeholder="Здесь должна быть ваша ссылка")
+			
+			.utm-form__fieldset
+				.utm-form__title Источник трафика
+				.utm-form__radio
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Свои значения
+					
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Google Ads
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Яндекс.Директ
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Вконтакте
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Target My.com
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Telegram
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Wildberries
+					label.square-radio-label
+						input.hide-input(type="radio" name="source_type")
+						span.square-radio
+						span.custom-label__txt Ozon
+
+

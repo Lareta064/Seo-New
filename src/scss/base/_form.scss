@@ -251,3 +251,116 @@
 	left: 0;
 	z-index: -1;
 }
+.square-radio-label{
+	position: relative;
+	
+	display: flex;
+	column-gap:remy(15);
+	cursor:pointer;
+	align-items: center;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: remy(18);
+	line-height: 120%;
+	color: var(--white);
+}
+.square-radio{
+	width: remy(24);
+	height: remy(24);
+	display: block;
+	flex-shrink: 0;
+	border-radius:remy(5);
+	background-color: #fff;
+	border:remy(5) solid white;
+}
+.square-radio__txt{white-space: nowrap;}
+input.hide-input:checked + .square-radio{
+	border:5px solid var(--utm);
+}
+/*custom select*/
+.custom-select {
+	position: relative;
+	
+  }
+  
+  .custom-select__button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+  }
+  .custom-select__arrow{
+	width: 12px;
+	height: 6px;
+	flex-shrink: 0;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.8844 7.61949L14.9474 0.00185977L16 1.10913L7.8844 10L0 1.10918L1.05263 0L7.8844 7.61949Z' fill='%23ffffff' /%3e%3c/svg%3e");
+	transition: .3s; 
+	background-size: .9em 0.6em;
+	background-repeat: no-repeat;
+	background-position: center;
+	pointer-events: none;
+  }
+  
+  .custom-select__list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 38px;
+	margin: 0;
+	padding: 0;
+	
+	width: 100%;
+	list-style-type: none;
+	background: #FFFFFF;
+	// max-height: remy(121);
+	// overflow: hidden;
+	// overflow-y: auto;
+	// scrollbar-width: thin;
+	// scrollbar-color: #000 white;
+	z-index: 2;
+	// &::-webkit-scrollbar{
+	// 	width: 3px;
+	// 	height: 20px;
+	// 	&-track{background-color: #fff;}
+	// 	&-thumb{background-color: #000;}
+	//  }
+	
+	 .custom-select__ul{
+	  padding-bottom: 5px;
+	  overflow: hidden;
+	  overflow-y: auto;
+	  scrollbar-width: thin;
+	  scrollbar-color: #000 #fff;
+	  scrollbar-width: 3px;
+	  background: #4d4e4f;
+	  padding: 0 18px;
+	  &::-webkit-scrollbar-track {
+		background-color:white;
+		border-radius: 5px;
+	  }
+	}
+ } 
+  
+ .custom-select__list--visible {
+	display: block;
+	
+	border-top:0;
+	
+  }
+  
+  .custom-select__list-item {
+	margin: 0;
+	padding: 0;
+	padding-block: 5px;
+	line-height: 1.43;
+	transition: .3s; 
+	cursor: pointer;
+	color: white;
+	
+	&.selected{color: white;}
+  }
+  
+  .custom-select__input {
+	color: white;
+  }
