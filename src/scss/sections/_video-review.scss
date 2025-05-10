@@ -1,0 +1,9 @@
+.video-review-container{
+	.swiper-slider{
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			.video-review-card{grid-column: span 4;}
+		}
+	}
+}

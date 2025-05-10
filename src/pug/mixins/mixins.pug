@@ -63,15 +63,15 @@ mixin techno-card-ui(img, title, txt)
 			p !{txt}
 
 mixin videoRev(ava, title, tag)
-	.video-review
-		.video-review__screen
+	.video-review-card
+		.video-review-card__screen
 			img(src='../img/video-review/poster.webp', srcset='../img/video-review/poster@2x.webp 2x' width='523' height='272' loading='lazy' alt='img')
-		.video-review__body.flex
-			.video-review__img
+		.video-review-card__body.flex
+			.video-review-card__img
 				img.round-img(src='../img/video-review/rev'+ ava +'.webp' width='55' height='55' loading='lazy' alt='img')
-			.video-review__box
+			.video-review-card__box
 				.flex
-					.video-review__title #{title}
+					.video-review-card__title #{title}
 					.tag #{tag}
 				
-				.video-review__txt  “Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска. Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска
+				.video-review-card__txt  “Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска. Контекст может похвастаться наиболее быстрыми результатами уже в первые дни запуска
