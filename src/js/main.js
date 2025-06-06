@@ -453,8 +453,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // parallax seo map
 document.addEventListener('DOMContentLoaded', () => {
 	const sectors = [
-	  { element: document.querySelector('.parallax-scene__sector1'), group: ['.prx-1', '.prx-2', '.prx-5', '.prx-21', '.prx-23', '.prx-26', '.prx-27'], isCenter: false },
-	  { element: document.querySelector('.parallax-scene__sector2'), group: ['.prx-3', '.prx-4', '.prx-6', '.prx-7', '.prx-22', '.prx-24', '.prx-25'], isCenter: false },
+	  { element: document.querySelector('.parallax-scene__sector1'), group: ['.prx-1', '.prx-2', '.prx-5','.prx-7', '.prx-21', '.prx-23', '.prx-26', '.prx-27'], isCenter: false },
+	  { element: document.querySelector('.parallax-scene__sector2'), group: ['.prx-3', '.prx-4', '.prx-6',  '.prx-22', '.prx-24', '.prx-25'], isCenter: false },
 	  { element: document.querySelector('.parallax-scene__sector3'), group: [], isCenter: true },
 	  { element: document.querySelector('.parallax-scene__sector4'), group: ['.prx-3', '.prx-4', '.prx-6', '.prx-7', '.prx-22', '.prx-24', '.prx-25'], isCenter: false },
 	  { element: document.querySelector('.parallax-scene__sector5'), group: ['.prx-1', '.prx-2', '.prx-5', '.prx-21', '.prx-23', '.prx-26', '.prx-27'], isCenter: false },

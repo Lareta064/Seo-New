@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const resultSlider = new Swiper('.benefit-slider', {
-        speed: 600,
+        speed: 200,
         spaceBetween:20,
+        effect: 'fade',
         pagination: {
             el: ".benefit-slider-pagination",
 			clickable: true,

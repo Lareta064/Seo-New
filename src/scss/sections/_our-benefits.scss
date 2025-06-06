@@ -155,7 +155,8 @@
 			bottom: remy(30);
 			right: remy(33);
 			width: remy(61);
-			display: inline-block;
+			display: inline-block;transition: .1s; 
+			&:hover{opacity: .6;}
 		}
 		@media (max-width: 767px) {
 			padding: 8px 24px 14px 12px;
