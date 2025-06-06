@@ -362,12 +362,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.addEventListener("DOMContentLoaded", () => {
 	
 
-	lightbox.option({
-		'resizeDuration': 200,
-		'alwaysShowNavOnTouchDevices': true,
-		'showImageNumberLabel': false,
-		'disableScrolling':true,
-	  });
+	// lightbox.option({
+	// 	'resizeDuration': 200,
+	// 	'alwaysShowNavOnTouchDevices': true,
+	// 	'showImageNumberLabel': false,
+	// 	'disableScrolling':true,
+	//   });
 	
 	
 	/*interActive map*/
@@ -672,7 +672,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	// Fancybox.bind("[data-fancybox]", {
-	// 	// Thumbs: false,
-	// });
+	Fancybox.bind("[data-fancybox]", {
+		Thumbs: false,
+		
+	});
 })
