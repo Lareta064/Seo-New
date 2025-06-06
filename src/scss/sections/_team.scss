@@ -32,6 +32,7 @@
 			object-fit: cover;
 		}
 	}
+	 .hide-galery-link{display: none!important;}
 	&__icon{
 		position: relative;
 		display: flex;
@@ -158,3 +159,4 @@
 		
 	}
 }
+

@@ -21,11 +21,15 @@ section.team#our-team
 									.tag #менежмент
 						//=== нижний ряд ===
 						.team-card__row
-							.team-card__icon
+							//что бы показать все грамоты, ссылку на первую прописать в href  ссылки .team-card__icon, а  путь до второй грамоты в href ссылки .hide-galery-link. У обеих этих ссылок одинаковый  data-lightbox="gleb-gallery"
+							a(href="https://ir-3.ozone.ru/s3/multimedia-y/c1000/6235266298.jpg" data-lightbox="gleb-gallery").team-card__icon
 								img(src='./img/team/img1.webp', srcset='./img/team/img1@2x.webp 2x' width='173' height='126' loading='lazy' alt='img')
+							a.hide-galery-link( data-lightbox="gleb-gallery"  href="https://basket-16.wbbasket.ru/vol2527/part252736/252736137/images/big/1.webp")
+							
+								
 							.team-card__text
 								p Разработаю стратегию успеха для вашего бизнеса. Веду “ADs’кий подкаст” о главных трендах в маркетинге
-								a(href="#!").mini-btn
+								a(href="https://www.youtube.com/channel/UCxSNy6SikQqOrzqAqCIcKgQ").mini-btn
 									span Подробнее
 									span.yout-icon
 				//===card 2 ===
@@ -66,8 +70,10 @@ section.team#our-team
 									.tag #менежмент 
 						//=== нижний ряд ===
 						.team-card__row
-							.team-card__icon
+							//что бы показать все грамоту, ссылку  прописать в href  ссылки .team-card__icon,  data-lightbox="artem-gallery"
+							a(href="https://na-olimpe.ru/upload/resize_cache/iblock/884/601_801_1292baf2fb9346f21311c900c48894bd5/6843d5c4643905e1e77109e72a034517.jpg" data-lightbox="artem-gallery").team-card__icon
 								img(src="./img/team/img3.webp", srcset="./img/team/img3@2x.webp 2x" width="174" height="126" alt="alt")
+							
 							.team-card__text
 								p Яркий, отзывчивый и коммуникабельный. Хорошо разбираюсь в специфике Google и Яндекса, не упускаю ни одной цифры. Четко проанализирую ситуацию, всегда на связи.
 				//===card 4 ===

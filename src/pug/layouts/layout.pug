@@ -104,6 +104,7 @@ html(lang="ru")
 				font-display: swap;
 			}
 			
+			
 		link(rel="stylesheet", href="./css/main.css")
 		title !{title}
 		
@@ -112,44 +113,44 @@ html(lang="ru")
 		block content
 		
 		//=============== мои скрипты ===================
-		script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js')
-		script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js')
-		script.
+		//- script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js')
+		//- script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js')
+		//- script.
 			
-			gsap.registerPlugin(ScrollTrigger);
+		//- 	gsap.registerPlugin(ScrollTrigger);
 			
-			// Объявим переменные
-			const cards = document.querySelectorAll('.seo-card');
+		//- 	// Объявим переменные
+		//- 	const cards = document.querySelectorAll('.seo-card');
 			
-			// Фиксируем блок, когда он доходит до центра
-			ScrollTrigger.create({
-				trigger: '.seo-animate',
-				start: 'top center',
-				end: () => `+=${cards.length * 100}`, // прокрутка зависит от кол-ва карточек
-				pin: true,
-				scrub: true,
-				onEnter: () => {
-					// Показываем текст и первую карточку
-					gsap.to('.seo-animate__text', { opacity: 1, y: 0, duration: 0.6 });
-					gsap.to(cards[0], { opacity: 1, y: 0, duration: 0.6 });
-				}
-			});
+		//- 	// Фиксируем блок, когда он доходит до центра
+		//- 	ScrollTrigger.create({
+		//- 		trigger: '.seo-animate',
+		//- 		start: 'top center',
+		//- 		end: () => `+=${cards.length * 100}`, // прокрутка зависит от кол-ва карточек
+		//- 		pin: true,
+		//- 		scrub: true,
+		//- 		onEnter: () => {
+		//- 			// Показываем текст и первую карточку
+		//- 			gsap.to('.seo-animate__text', { opacity: 1, y: 0, duration: 0.6 });
+		//- 			gsap.to(cards[0], { opacity: 1, y: 0, duration: 0.6 });
+		//- 		}
+		//- 	});
 			
-			// Анимация карточек по скроллу
-			cards.forEach((card, index) => {
-				if (index === 0) return; // первую уже показали
+		//- 	// Анимация карточек по скроллу
+		//- 	cards.forEach((card, index) => {
+		//- 		if (index === 0) return; // первую уже показали
 			
-				gsap.to(card, {
-					scrollTrigger: {
-						trigger: '.seo-animate',
-						start: `top+=${index * 100} center`, // шаг по скроллу
-						scrub: true
-					},
-					opacity: 1,
-					y: index * 45,
-					zIndex: index + 1,
-					duration: 0.6
-				});
-			});
+		//- 		gsap.to(card, {
+		//- 			scrollTrigger: {
+		//- 				trigger: '.seo-animate',
+		//- 				start: `top+=${index * 100} center`, // шаг по скроллу
+		//- 				scrub: true
+		//- 			},
+		//- 			opacity: 1,
+		//- 			y: index * 45,
+		//- 			zIndex: index + 1,
+		//- 			duration: 0.6
+		//- 		});
+		//- 	});
 			
 		script(src="js/main.js")
