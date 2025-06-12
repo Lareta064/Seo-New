@@ -123,9 +123,10 @@
 	color: #f9f9f9;
 	text-align: center;
 	position: relative;
+	pointer-events: none;
 	span{
 		position: relative;
-		z-index: 2;
+		// z-index: 2;
 	}
 	&:after{
 		content:'';

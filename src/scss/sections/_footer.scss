@@ -82,6 +82,7 @@ footer.footer{
 	column-gap: remy(16);
 	margin-bottom: remy(23);
 	font-size: remy(18);
+	a:hover{color: #d6d6d6;}
 }
 .footer-nav .nav-list{
 	display: flex;
@@ -127,4 +128,6 @@ footer.footer{
 			row-gap:22px;
 		}
 }
-@media (max-width: 767px) { .footer-nav{display: none;}}
+@media (max-width: 767px) { 
+	.footer-nav{display: none;}
+}
