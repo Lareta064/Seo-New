@@ -67,6 +67,19 @@
 }
 .header-container{
 	.phone-contacts .phone-link__icon{display: none;}
+	.phone-contacts{
+		display: flex;
+		flex-direction: column;
+		row-gap:remy(8);
+	}
+	.open-city-popup{
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: remy(18);
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: #6e6e6e;
+	}
 	@media (max-width: 767px) {
 		.phone-contacts {
 			margin-left: auto;

@@ -676,4 +676,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		Thumbs: false,
 		
 	});
+});
+document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
+  const input = popupBlock.querySelector('.search-form-input');
+  const cityNameDisplay = popupBlock.querySelector('.user-city-name');
+  const cityItems = popupBlock.querySelectorAll('.search-city-item');
+  const modal = popupBlock.querySelector('.modal-frame[data-modal="city-popup"]');
+
+  cityItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const selectedCity = item.getAttribute('data-value');
+
+      // Подставляем выбранный город в поле ввода и в отображение
+      if (input) input.value = selectedCity;
+      if (cityNameDisplay) cityNameDisplay.textContent = selectedCity;
+
+      // Закрываем модалку, убирая класс visible
+      if (modal && modal.classList.contains('visible')) {
+        modal.classList.remove('visible');
+      }
+    });
+  });
 })

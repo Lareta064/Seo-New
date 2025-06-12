@@ -55,10 +55,36 @@ header.header.header--seo#header
 						
 					
 			//====== right content ======
-			.phone-contacts
+			.phone-contacts.city-popup-block
 				a(href="tel:+79006566903").phone-link +7 900 656 69 03
 					svg.svg-phone.phone-link__icon
 						use(href='./img/sprite.svg#svg-phone')
+
+				button.open-city-popup.user-city(type="button"  data-btn="city-popup") г. 
+					span.user-city-name Санкт-Петербург
+				
+				//city-popup
+				.modal-frame.modal-city(data-modal="city-popup")
+					button(type="button" data-close) X
+					.modal-frame-wrapper
+						.modal-frame-content
+							form.select-city.search-form
+								.search-form-item
+									input.search-form-input(type="text" placeholder="Ваш город")
+									button.search-btn(type="submit")
+										svg.svg-search
+											use(href='./img/sprite.svg#svg-search')
+								
+								//city list
+								.search-city-list
+									button.search-city-item(data-value="Казань") Казань
+									button.search-city-item(data-value="Санкт-Петербург") Санкт-Петербург
+									button.search-city-item(data-value="Москва") Москва
+									button.search-city-item(data-value="Минск") Минск
+									button.search-city-item(data-value="Дубай") Дубай
+							
+			
+			//header button
 			button.btn-outline Заявка
 			//====== menu-toggle =====
 			button.menu-toggle#menu-toggle

@@ -364,3 +364,44 @@ input.hide-input:checked + .square-radio{
   .custom-select__input {
 	color: white;
   }
+
+  .search-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: remy(40);
+	height: remy(40);
+  }
+.search-form{
+	.search-btn{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 3;
+	}
+}
+.search-form-item{
+	position: relative;
+	width: 100%;
+	
+}
+.search-form-input{
+	display: block;
+	border:0;
+	width: 100%;
+	height: remy(57);
+	border-bottom:  1px solid var(--white);
+	background-color: transparent;
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 1remy(18);
+	letter-spacing: -0.02em;
+	color: var(--white);
+	&::placeholder{
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+
+	}
+}
