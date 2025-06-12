@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
        /*   клик по мобильному меню*/  
-		mobileMenu.addEventListener('click', () => {
+		// mobileMenu.addEventListener('click', () => {
 			
-			menuToggle.classList.remove('active');
-			mobileMenu.classList.remove('active');
-			bodyEl.classList.remove('lock');
-		});
+		// 	menuToggle.classList.remove('active');
+		// 	mobileMenu.classList.remove('active');
+		// 	bodyEl.classList.remove('lock');
+		// });
 	}
 	
 	/*Catalogy Menu */
@@ -728,13 +728,20 @@ document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
     });
 
     // Клик снаружи дропдауна. Закрыть дропдаун
-    document.addEventListener('click', function (e) {
-      if (e.target !== dropDownBtn) {
-        dropDownBtn.classList.remove('dropdown__button--active');
-        dropDownList.classList.remove('dropdown__list--visible');
-      }
-    });
-
+    // document.addEventListener('click', function (e) {
+    //   if (e.target !== dropDownBtn) {
+    //     dropDownBtn.classList.remove('dropdown__button--active');
+    //     dropDownList.classList.remove('dropdown__list--visible');
+    //   }
+    // });
+	// Клик снаружи дропдауна. Закрыть дропдаун, если не клик по .dropdown__button или .search-form-item
+	document.addEventListener('click', function (e) {
+	if (!dropDownWrapper.contains(e.target) || 
+		(e.target.closest('.dropdown__list') && !e.target.closest('.search-form-item'))) {
+		dropDownBtn.classList.remove('dropdown__button--active');
+		dropDownList.classList.remove('dropdown__list--visible');
+	}
+	});
     // Нажатие на Tab или Escape. Закрыть дропдаун
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Tab' || e.key === 'Escape') {

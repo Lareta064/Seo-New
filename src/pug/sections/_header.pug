@@ -59,15 +59,23 @@ header.header.header--seo#header
 							
 							.dropdown__list
 								ul
-									li.search-city-item(data-value="Казань") Казань
-									li.search-city-item(data-value="Санкт-Петербург") Санкт-Петербург
-									li.search-city-item(data-value="Москва") Москва
-									li.search-city-item(data-value="Минск") Минск
-									li.search-city-item(data-value="Дубай") Дубай
+									li.dropdown__list-item(data-value="Казань") Казань
+									li.dropdown__list-item(data-value="Санкт-Петербург") Санкт-Петербург
+									li.dropdown__list-item(data-value="Москва") Москва
+									li.dropdown__list-item(data-value="Минск") Минск
+									li.dropdown__list-item(data-value="Дубай") Дубай
 
-							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-							input.dropdown__input-hidden(type="hidden", name="product_count")
-			
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+								
+								//search-input
+								.search-form-item
+									input.search-form-input(type="text" placeholder="Ваш город"  name="")
+									button.search-btn(type="submit")
+										svg.svg-search
+											use(href='./img/sprite.svg#svg-search')
+
+
 			//====== right content ======
 			.phone-contacts.city-popup-block
 				a(href="tel:+79006566903").phone-link +7 900 656 69 03
