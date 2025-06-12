@@ -1,6 +1,8 @@
 @use "base/var" as *;
 .modal-city{
-	
+	@media (max-width: 767px) {
+	display: none;
+	}
 }
 .modal-city .modal-frame-content{
 	border-radius: remy(24);
