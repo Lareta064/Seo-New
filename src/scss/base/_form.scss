@@ -405,3 +405,115 @@ input.hide-input:checked + .square-radio{
 
 	}
 }
+// DROPDOWN
+.dropdown {
+	position: relative;
+	width: 100%;
+  }
+  
+  .dropdown__button {
+	position: relative;
+	display: block;
+	width: 100%;
+	
+	
+	text-align: left;
+	
+	cursor: pointer;
+	z-index: 3;
+	
+  }
+  
+  .dropdown__button::after {
+	content: "";
+	position: absolute;
+	top: 52%;
+	right: remy(12);
+	transform: translateY(-50%);
+	width: remy(12);
+	height: remy(8);
+	display: block;
+	// z-index: 2;
+	
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.186392 1.34063L6.5502 7.70426C6.66949 7.82359 6.83138 7.89062 7.00015 7.89062C7.16895 7.89062 7.3308 7.82355 7.45014 7.70421L13.8136 1.34059C14.0621 1.09207 14.0621 0.689167 13.8136 0.440646C13.5651 0.192167 13.1622 0.192125 12.9137 0.440646L7.00015 6.35428L1.08634 0.440646C0.962076 0.316385 0.79921 0.254276 0.636343 0.254276C0.473476 0.254276 0.31061 0.316385 0.186349 0.440688C-0.06213 0.689209 -0.062129 1.09211 0.186392 1.34063Z' fill='%23B9B1A6' /%3e%3c/svg%3e");
+	transition: .3s; 
+	background-size: remy(12) remy(8);
+	background-repeat: no-repeat;
+	background-position: center;
+	pointer-events: none;
+	
+  }
+  .dropdown__button.dropdown__button--active:after{
+	transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .dropdown__list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+	border: 1px solid white;
+	
+	max-height: 150px;
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #EAEAEA white;
+	z-index: 3;
+	font-weight: 400;
+	
+	color: white;
+	
+	&::-webkit-scrollbar{
+		width: 3px;
+		height: 20px;
+		&-track{background-color: #fff;}
+		&-thumb{background-color: #EAEAEA;}
+ 
+	 }
+	
+	ul{
+	  margin-block:remy(10); 
+	  list-style-type: none;
+	  padding-left: 0;
+	  overflow: hidden;
+	  overflow-y: auto;
+	  scrollbar-width: thin;
+	  scrollbar-color: #e9e9e9 #fff;
+	  scrollbar-width: 3px;
+	   border-radius: 5px;
+	  
+	  &::-webkit-scrollbar-track {
+		background-color:white;
+		border-radius: 5px;
+	  }
+	}
+	
+ } 
+  
+  .dropdown__list--visible {
+	display: block;
+	
+  }
+  
+  .dropdown__list-item {
+	
+	
+	width: 100%;
+	
+	transition: .3s; 
+	
+	cursor: pointer;
+	&:hover{
+		
+	}
+	
+  }
+  
+  .dropdown__input-hidden {
+	display: none;
+  }

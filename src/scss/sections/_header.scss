@@ -86,15 +86,10 @@
 			display: flex;
 			align-items: center;
 			.phone-link{font-size: 0;}
-			
-			
-		}
-	} 
-}
-.lock {
-	@media (max-width: 767px) {
-		.phone-contacts {
 			.phone-link__icon{display: block;}
 		}
+		.open-city-popup{display: none;;}
 	} 
 }
+
+

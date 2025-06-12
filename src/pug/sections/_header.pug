@@ -53,7 +53,21 @@ header.header.header--seo#header
 						li.menu-item
 							a.menu-link(href="#!") Контакты
 						
-					
+					form.mobile-city-select
+						.dropdown.dropdown-city
+							button.dropdown__button(type="button") Санкт-Петербург
+							
+							.dropdown__list
+								ul
+									li.search-city-item(data-value="Казань") Казань
+									li.search-city-item(data-value="Санкт-Петербург") Санкт-Петербург
+									li.search-city-item(data-value="Москва") Москва
+									li.search-city-item(data-value="Минск") Минск
+									li.search-city-item(data-value="Дубай") Дубай
+
+							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+							input.dropdown__input-hidden(type="hidden", name="product_count")
+			
 			//====== right content ======
 			.phone-contacts.city-popup-block
 				a(href="tel:+79006566903").phone-link +7 900 656 69 03
