@@ -9,7 +9,7 @@ footer.footer
 					a(href="#!").link Политика конфиденциальности
 					a(href="#!").link Публичная оферта
 				.bank-details
-					p © 2019–2024 SAVOVИНН 
+					p © 2019–2025 SAVOV
 					//- p 781713009343ОГРНИП 
 					//- p 319784700168929
 			//===footer nav ===
@@ -66,3 +66,35 @@ footer.footer
 		.footer-bottom
 			p.visible-768 Использование материалов с данного сайта разрешено только по согласию с владельцем. Владелец оставляет за собой право воспользоваться 146 статьей УК&nbsp;РФ при нарушении авторских и смежных прав. Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
 			p.hide-768 Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик. Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
+
+//popUp по клику на кнопку Хочу также в слайдере проектов
+.modal-frame(data-modal="place-order")
+	.modal-frame-wrapper
+		
+		.modal-frame-content
+			//====FORM=====
+			.modal-frame-form
+				.modal-title Оставьте заявку
+				//===== FORM =====
+				form.modal-form.grid-form(action="" method="method")
+					.form-item
+						input.form-input(type="text" placeholder="Имя")
+						span.form-input-state
+					.form-item
+						input.form-input.phone(type="tel" placeholder="+7 (     )")
+						span.form-input-state
+					.form-item
+						input.form-input.phone(type="email" placeholder="Email")
+						span.form-input-state
+					
+					//===== btn-group =====
+					.form-btn-group.flex-column
+						button.btn-accent.btn-overlay.w-100(type="submit")
+							span Отправить
+						p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+						
+
+			//====SUCCESS MESSAGE=====
+			.modal-success
+				p Сообщение успешно отправлено!|
+				p Скоро с вами свяжуться наши специалисты 🤍

@@ -87,9 +87,15 @@ header.header.header--seo#header
 				
 				//city-popup
 				.modal-frame.modal-city(data-modal="city-popup")
-					button(type="button" data-close) X
+					
 					.modal-frame-wrapper
+						
 						.modal-frame-content
+							//close modal
+							button.btn-close(type="button" data-close)
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
+							//form
 							form.select-city.search-form
 								.search-form-item
 									input.search-form-input(type="text" placeholder="Ваш город")

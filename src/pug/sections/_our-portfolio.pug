@@ -5,7 +5,7 @@ mixin portfolio-card
 			.card-toggle(data-toggle="2") Результат
 		.portfolio-card__header.active(data-child="1")
 			.portfolio-card__title Компания<br>«Автоэстетика»
-			a.btn-white(href="#!") Хочу так же
+			button.btn-white(type="button" data-btn="place-order") Хочу так же
 			
 		.portfolio-card__body
 			.portfolio-card__left.active(data-child="1")
@@ -56,9 +56,9 @@ mixin portfolio-card
 				.chart__subtext
 					p Было
 					p Стало
-				a.btn-outline(href="#!" data-child="1") Хочу так же
+				button.btn-white(type="button" data-child="1"  data-btn="place-order") Хочу так же
 		
-		a.btn-outline.active(href="#!" data-child="1") Хочу так же
+		button.btn-outline.active(type="button" data-child="1"  data-btn="place-order") Хочу так же
 section.our-portfolio
 	.container
 		h1.title Кейсы

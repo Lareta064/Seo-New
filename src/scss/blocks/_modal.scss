@@ -9,6 +9,23 @@
     overflow-y: auto;
     outline: 0;
 	&.visible{display: block;background-color: rgba(255, 255, 255, 0.55);}
+	.btn-close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .3s; 
+		svg{
+			color: #929292;
+		}
+		&:hover{
+			svg{color:white;}
+		}
+	}
 }
 .modal-frame-wrapper{
 	min-height: calc(100% - 3.5rem);

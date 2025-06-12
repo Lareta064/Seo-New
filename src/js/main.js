@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	/* =============== modal с атрибутом [data-modal] ===============*/ 
 	const modalOpen = document.querySelectorAll('[data-btn]');
 	const modalFrames = document.querySelectorAll('[data-modal]');
+	const modalFramesClose = document.querySelectorAll('[data-close]');
 	if( modalFrames.length > 0){
 	//  const modalFramesClose = document.querySelectorAll('[data-close]');
 
@@ -175,15 +176,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
 	/*==  закрыть модалки  frame-modal по клику на крестик ======*/
-	// if(modalFramesClose){
-	// 	for(let item of modalFramesClose){
-	// 		item.addEventListener('click', function(e){
-	// 		e.preventDefault();
-	// 		item.closest('[data-modal]').classList.remove('visible');
-	// 		bodyEl.classList.remove('lock');
-	// 		});
-	// 	}
-	// }
+	if(modalFramesClose){
+		for(let item of modalFramesClose){
+			item.addEventListener('click', function(e){
+			e.preventDefault();
+			item.closest('[data-modal]').classList.remove('visible');
+			bodyEl.classList.remove('lock');
+			});
+		}
+	}
 	
 	/*=============== закрыть модалки по клику вне ===============*/
 		for(let frame of modalFrames){
@@ -694,6 +695,7 @@ document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
       // Закрываем модалку, убирая класс visible
       if (modal && modal.classList.contains('visible')) {
         modal.classList.remove('visible');
+		body.classList.remove('lock');
       }
     });
   });
