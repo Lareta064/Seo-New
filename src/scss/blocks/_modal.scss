@@ -134,4 +134,13 @@
 		width: 310px;
 		padding: 24px 20px;
 	}
-}	
+}
+.modal-form{
+	// .form-input::placeholder{transition: .3s; }
+	.form-input:focus::placeholder {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+   
+}
+}
