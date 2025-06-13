@@ -137,10 +137,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (submitButton) {
 				submitButton.addEventListener("click", (event) => {
 					event.preventDefault(); // Отключаем стандартное поведение кнопки submit
-					console.log('555');
+					
 					
 					if (successBlock) {
 						successBlock.classList.add("show-block");
+						
 					}
 					if (formBlock) {
 						formBlock.classList.add("hide-block");
@@ -695,7 +696,7 @@ document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
       // Закрываем модалку, убирая класс visible
       if (modal && modal.classList.contains('visible')) {
         modal.classList.remove('visible');
-		body.classList.remove('lock');
+		bodyEl.classList.remove('lock');
       }
     });
   });

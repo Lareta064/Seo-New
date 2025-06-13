@@ -1,38 +1,39 @@
 section.feedback#feedback
 	.container
 		h2.title.txt-center Оставьте заявку&nbsp;на реализацию вашей мечты&nbsp;🔥
-		.modal-frame-content
-			.modal-title Оставьте заявку
-			.modal-subtitle Мы подготовим предложение и поможем определиться с выбором услуг
-			.modal-frame-form
-				// ===== FORM =====
-				form.modal-form.grid-form(action method='method')
-					.form-item
-						input.form-input(type='text' placeholder='Имя')
-						span.form-input-state
-					.form-item
-						input.form-input.phone(type='tel' placeholder='+7 (     )')
-						span.form-input-state
-					.form-item
-						input.form-input.phone(type='email' placeholder='Email')
-						span.form-input-state
-					// ==== инпут загрузки файла с компьютера====
-					.fileUpload-group
-						label.fileUpload-label.round-btn
-							input.form-input.fileUploadInput(type='file')
-							span.fileUpload-name.round-btn__name Прикрепить файл
+		.form-parts
+			.modal-frame-content
+				.modal-title Оставьте заявку
+				.modal-subtitle Мы подготовим предложение и поможем определиться с выбором услуг
+				.modal-frame-form
+					// ===== FORM =====
+					form.modal-form.grid-form(action method='method')
+						.form-item
+							input.form-input(type='text' placeholder='Имя')
 							span.form-input-state
-						p.fileUpload-limit *Файл должен быть не более 10 мб
-					
-					// ===== btn-group =====
-					.form-btn-group
+						.form-item
+							input.form-input.phone(type='tel' placeholder='+7 (     )')
+							span.form-input-state
+						.form-item
+							input.form-input.phone(type='email' placeholder='Email')
+							span.form-input-state
+						// ==== инпут загрузки файла с компьютера====
+						.fileUpload-group
+							label.fileUpload-label.round-btn
+								input.form-input.fileUploadInput(type='file')
+								span.fileUpload-name.round-btn__name Прикрепить файл
+								span.form-input-state
+							p.fileUpload-limit *Файл должен быть не более 10 мб
 						
-						//кнопке submit, когда поля заполнены,  надо добавить два класса еще "btn-accent btn-overlay" , что бы она стала оранжевого цвета
-						button.btn-dark.seo-feedback-btn(type='submit')
-							span Отправить заявку
-						p.accept-terms
-							| Нажав на кнопку, соглашаюсь на обработку 
-							a(href='#!') персональных данных
+						// ===== btn-group =====
+						.form-btn-group
+							
+							//кнопке submit, когда поля заполнены,  надо добавить два класса еще "btn-accent btn-overlay" , что бы она стала оранжевого цвета
+							button.btn-dark.seo-feedback-btn(type='submit')
+								span Отправить заявку
+							p.accept-terms
+								| Нажав на кнопку, соглашаюсь на обработку 
+								a(href='#!') персональных данных
 			// ====SUCCESS MESSAGE=====
 			.modal-success
 				p Сообщение успешно отправлено!|

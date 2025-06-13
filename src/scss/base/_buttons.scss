@@ -11,6 +11,7 @@
 	color: white;
 	font-weight: 900;
 	font-family: var(--font-family);
+	font-family: var(--second-family);
 	font-size: remy(20);
 	background-color: $dark;
 	flex-shrink: 0;
@@ -21,7 +22,7 @@
 	
 	@media (max-width: 767px) {
 	height: remy(46);
-	font-size: 1rem;
+	font-size: 15px;
 	}
 }
 .br-15{
