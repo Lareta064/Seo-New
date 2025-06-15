@@ -1,6 +1,7 @@
 section.feedback#feedback
 	.container
 		h2.title.txt-center Оставьте заявку&nbsp;на реализацию вашей мечты&nbsp;🔥
+		//внутри блока две части : форма и сообщение об отправке. При успешной отправке, одно скрывается, другое отображается
 		.form-parts
 			.modal-frame-content
 				.modal-title Оставьте заявку
@@ -34,7 +35,7 @@ section.feedback#feedback
 							p.accept-terms
 								| Нажав на кнопку, соглашаюсь на обработку 
 								a(href='#!') персональных данных
-			// ====SUCCESS MESSAGE=====
+			//====SUCCESS MESSAGE  изначально скрыто , для отображения надо добавить класс  " show-block "=====
 			.modal-success
 				p Сообщение успешно отправлено!|
 				p Скоро с вами свяжуться наши специалисты 🤍

@@ -1,3 +1,4 @@
+//Без Модалки под футером
 footer.footer
 	.container
 		.footer-content
@@ -67,35 +68,3 @@ footer.footer
 			p.visible-768 Использование материалов с данного сайта разрешено только по согласию с владельцем. Владелец оставляет за собой право воспользоваться 146 статьей УК&nbsp;РФ при нарушении авторских и смежных прав. Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ.
 			p.hide-768 Мы используем cookies для сбора обезличенных персональных данных. Они помогают настраивать рекламу и анализировать трафик. Оставаясь на сайте, вы соглашаетесь на сбор таких данных.
 
-
-//базовое модальное окно, открывается по клику на компонент с data-btn="basic-popup", например кнопка "Заявка" в шапке
-.modal-frame(data-modal="basic-popup")
-	.modal-frame-wrapper
-		.form-part
-			.modal-frame-content
-				//====FORM=====
-				.modal-frame-form
-					.modal-title Оставьте заявку
-					//===== FORM =====
-					form.modal-form.grid-form(action="" method="method")
-						.form-item
-							input.form-input(type="text" placeholder="Имя")
-							span.form-input-state
-						.form-item
-							input.form-input.phone(type="tel" placeholder="+7 (     )")
-							span.form-input-state
-						.form-item
-							input.form-input.phone(type="email" placeholder="Email")
-							span.form-input-state
-						
-						//===== btn-group =====
-						.form-btn-group.flex-column
-							button.btn-accent.btn-overlay.w-100(type="submit")
-								span Отправить
-							p.accept-terms.txt-center  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
-							
-
-			//====SUCCESS MESSAGE  изначально скрыто , для отображения надо добавить класс  " show-block "=====
-			.modal-success
-				p Сообщение успешно отправлено!|
-				p Скоро с вами свяжуться наши специалисты 🤍

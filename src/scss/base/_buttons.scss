@@ -18,6 +18,7 @@
 	transition: .3s; 
 	width: fit-content;
 	overflow: hidden;
+	white-space: nowrap;
 	span{position: relative;z-index: 3;}
 	
 	@media (max-width: 767px) {
@@ -63,7 +64,7 @@
 }
 .btn-blue{
 	background: #c6dbff;
-	
+	border: 1px solid #c6dbff;
 	&:hover{color: $dark; background-color: #fff;border: 1px solid #fff;}
 	&:active{color: white; border: 1px solid #d4deef; background-color: $dark;}
 }
@@ -100,7 +101,7 @@
 		bottom: 0;;
 		right: 0;
 		width: 100%;
-		border-radius: inherit;
+		border-radius:30px;
 		transform: translateX(110%);
 		transition: .2s; 
 	}

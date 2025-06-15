@@ -123,6 +123,8 @@
 	min-width: 244px;
 	transform: translate(-50%, -50%) scale(0);
 	
+	width: 462px;
+	
 	&.show-block{
 		animation-name: scale;
 		animation-duration: .8s;
@@ -133,6 +135,7 @@
 	}
 	@media (max-width: 767px) {
 		font-size: 14px;
+		width: 330px;
 	}
 }
 @keyframes scale{
