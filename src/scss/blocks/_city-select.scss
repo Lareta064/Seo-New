@@ -36,4 +36,10 @@
 	border:1px solid white;
 	text-align: center;
 	line-height: remy(50);
+	transition: .3s; 
+	&:hover{
+		border:1px solid #D4DEEF;
+		background-color: #D4DEEF;
+		color: #414346;
+	}
 }

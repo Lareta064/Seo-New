@@ -1,5 +1,5 @@
 @use "base/var" as *;
-.highlight{
+.highlight-wrapper{
 	@media (max-width: 767px) {
 	display: none;
 	}
@@ -42,3 +42,7 @@
 		line-height: 0.9;
 	}
   }
+.highlight-gif{display: flex;justify-content: center;}
+.hidden {
+  display: none !important;
+}
