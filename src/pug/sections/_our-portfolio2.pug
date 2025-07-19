@@ -5,7 +5,7 @@ mixin portfolio-card
 			.card-toggle(data-toggle="2") Результат
 		.portfolio-card__header.active(data-child="1")
 			.portfolio-card__title Компания<br>«Автоэстетика»
-			a.btn-white(href="#!") Хочу так же
+			button.btn-white(type="button" data-btn="basic-popup") Хочу так же
 			
 		.portfolio-card__body
 			.portfolio-card__left.active(data-child="1")
@@ -58,7 +58,7 @@ mixin portfolio-card
 					p Стало
 				//- a.btn-outline(href="#!" data-child="2") Хочу так же
 		
-		a.btn-outline.active(href="#!") Хочу так же
+		button.btn-outline.active(type="button"  data-btn="basic-popup") Хочу так же
 section.our-portfolio
 	.container
 		h2.title Кейсы
@@ -80,7 +80,7 @@ section.our-portfolio
 								.card-toggle(data-toggle="2") Результат
 							.portfolio-card__header.active(data-child="1")
 								.portfolio-card__title Компания<br>«Альфа Мастер Клининг»
-								a.btn-white(href="#!") Хочу так же
+								button.btn-white(type="button" data-btn="basic-popup") Хочу так же
 								
 							.portfolio-card__body
 								.portfolio-card__left.active(data-child="1")
@@ -106,20 +106,20 @@ section.our-portfolio
 											ul.compare-card__list
 												li
 													p В ТОП 10<br>Яндекс
-													p #[span 0]<br>запросов
+													p #[span 4]<br>запросов
 												li
 													p Трафик
-													p #[span 320]<br>пос/мес
+													p #[span 26]<br>пос/мес
 
 										.compare-card.compare-card--after
 											.compare-card__title Стало
 											ul.compare-card__list
 												li
 													p В ТОП 10<br>Яндекс
-													p #[span 92]<br>запросов
+													p #[span 96]<br>запросов
 												li
 													p Трафик
-													p #[span 320]<br>пос/мес
+													p #[span 88]<br>пос/мес
 								
 								//===графики справа ===
 								.portfolio-card__chart(data-child="2")
@@ -133,7 +133,7 @@ section.our-portfolio
 										p Стало
 									//- a.btn-outline(href="#!" data-child="2") Хочу так же
 							
-							a.btn-outline.active(href="#!") Хочу так же
+							button.btn-outline.active(type="button"  data-btn="basic-popup") Хочу так же
 					//SLIDE
 					.swiper-slide
 						.portfolio-card
@@ -142,7 +142,7 @@ section.our-portfolio
 								.card-toggle(data-toggle="2") Результат
 							.portfolio-card__header.active(data-child="1")
 								.portfolio-card__title Компания<br>ООО «ПАРАДИССНАБ»
-								a.btn-white(href="#!") Хочу так же
+								button.btn-white(type="button" data-btn="basic-popup") Хочу так же
 								
 							.portfolio-card__body
 								.portfolio-card__left.active(data-child="1")
@@ -158,8 +158,7 @@ section.our-portfolio
 									//===список услуг ===
 									.serv-list
 										.serv-list__title Предоставленные услуги
-										p Продвижение сайта
-										p Контекстная реклама
+										p SEO продвижение сайта
 									
 									//===карточки сравнения ===
 									.portfolio-card__compare
@@ -168,20 +167,20 @@ section.our-portfolio
 											ul.compare-card__list
 												li
 													p В ТОП 10<br>Яндекс
-													p #[span 6]<br>запросов
+													p #[span 0]<br>запросов
 												li
 													p Трафик
-													p #[span 320]<br>пос/мес
+													p #[span 0]<br>пос/мес
 
 										.compare-card.compare-card--after
 											.compare-card__title Стало
 											ul.compare-card__list
 												li
 													p В ТОП 10<br>Яндекс
-													p #[span 56]<br>запросов
+													p #[span 92]<br>запросов
 												li
 													p Трафик
-													p #[span 320]<br>пос/мес
+													p #[span 635]<br>пос/мес
 								
 								//===графики справа ===
 								.portfolio-card__chart(data-child="2")
@@ -195,7 +194,7 @@ section.our-portfolio
 										p Стало
 									//- a.btn-outline(href="#!" data-child="2") Хочу так же
 							
-							a.btn-outline.active(href="#!") Хочу так же
+							button.btn-outline.active(type="button" data-btn="basic-popup") Хочу так же
 
 				//=== pagination ====
 			.portfolio-pagination2.swiper-pagination.swiper-pagination-right

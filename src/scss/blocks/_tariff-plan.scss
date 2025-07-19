@@ -123,6 +123,7 @@
 	color: #f9f9f9;
 	text-align: center;
 	position: relative;
+	
 	span{
 		position: relative;
 		z-index: 2;
@@ -137,9 +138,16 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%) scale(0);
+		transform: translate(-50%, -50%);
+		will-change: filter;
 		filter: blur(29px);
+		-webkit-filter: blur(29px);
+		z-index: 1;
 		transition: .3s; 
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+		filter: blur(29px);
 		
 	}
 	@media (max-width: 767px) {
@@ -147,7 +155,8 @@
 	}
 }
 .tariff-plan:hover{
-	.tariff-price:after{transform: translate(-50%, -50%) scale(1);}
+	.tariff-price:after{opacity: 1;
+	visibility: visible;}
 	.btn-outline{
 		background-color:  #f98836;
 		color: #1d1d1d;

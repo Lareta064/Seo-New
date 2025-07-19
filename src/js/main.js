@@ -32,7 +32,82 @@ document.addEventListener("DOMContentLoaded", function () {
 		// 	bodyEl.classList.remove('lock');
 		// });
 	}
-	
+	document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
+		const input = popupBlock.querySelector('.search-form-input');
+		const cityNameDisplay = popupBlock.querySelector('.user-city-name');
+		const cityItems = popupBlock.querySelectorAll('.search-city-item');
+		const modal = popupBlock.querySelector('.modal-frame[data-modal="city-popup"]');
+
+		cityItems.forEach(item => {
+			item.addEventListener('click', () => {
+			const selectedCity = item.getAttribute('data-value');
+
+			// Подставляем выбранный город в поле ввода и в отображение
+			if (input) input.value = selectedCity;
+			if (cityNameDisplay) cityNameDisplay.textContent = selectedCity;
+
+			// Закрываем модалку, убирая класс visible
+			if (modal && modal.classList.contains('visible')) {
+				modal.classList.remove('visible');
+				bodyEl.classList.remove('lock');
+			}
+			});
+		});
+
+		// DROP SELECT
+			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+			const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+			const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+			const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+			const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+			// Клик по кнопке. Открыть/Закрыть select
+			dropDownBtn.addEventListener('click', function (e) {
+			dropDownList.classList.toggle('dropdown__list--visible');
+			this.classList.toggle('dropdown__button--active');
+			});
+			
+
+			// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+			dropDownListItems.forEach(function (listItem) {
+			
+			listItem.addEventListener('click', function (e) {
+				e.stopPropagation();
+				dropDownBtn.innerText = this.innerText;
+				dropDownBtn.focus();
+				dropDownInput.value = this.dataset.value;
+				
+				dropDownList.classList.remove('dropdown__list--visible');
+				dropDownBtn.classList.remove('dropdown__button--active');
+				
+			});
+			});
+
+			// Клик снаружи дропдауна. Закрыть дропдаун
+			// document.addEventListener('click', function (e) {
+			//   if (e.target !== dropDownBtn) {
+			//     dropDownBtn.classList.remove('dropdown__button--active');
+			//     dropDownList.classList.remove('dropdown__list--visible');
+			//   }
+			// });
+			// Клик снаружи дропдауна. Закрыть дропдаун, если не клик по .dropdown__button или .search-form-item
+			document.addEventListener('click', function (e) {
+			if (!dropDownWrapper.contains(e.target) || 
+				(e.target.closest('.dropdown__list') && !e.target.closest('.search-form-item'))) {
+				dropDownBtn.classList.remove('dropdown__button--active');
+				dropDownList.classList.remove('dropdown__list--visible');
+			}
+			});
+			// Нажатие на Tab или Escape. Закрыть дропдаун
+			document.addEventListener('keydown', function (e) {
+			if (e.key === 'Tab' || e.key === 'Escape') {
+				dropDownBtn.classList.remove('dropdown__button--active');
+				dropDownList.classList.remove('dropdown__list--visible');
+			}
+			});
+		});
+
+		});
 	/*Catalogy Menu */
 	
 	const hasDropMenu = document.querySelectorAll('.has-drop-menu');
@@ -126,32 +201,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 	//SWOW SUCCESS MESSAGE
-	const modalFramesContent = document.querySelectorAll(".modal-frame-content");
+	const modalFramesContent = document.querySelectorAll(".form-parts");
+	// const modalFramesContent = document.querySelectorAll(".modal-frame-content");
 	if(modalFramesContent.length>0){
 		modalFramesContent.forEach((modalFrame) => {
 			
-			const formBlock = modalFrame.querySelector(".modal-frame-form");
+			const formBlock = modalFrame.querySelector(".modal-frame-content");
 			const successBlock = modalFrame.querySelector(".modal-success");
 			const submitButton = formBlock?.querySelector("[type='submit']");
 
-			if (submitButton) {
-				submitButton.addEventListener("click", (event) => {
-					event.preventDefault(); // Отключаем стандартное поведение кнопки submit
-					console.log('555');
+			// if (submitButton) {
+			// 	submitButton.addEventListener("click", (event) => {
+			// 		event.preventDefault(); // Отключаем стандартное поведение кнопки submit
 					
-					if (successBlock) {
-						successBlock.classList.add("show-block");
-					}
-					if (formBlock) {
-						formBlock.classList.add("hide-block");
-					}
-				});
-			}
+					
+			// 		if (successBlock) {
+			// 			successBlock.classList.add("show-block");
+						
+			// 		}
+			// 		if (formBlock) {
+			// 			formBlock.classList.add("hide-block");
+			// 		}
+			// 	});
+			// }
 		});
 	}
 	/* =============== modal с атрибутом [data-modal] ===============*/ 
 	const modalOpen = document.querySelectorAll('[data-btn]');
 	const modalFrames = document.querySelectorAll('[data-modal]');
+	const modalFramesClose = document.querySelectorAll('[data-close]');
 	if( modalFrames.length > 0){
 	//  const modalFramesClose = document.querySelectorAll('[data-close]');
 
@@ -175,15 +253,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
 	/*==  закрыть модалки  frame-modal по клику на крестик ======*/
-	// if(modalFramesClose){
-	// 	for(let item of modalFramesClose){
-	// 		item.addEventListener('click', function(e){
-	// 		e.preventDefault();
-	// 		item.closest('[data-modal]').classList.remove('visible');
-	// 		bodyEl.classList.remove('lock');
-	// 		});
-	// 	}
-	// }
+	if(modalFramesClose){
+		for(let item of modalFramesClose){
+			item.addEventListener('click', function(e){
+			e.preventDefault();
+			item.closest('[data-modal]').classList.remove('visible');
+			bodyEl.classList.remove('lock');
+			});
+		}
+	}
 	
 	/*=============== закрыть модалки по клику вне ===============*/
 		for(let frame of modalFrames){
@@ -677,78 +755,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 	});
 });
-document.querySelectorAll('.city-popup-block').forEach(popupBlock => {
-  const input = popupBlock.querySelector('.search-form-input');
-  const cityNameDisplay = popupBlock.querySelector('.user-city-name');
-  const cityItems = popupBlock.querySelectorAll('.search-city-item');
-  const modal = popupBlock.querySelector('.modal-frame[data-modal="city-popup"]');
-
-  cityItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const selectedCity = item.getAttribute('data-value');
-
-      // Подставляем выбранный город в поле ввода и в отображение
-      if (input) input.value = selectedCity;
-      if (cityNameDisplay) cityNameDisplay.textContent = selectedCity;
-
-      // Закрываем модалку, убирая класс visible
-      if (modal && modal.classList.contains('visible')) {
-        modal.classList.remove('visible');
-      }
-    });
-  });
-
-  // DROP SELECT
-    document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-    const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-    const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-    const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-    const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-
-    // Клик по кнопке. Открыть/Закрыть select
-    dropDownBtn.addEventListener('click', function (e) {
-      dropDownList.classList.toggle('dropdown__list--visible');
-      this.classList.toggle('dropdown__button--active');
-    });
-      
-
-    // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-    dropDownListItems.forEach(function (listItem) {
-      
-      listItem.addEventListener('click', function (e) {
-        e.stopPropagation();
-        dropDownBtn.innerText = this.innerText;
-        dropDownBtn.focus();
-        dropDownInput.value = this.dataset.value;
-        
-        dropDownList.classList.remove('dropdown__list--visible');
-        dropDownBtn.classList.remove('dropdown__button--active');
-        
-      });
-    });
-
-    // Клик снаружи дропдауна. Закрыть дропдаун
-    // document.addEventListener('click', function (e) {
-    //   if (e.target !== dropDownBtn) {
-    //     dropDownBtn.classList.remove('dropdown__button--active');
-    //     dropDownList.classList.remove('dropdown__list--visible');
-    //   }
-    // });
-	// Клик снаружи дропдауна. Закрыть дропдаун, если не клик по .dropdown__button или .search-form-item
-	document.addEventListener('click', function (e) {
-	if (!dropDownWrapper.contains(e.target) || 
-		(e.target.closest('.dropdown__list') && !e.target.closest('.search-form-item'))) {
-		dropDownBtn.classList.remove('dropdown__button--active');
-		dropDownList.classList.remove('dropdown__list--visible');
-	}
-	});
-    // Нажатие на Tab или Escape. Закрыть дропдаун
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Tab' || e.key === 'Escape') {
-        dropDownBtn.classList.remove('dropdown__button--active');
-        dropDownList.classList.remove('dropdown__list--visible');
-      }
-    });
-  });
-
-})

@@ -11,49 +11,51 @@ block content
 		//===== popUp широкое, достигается за счет доп класса .modal-frame--large ======= 
 		.modal-frame.modal-frame--large(data-modal="place-order")
 			.modal-frame-wrapper
-				.modal-frame-content
-					//====FORM=====
-					.modal-frame-form
-						.modal-title Оставьте заявку
-						.modal-subtitle Мы подготовим предложение и поможем определиться с выбором услуг 
-						//===== FORM =====
-						form.modal-form.grid-form(action="" method="method")
-							.form-item
-								input.form-input(type="text" placeholder="Имя")
-								span.form-input-state
-							.form-item
-								input.form-input.phone(type="tel" placeholder="+7 (     )")
-								span.form-input-state
-							.form-item
-								input.form-input.phone(type="email" placeholder="Email")
-								span.form-input-state
-							//==== инпут загрузки файла с компьютера====
-							.fileUpload-group
-								label.fileUpload-label.round-btn.error
-									input.form-input.fileUploadInput(type="file")
-									span.fileUpload-name.round-btn__name Добавить файл
+				//внутри блока .form-parts две части : форма и сообщение об отправке. При успешной отправке, одно скрывается, другое отображается
+				.form-parts
+					.modal-frame-content
+						//====FORM=====
+						.modal-frame-form
+							.modal-title Оставьте заявку
+							.modal-subtitle Мы подготовим предложение и поможем определиться с выбором услуг 
+							//===== FORM =====
+							form.modal-form.grid-form(action="" method="method")
+								.form-item
+									input.form-input(type="text" placeholder="Имя")
 									span.form-input-state
-								p.fileUpload-limit *Файл должен быть не более 10 мб
-							
-							
-							.brif-btn.round-btn.round-btn--change.error
-								span.round-btn__name Заполнить бриф
-								span.form-input-state.active
-							
-							//===== btn-group =====
-							.form-btn-group
-								button.btn-primary(type="submit")
-									span Отправить заявку
-								p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
+								.form-item
+									input.form-input.phone(type="tel" placeholder="+7 (     )")
+									span.form-input-state
+								.form-item
+									input.form-input.phone(type="email" placeholder="Email")
+									span.form-input-state
+								//==== инпут загрузки файла с компьютера====
+								.fileUpload-group
+									label.fileUpload-label.round-btn.error
+										input.form-input.fileUploadInput(type="file")
+										span.fileUpload-name.round-btn__name Добавить файл
+										span.form-input-state
+									p.fileUpload-limit *Файл должен быть не более 10 мб
+								
+								
+								.brif-btn.round-btn.round-btn--change.error
+									span.round-btn__name Заполнить бриф
+									span.form-input-state.active
+								
+								//===== btn-group =====
+								.form-btn-group
+									button.btn-primary(type="submit")
+										span Отправить заявку
+									p.accept-terms  Нажав на кнопку, соглашаюсь на обработку #[a(href="#!") персональных данных]
 								
 
-					//====SUCCESS MESSAGE=====
+					//====SUCCESS MESSAGE  изначально скрыто , для отображения надо добавить класс  " show-block "=====
 					.modal-success
 						p Сообщение успешно отправлено!|
 						p Скоро с вами свяжуться наши специалисты 🤍
 			
 		//==== FOOTER =====
-		include ../sections/_footer.pug
+		include ../sections/_footer-test.pug
 	
 block variables
 	-var title = "Оформиь заказ";

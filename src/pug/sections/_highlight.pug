@@ -1,40 +1,37 @@
+
 //Подсветка текста
-section.highlight
-	
-	.highlight-text *SEO продвижение —<br>это работа на перспективу
+section.highlight-wrapper
+	.highlight
+		.highlight-text SEO продвижение —<br>это работа на перспективу
+
+
+	.highlight-gif
+		
+		video.highlight-video(autoplay loop muted playsinline)
+			source(src='./video/flach.mp4' type='video/mp4')
 	script.
 		document.querySelectorAll('.highlight').forEach(section => {
-			//-  const text = section.querySelector('.highlight-text');
+			 function getSafariVersion() {
+				const ua = navigator.userAgent;
+				const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+				if (!isSafari) return null;
 
-			//- let targetX = 0;
-			//- let targetY = 0;
-			//- let currentX = 0;
-			//- let currentY = 0;
+				const match = ua.match(/Version\/([\d\.]+)/);
+				if (match && match[1]) {
+				return parseFloat(match[1]);
+				}
+				return null;
+			}
 
-			//- // Устанавливаем стартовую точку (как в CSS)
-			//- const rect = text.getBoundingClientRect();
-			//- currentX = targetX = rect.width * 0.4;
-			//- currentY = targetY = rect.height * 0.5;
+			const safariVersion = getSafariVersion();
 
-			//- // Плавное приближение к целевой точке
-			//- function animate() {
-			//- const lerp = 0.1; // плавность (0.1 — мягко, 1 — мгновенно)
-			//- currentX += (targetX - currentX) * lerp;
-			//- currentY += (targetY - currentY) * lerp;
-
-			//- text.style.setProperty('--x', `${currentX}px`);
-			//- text.style.setProperty('--y', `${currentY}px`);
-
-			//- requestAnimationFrame(animate);
-			//- }
-
-			//- animate(); // запускаем анимацию
-
-			//- section.addEventListener('mousemove', (e) => {
-			//- const rect = text.getBoundingClientRect();
-			//- targetX = e.clientX - rect.left;
-			//- targetY = e.clientY - rect.top;
-			//- });
+			if (safariVersion && safariVersion < 16) {
+				document.querySelector('.highlight')?.classList.add('hidden');
+				document.querySelector('.highlight-gif')?.classList.remove('hidden');
+			} else {
+				document.querySelector('.highlight')?.classList.remove('hidden');
+				document.querySelector('.highlight-gif')?.classList.add('hidden');
+			}
 			const text = section.querySelector('.highlight-text');
 
 			let targetX = 0;
@@ -83,3 +80,24 @@ section.highlight
 			targetY = touch.clientY - rect.top;
 			}, { passive: true });
 		});
+		const highlightVideo = document.querySelector('.highlight-video');
+
+			if (highlightVideo) {
+				const observer = new IntersectionObserver((entries, obs) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const playPromise = highlightVideo.play();
+							if (playPromise !== undefined) {
+								playPromise.catch(err => {
+									console.warn('Safari блокирует autoplay:', err);
+								});
+							}
+							obs.unobserve(highlightVideo);
+						}
+					});
+				}, {
+					threshold: 0.5 // половина видео должна быть видна
+				});
+
+				observer.observe(highlightVideo);
+			}
